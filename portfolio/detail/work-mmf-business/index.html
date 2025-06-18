@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+    <link rel="alternate icon" type="image/ico" href="/images/favicon.ico">
+ 
+    <title>
+         测试内容 ·  
+        YANNGIKI
+    </title>
+
+    <!-- CSS引用 -->
+    
+<link rel="stylesheet" href="/css/colors.css">
+
+    
+<link rel="stylesheet" href="/css/reset.css">
+
+    
+<link rel="stylesheet" href="/css/nav.css">
+
+    
+<link rel="stylesheet" href="/css/home.css">
+
+    
+<link rel="stylesheet" href="/css/postmd.css">
+
+    
+<link rel="stylesheet" href="/css/index.css">
+
+    
+<link rel="stylesheet" href="/css/about.css">
+
+    
+<link rel="stylesheet" href="/css/toc.css">
+
+    
+<link rel="stylesheet" href="/css/portf_detail.css">
+
+    
+    <!-- Fanbox图片预览引用 -->
+    <!-- <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+
+    <!-- 引用iconfont Symbol -->
+    <script src="//at.alicdn.com/t/font_1136188_oqq48jgc1lf.js"></script>
+
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+    <body>
+         <nav id="nav">
+    <div class="nav-content">
+        <a class="logo" href="/"><img class="navlogo" src="/images/logo.svg"></a>
+        <ul class="menu-group">
+            
+            <li class="menu-detail">
+                <a href="/" class="menu  ">首页</a>
+                <span class="splash">/</span>
+            </li>
+            
+            <li class="menu-detail">
+                <a href="/portfolio" class="menu z-active ">作品</a>
+                <span class="splash">/</span>
+            </li>
+            
+            <li class="menu-detail">
+                <a href="/about" class="menu  ">关于</a>
+                <span class="splash">/</span>
+            </li>
+            
+        </ul>
+    </div>
+</nav>
+
+        <div class="paper">
+            <div class="paper-main">   
+                <body>
+    <div id="portf_main" class="post-main">
+        <div class="post-main-title">
+            测试内容
+        </div>
+        <div id="portf_detail" class="post-md">
+            <h1 id="Facnybox-使用方式"><a href="#Facnybox-使用方式" class="headerlink" title="Facnybox 使用方式"></a>Facnybox 使用方式</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p><strong>安装包</strong></p>
+<p>NPM</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">npm install <span class="token operator">--</span>save @fancyapps<span class="token operator">/</span>ui<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>Yarn</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">yarn add @fancyapps<span class="token operator">/</span>ui<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>CDN</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">Fancybox <span class="token number">5.0</span>
+<span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+<span class="token operator">&lt;</span>link rel<span class="token operator">=</span><span class="token string">"stylesheet"</span> href<span class="token operator">=</span><span class="token string">"https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"</span><span class="token operator">/</span><span class="token operator">></span>
+
+Fancybox <span class="token number">4.0</span>
+<span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+<span class="token operator">&lt;</span>link  rel<span class="token operator">=</span><span class="token string">"stylesheet"</span> href<span class="token operator">=</span><span class="token string">"https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"</span><span class="token operator">/</span><span class="token operator">></span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="触发方式"><a href="#触发方式" class="headerlink" title="触发方式"></a>触发方式</h1><h2 id="按钮入口"><a href="#按钮入口" class="headerlink" title="按钮入口"></a>按钮入口</h2><a data-fancybox-trigger = "aa" href="">
+  <span >查看图片</span>
+</a>
+
+<div style="display: none">
+  <a data-fancybox="aa" target="_blank" rel="noopener" href="https://lipsum.app/id/60/1600x1200">
+    <img  src="https://lipsum.app/id/60/1600x1200" />
+  </a>
+  <a data-fancybox="aa" target="_blank" rel="noopener" href="https://lipsum.app/id/61/1600x1200">
+    <img class="rounded" src="https://lipsum.app/id/61/1600x1200" />
+  </a>
+  <a data-fancybox="aa" target="_blank" rel="noopener" href="https://lipsum.app/id/62/1600x1200">
+    <img class="rounded" src="https://lipsum.app/id/62/200x150" />
+  </a>
+</div>
+
+
+<h2 id="缩略图"><a href="#缩略图" class="headerlink" title="缩略图"></a>缩略图</h2><a data-fancybox data-src="https://lipsum.app/id/1/1600x1200" data-caption="Hello world">
+  <img src="https://lipsum.app/id/1/200x150" width="200" height="150" alt="" />
+</a>
+
+<h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1><h2 id="单张图片"><a href="#单张图片" class="headerlink" title="单张图片"></a>单张图片</h2><p>方式1：使用 img 标签，插入属性 data-fancybox。<br>方式2：使用Markdown语法引用图片，在全局引用Fancybox时 额外用js给所有图片插入属性 data-fancybox。</p>
+<pre class="line-numbers language-Html" data-language="Html"><code class="language-Html">&lt;a
+  data-fancybox
+  data-src&#x3D;&quot;https:&#x2F;&#x2F;lipsum.app&#x2F;id&#x2F;1&#x2F;1600x1200&quot;
+  data-caption&#x3D;&quot;Hello world&quot;
+&gt;
+  &lt;img src&#x3D;&quot;https:&#x2F;&#x2F;lipsum.app&#x2F;id&#x2F;1&#x2F;200x150&quot; width&#x3D;&quot;200&quot; height&#x3D;&quot;150&quot; alt&#x3D;&quot;&quot; &#x2F;&gt;
+&lt;&#x2F;a&gt;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><a target="_blank" rel="noopener" href="https://jsfiddle.net/de9w2y6x/">JSFiddle Example</a></p>
+<h2 id="组合图片"><a href="#组合图片" class="headerlink" title="组合图片"></a>组合图片</h2><p>组合图片：使用a标签包裹img标签，并在a标签中插入属性 data-fancybox&#x3D;”gallery” ，“gallery”为自定义的分组识别名</p>
+<p>第一步：在Html中将图片分好组</p>
+<pre class="line-numbers language-Html" data-language="Html"><code class="language-Html">&lt;!-- First gallery --&gt;
+&lt;a href&#x3D;&quot;image-a1.jpeg&quot; data-fancybox&#x3D;&quot;gallery-a&quot; data-caption&#x3D;&quot;Gallery A #1&quot;&gt;
+  &lt;img src&#x3D;&quot;thumbnail-a1.jpeg&quot; &#x2F;&gt;
+&lt;&#x2F;a&gt;
+
+&lt;a href&#x3D;&quot;image-a2.jpeg&quot; data-fancybox&#x3D;&quot;gallery-a&quot; data-caption&#x3D;&quot;Gallery A #2&quot;&gt;
+  &lt;img src&#x3D;&quot;thumbnail-a2.jpeg&quot; &#x2F;&gt;
+&lt;&#x2F;a&gt;
+
+&lt;!-- Second gallery --&gt;
+&lt;a href&#x3D;&quot;image-b1.jpeg&quot; data-fancybox&#x3D;&quot;gallery-b&quot; data-caption&#x3D;&quot;Gallery B #1&quot;&gt;
+  &lt;img src&#x3D;&quot;thumbnail-b1.jpeg&quot; &#x2F;&gt;
+&lt;&#x2F;a&gt;
+
+&lt;a href&#x3D;&quot;image-b2.jpeg&quot; data-fancybox&#x3D;&quot;gallery-b&quot; data-caption&#x3D;&quot;Gallery B #2&quot;&gt;
+  &lt;img src&#x3D;&quot;thumbnail-b2.jpeg&quot; &#x2F;&gt;
+&lt;&#x2F;a&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>第二步：在JS中将图片的分组与Fancybox绑定一块</p>
+<pre class="line-numbers language-Javascript" data-language="Javascript"><code class="language-Javascript">Fancybox.bind(&quot;[data-fancybox]&quot;, &#123;
+  &#x2F;&#x2F; Custom options for all galleries
+&#125;);
+
+Fancybox.bind(&#39;[data-fancybox&#x3D;&quot;gallery-a&quot;]&#39;, &#123;
+  &#x2F;&#x2F; Custom options for the first gallery
+&#125;);
+
+Fancybox.bind(&#39;[data-fancybox&#x3D;&quot;gallery-b&quot;]&#39;, &#123;
+  &#x2F;&#x2F; Custom options for the second gallery
+&#125;);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><a target="_blank" rel="noopener" href="https://jsfiddle.net/y59f1n8d/">JSFiddle Example</a></p>
+<h2 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h2><p>问题：因为遍历了paper的所有图片，导至点击视频的缩略图会打开图片</p>
+<!-- YouTube -->
+<a data-fancybox="video-gallery" target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=z2X2HaTvkl8">
+  <img style="margin-bottom:12px" src="http://i3.ytimg.com/vi/z2X2HaTvkl8/hqdefault.jpg" width="200" height="150" />
+</a>
+
+<!-- YouTube custom start time -->
+<a data-fancybox="video-gallery" target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=dZRqB0JLizw&t=40s">
+  <img style="margin-bottom:12px" src="http://i3.ytimg.com/vi/dZRqB0JLizw/hqdefault.jpg" width="200" height="150" />
+</a>
+
+<a data-fancybox-trigger = "video-gallery" href="">
+  <span >查看视频</span>
+</a>
+
+
+<h1 id="Plugins"><a href="#Plugins" class="headerlink" title="Plugins"></a>Plugins</h1><h2 id="Toolbar"><a href="#Toolbar" class="headerlink" title="Toolbar"></a>Toolbar</h2><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">Fancybox <span class="token number">5.0</span>
+  <span class="token literal-property property">Toolbar</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">display</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+      <span class="token literal-property property">left</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"infobar"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">middle</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">"zoomIn"</span><span class="token punctuation">,</span>
+        <span class="token string">"zoomOut"</span><span class="token punctuation">,</span>
+        <span class="token string">"toggle1to1"</span><span class="token punctuation">,</span>
+        <span class="token string">"rotateCCW"</span><span class="token punctuation">,</span>
+        <span class="token string">"rotateCW"</span><span class="token punctuation">,</span>
+        <span class="token string">"flipX"</span><span class="token punctuation">,</span>
+        <span class="token string">"flipY"</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">right</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"slideshow"</span><span class="token punctuation">,</span> <span class="token string">"thumbs"</span><span class="token punctuation">,</span> <span class="token string">"close"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<!-- Fancybox 4.0
+  Toolbar: {
+      display: [
+      // 放大缩小下载等按钮
+      {id: "zoom"},
+      {id: "slideshow"},
+      {id: "fullscreen"},
+      "download",
+      {id: "close", position: 'left'},
+      "thumbs",
+      // 计数器
+      { id: "prev", position: "center" },
+      { id: "counter", position: "center" },
+      { id: "next", position: "center" },
+      ],
+  }, -->
+
+<h2 id="Tumbnails"><a href="#Tumbnails" class="headerlink" title="Tumbnails"></a>Tumbnails</h2><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script<span class="token operator">></span>
+  <span class="token function">Fancybox</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token string">'[data-fancybox="gallery"]'</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">Thumbs</span> <span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+      <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">"modern"</span>
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+
+<span class="token literal-property property">类型：type</span><span class="token operator">:</span> <span class="token string">"classic"</span> <span class="token operator">/</span> <span class="token string">"modern"</span>
+<span class="token literal-property property">禁用：Thumbs</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p><img src="https://user-images.githubusercontent.com/9880101/56782314-296d2280-6819-11e9-92c5-1ebe4b838634.png" alt="atomic"></p>
+<p><img src="https://user-images.githubusercontent.com/9880101/56782314-296d2280-6819-11e9-92c5-1ebe4b838634.png" alt="atomic"></p>
+<p><img src="https://user-images.githubusercontent.com/9880101/56782314-296d2280-6819-11e9-92c5-1ebe4b838634.png" alt="atomic"></p>
+<p><img src="https://user-images.githubusercontent.com/9880101/56782314-296d2280-6819-11e9-92c5-1ebe4b838634.png" alt="atomic"></p>
+<h3 id="颜色"><a href="#颜色" class="headerlink" title="颜色"></a>颜色</h3><p><img src="https://user-images.githubusercontent.com/9880101/57174386-8e0b2b80-6e70-11e9-9b87-8aff96599f0a.png" alt="Color-L"></p>
+<p><img src="https://user-images.githubusercontent.com/9880101/57176851-cc641300-6e8f-11e9-81a8-823a4c982b94.png" alt="颜色用法"></p>
+<h3 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h3><p><a target="_blank" rel="noopener" href="https://www.google.com/"><img src="https://user-images.githubusercontent.com/9880101/57173285-fac9fa00-6e5f-11e9-9fa7-f4d7bc58619e.png" alt="Typography-L"></a></p>
+<h4 id="字体家族-Font-Family"><a href="#字体家族-Font-Family" class="headerlink" title="字体家族 (Font-Family)"></a>字体家族 (Font-Family)</h4><p>字体家族的选择首要考虑的是要适合屏幕的显示，并且至少要有<strong>轻、正常、重</strong>这三种字重可以选择。</p>
+<p>有时为了突出或区分一些不同的内容，需要用到不一样的字体。</p>
+<p><img src="https://user-images.githubusercontent.com/9880101/57176635-b9037880-6e8c-11e9-8dcf-ae67472346c9.png" alt="Font-Family"></p>
+<h4 id="字重-Font-Weight"><a href="#字重-Font-Weight" class="headerlink" title="字重 (Font-Weight)"></a>字重 (Font-Weight)</h4><p>字体通过使用不同的字重，可以让内容表现出层级感。从轻到重一共设置5个层级，对于内容的区分有很大的什么用。</p>
+<table>
+<thead>
+<tr>
+<th>Light</th>
+<th>Regular</th>
+<th>Medium</th>
+<th>Bold</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>300</td>
+<td>400</td>
+<td>500</td>
+<td>600</td>
+</tr>
+</tbody></table>
+<p><a href=""><img src="https://user-images.githubusercontent.com/9880101/57176887-6461fc80-6e90-11e9-8fef-84697a127714.png" alt="Font-Weight"></a></p>
+<h3 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h3><p><img src="https://user-images.githubusercontent.com/9880101/57174499-9b291a00-6e72-11e9-8f9e-f30a9080fa2a.png" alt="Layout-L2"></p>
+<p><a target="_blank" rel="noopener" href="https://www.lightningdesignsystem.com/assets/downloads/salesforce-voice-and-tone.pdf">Salesforce-Voice -and-Tone</a></p>
+
+        </div>
+    </div>
+</body>
+
+
+<!-- 
+<script src="/js/push-last-url.js"></script>
+ -->
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+
+<script src="/js/fancy-box.js"></script>
+ 
+            </div>
+        </div>
+    </body>
+    
+
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
+
+
+<script src="/js/highlight.min.js"></script>
+
+
+<script src="/js/highlightjs-line-numbers.js"></script>
+ 
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+
+<script>
+    function setImgAtt() {
+    let allIMG = document.getElementsByTagName('img');
+    for (let i = 0; i < allIMG.length; i++) {
+            allIMG[i].setAttribute('draggable', 'false');
+        }
+    }   
+    document.addEventListener('DOMContentLoaded', setImgAtt, false)
+
+    document.oncontextmenu = function (e) {
+        return false
+    }
+</script>
+</html>

@@ -1,0 +1,84 @@
+
+
+/* iconfont 图标基础样式 */
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+/* 标签-蓝 */
+.label-blue {
+    display: inline-block;
+    text-align: center;
+    padding: 4px 6px;
+    margin: 0 4px 4px 0;
+    font-size: 13px;
+    line-height: 17px;
+    color: #1173C0;
+    background-color: #F2FBFF;
+    border: 1px solid #e0eef5;
+    border-radius: 3px;
+    letter-spacing: 0.03rem;
+  }
+
+/* 标签-黄 */
+.label-yellow {
+    display: inline-block;
+    text-align: center;
+    padding: 4px 6px;
+    margin: 0 4px 4px 0;
+    font-size: 13px;
+    line-height: 17px;
+    color: #FFB71D;
+    background-color: #FFF9EB;
+    border: 1px solid #FFE5AD;
+    border-radius: 3px;
+    letter-spacing: 0.03rem;
+  }
+  
+  /* 标签-绿 */
+  .label-green {
+    display: inline-block;
+    text-align: center;
+    padding: 4px 6px;
+    margin: 0 4px 4px 0;
+    font-size: 13px;
+    line-height: 17px;
+    color: #37a76f;
+    background-color: #eff9f1;
+    border: 1px solid #cce0d4;
+    border-radius: 3px;
+    letter-spacing: 0.03rem;
+  }
+
+/* 标签-深绿 */
+.label-darkgreen {
+    display: inline-block;
+    text-align: center;
+    padding: 4px 6px;
+    margin: 0 4px 4px 0;
+    font-size: 13px;
+    line-height: 17px;
+    color: #108074;
+    background-color: #E6F5F2;
+    border: 1px solid #cce0de;
+    border-radius: 3px;
+    letter-spacing: 0.03rem;
+    }
+  
+  /* 标签-灰 */
+  .label-gray {
+    display: inline-block;
+    text-align: center;
+    padding: 4px 6px;
+    margin: 0 4px 4px 0;
+    font-size: 13px;
+    line-height: 17px;
+    color: #404040;
+    background-color: #F4F4F6;
+    border: 1px solid #E7E7E8;
+    border-radius: 3px;
+    letter-spacing: 0.03rem;
+  }

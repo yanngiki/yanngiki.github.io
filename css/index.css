@@ -1,0 +1,9 @@
+/* @import 'reset.css';
+@import 'colors.css';
+@import 'home.css';
+@import 'nav.css';
+@import 'postmd.css';
+@import 'toc.css';
+@import 'about.scss'; */
+@import './style-global.css';
+@import 'portfolio.css';

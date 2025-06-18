@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+    <link rel="alternate icon" type="image/ico" href="/images/favicon.ico">
+ 
+    <title>
+         顾问SaaS ·  
+        YANNGIKI
+    </title>
+
+    <!-- CSS引用 -->
+    
+<link rel="stylesheet" href="/css/colors.css">
+
+    
+<link rel="stylesheet" href="/css/reset.css">
+
+    
+<link rel="stylesheet" href="/css/nav.css">
+
+    
+<link rel="stylesheet" href="/css/home.css">
+
+    
+<link rel="stylesheet" href="/css/postmd.css">
+
+    
+<link rel="stylesheet" href="/css/index.css">
+
+    
+<link rel="stylesheet" href="/css/about.css">
+
+    
+<link rel="stylesheet" href="/css/toc.css">
+
+    
+<link rel="stylesheet" href="/css/portf_detail.css">
+
+    
+    <!-- Fanbox图片预览引用 -->
+    <!-- <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+
+    <!-- 引用iconfont Symbol -->
+    <script src="//at.alicdn.com/t/font_1136188_oqq48jgc1lf.js"></script>
+
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+    <body>
+         <nav id="nav">
+    <div class="nav-content">
+        <a class="logo" href="/"><img class="navlogo" src="/images/logo.svg"></a>
+        <ul class="menu-group">
+            
+            <li class="menu-detail">
+                <a href="/" class="menu  ">首页</a>
+                <span class="splash">/</span>
+            </li>
+            
+            <li class="menu-detail">
+                <a href="/portfolio" class="menu  ">作品</a>
+                <span class="splash">/</span>
+            </li>
+            
+            <li class="menu-detail">
+                <a href="/about" class="menu  ">关于</a>
+                <span class="splash">/</span>
+            </li>
+            
+        </ul>
+    </div>
+</nav>
+
+        <div class="paper">
+            <div class="paper-main">   
+                <div class="post-main">
+    
+        <div class="post-main-title">
+            顾问SaaS
+        </div>
+        <div class="post-meta">
+            2021-05-08
+        </div>
+    
+    
+    <div class="post-md" id="post-detail">
+        <h1 id="背景介绍"><a href="#背景介绍" class="headerlink" title="背景介绍"></a>背景介绍</h1><p>伊智OA（顾问SaaS）是公司内部销售顾问、运营顾问、和管理人员使用的工具，主要用于在与客户谈合作时能快速拟定合同和完成签约，利用数字化手段提升业务端录入客户、签发合同的效率；其次是做客户资源管理（包括构建公海客户和线索跟踪等客资管理功能）、实时的量化数据管理。对内部来说是一个提升合同签约效率和客户信息管理维护的工具。</p>
+<h1 id="挑战"><a href="#挑战" class="headerlink" title="挑战"></a>挑战</h1><section class="question">🤯 时间紧迫</section>
+
+<p>设计+研发，16个工作日</p>
+<section class="question">🤯 需求问题</section>
+
+<p><strong>1.) 缺少流程</strong></p>
+<p>e.g. 签约流程、续约流程、合同改价审批流程都缺少，这些都是这个项目的核心流程。</p>
+</br>
+
+<p><strong>2.) 功能描述仅基于业务考虑，缺少对基础交互、技术限制的考虑</strong></p>
+<p>e.g. 创建客户表单分为基本信息和合同信息，合同信息为非必填项，但只要有一项填写了，合同信息剩余的项都必须要填写。</p>
+</br>
+
+<p><strong>3.) 信息框架、功能交互不合理</strong></p>
+<p>e.g. 客户名片（客户详情）页面的功能按钮排放杂乱无逻辑，仅是为了表明有这么一个功能。</p>
+<p>e.g. 基础交互组件如时间选择、下拉选择等都基于PC，不适合移动端。</p>
+</br>
+
+<p><strong>4.) 功能细节描述不完整</strong></p>
+<p>e.g. 不同类型的合同签约、续约、升单等操作缺少前置条件和结果事件。</p>
+<p>e.g. 单店、连锁签约续约的约束条件不明确。</p>
+<section class="question">🤯 跨团队跨区域合作</section>
+
+<p>顾问、产品和后端在一处办公地点，设计和前端又在另一处办公地点，在前期有沟通困难，而且时效性长。</p>
+<h1 id="做了什么"><a href="#做了什么" class="headerlink" title="做了什么"></a>做了什么</h1><p><strong>重新沟通和确认需求</strong></p>
+<p>现有的需求文档缺少关键流程和细节交互操作说明，如果直接设计，会预判到进入开发阶段会有很多问题。整理需求疑问点和，再拉着产品和开发逐点沟通，确定相关方案和让开发考虑实现可行性问题。</p>
+</br>
+
+<p><strong>明确业务模型</strong></p>
+<p>电子合同的完整功能交互，包括签约、续签、升单，都依赖于 <code>门店 - 合同类型 - 合同版本</code> 这三者的模型关系。在没确定之前，基础的事件交互容易做得天马行空。为了让产品和开发明确了解清楚，以及保证整体交互和设计方案的完整性、可行性，对它们进行了简单的业务建模。</p>
+<p>合同签约有针对单店和连锁（包含主店和分店），这两者的在签约处理上会有差别。下面这个界面是门店签约的入口页面，可以选择签约哪种类型的合同，但在这之前我们需要解决几个关键问题，才能知道在具体签约合同时的交互要怎么做。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/yizhioa/key_problem.png" alt="key_problem"></p>
+<p>要回答这些问题 ，其实是先整理清楚<code>门店--合同类型--合同版本</code>三者之间的对应关系，下图所示</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/yizhioa/entity_shopcontract.png" alt="entity"></p>
+<section class="caption-image">解释门店、合同、版本之间的对应关系</section>
+
+</br>
+
+<p>除了上面这个门店-合同类型-合同版本的关系问题，也存在其它方面不确定的问题，比如不同合同类型的计价方式，特别是连锁的主店或分店在签约时的价格计算方式；还有合同在续约、升单后的记录要怎么处理等。</p>
+</br>
+
+<p><strong>梳理流程</strong></p>
+<p>创建合同（首签、续签、升单）、合同管理、合同审批，这三者的流程在产品提供的文档都缺少清晰的描述，在沟通后，将这部分流程的需求重新转译为可实现的合理的方案，以及整理整条流程之间涉及到的干系人、操作和状态流转关系。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/yizhioa/process.svg" alt="process"></p>
+<section class="caption-image">创建合同-审批-签约流程图 </section> 
+
+</br>
+
+<p>下图是合同从创建到审批流程相关的部分页面</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/yizhioa/process_part.png" alt="process_part"></p>
+<section class="caption-image">创建合同、合同管理、审批合同的部分页面 </section> 
+
+
+</br>
+
+
+<p><strong>优化交互和页面框架</strong></p>
+<p>由于产品所设计的原型没有考虑到基本的移动端交互、表单校验、信息框架如何合理布局等问题，在设计阶段充分了解和把握真实需求动机后，把这些问题逐一想办法解决，最大程度地保证了设计的可行性。</p>
+<p>下面两图是部分做过调整的页面：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/yizhioa/form_adjustment.png" alt="form_adjustment"></p>
+<section class="caption-image">添加客户</section>
+
+
+
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/yizhioa/customer_pic.png" alt="customer_pic"></p>
+<section class="caption-image">客户名片</section>
+
+
+<h1 id="页面展示"><a href="#页面展示" class="headerlink" title="页面展示"></a>页面展示</h1><p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/yizhioa/page_preview.png" alt="page_preview"></p>
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/yizhioa/page_preview_big.png">查看部分页面图</a></p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p><strong>设计流程上跨职能敏捷协作:</strong></p>
+<p>1、<strong>设计沟通</strong>，目的是充分了解需求和发现问题。沟通需求、疑点问题、方案探讨 (结合需求、设计、技术)，通过提问题引导产品反向得出真正的需求点，渐进式地协助产品发现问题，再共商提出更好的方案。</p>
+<p>2、<strong>设计梳理</strong>，目的是重新梳理功能点和流程逻辑，保证功能的完整闭环，以及采用什么样的交互和设计语言。</p>
+<p>3、<strong>设计输出</strong>，产出设计稿和完成交付。</p>
+</br>
+
+<p><strong>思考：</strong></p>
+<ul>
+<li>如果缺乏对基本业务的理解，脱离业务和使用场景的设计是很难落地的。像合同几个表单信息的页面，它背后所关联的业务逻辑和流程交互是整个项目里最为复杂和最有挑战性，从合同数据的对应关系，到创建、续约、升单和审批都互相关联着，影响到整个流程交互的状态流转和闭环设计。</li>
+<li>职责不要仅局限在设计的好看，也不要仅局限在设计执行。多深入看看实质的需求触点和业务。</li>
+</ul>
+<p>设计、产品、研发合作，多次沟通在方案上达到共识，比起设计被动地接受需求更有助于发挥设计价值和推进方案落地。</p>
+</br>
+
+<section class="desc-page-bottom">📮 到底了</section>
+    </div>
+
+    <footer class="f-cf">
+        
+        <a href="/posts/f1ee05/" class="link f-fl">
+          <span class="arrow">Prev:</span>
+          MMF BOOK
+        </a>
+      
+
+      
+        <a href="/posts/64854923/" class="link f-fr">
+           <span class="arrow">Next:</span>
+          深浅模式设计
+        </a>
+      
+    </footer>
+</div>
+
+<!-- 目录入口图标 -->
+<div class="mini_toc">
+  <div class="toc_icn">
+    <span></span>
+    <span></span> 
+    <span></span>
+    <span></span>
+  </div>
+</div> 
+
+
+
+
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%83%8C%E6%99%AF%E4%BB%8B%E7%BB%8D"><span class="toc-text">背景介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8C%91%E6%88%98"><span class="toc-text">挑战</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%81%9A%E4%BA%86%E4%BB%80%E4%B9%88"><span class="toc-text">做了什么</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A1%B5%E9%9D%A2%E5%B1%95%E7%A4%BA"><span class="toc-text">页面展示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol>
+    </div>
+
+
+<script type="text/javascript">
+    var triggle = document.getElementsByClassName('mini_toc');
+    var toc = document.getElementById('toc');
+    var line = document.querySelectorAll('.toc_icn span');
+    var postMain = document.getElementsByClassName('post-main');
+    
+    var key = false;  // 映射toc的显示和隐藏，并作为真否判断条件，false == toc隐藏
+
+    //控制toc的出现或隐藏
+    function switch_toc() {
+        if(!key) {
+            toc.style.display = "block";
+            key = true;
+        }else {
+            toc.style.display = "none";
+            key = false;
+        } 
+    }
+
+    //目录icn的状态，每点击一次就切换，默认为css设置的状态
+    function toc_icn_state() {
+        for(let i=0; i < line.length; i++){
+            line[i].classList.toggle('op');
+        }
+    }
+
+    triggle[0].addEventListener('click', switch_toc, false);
+
+    triggle[0].addEventListener('click', toc_icn_state, false);
+
+    // >1132px,处理窗口改变大小时，强制让toc出现； 开关变为x，className控制开关隐藏
+    function toc_show(){
+        if((document.body.clientWidth+15) > 1132) {
+            toc.style.display = "block";
+            key = true;
+            for(let i=0; i < line.length; i++){
+                line[i].className='op';
+            }
+        }
+    }
+    window.addEventListener('resize', toc_show, false)
+
+
+    // <1132px toc出现后，点击外围区域可关闭
+    function toc_close(){
+        if((document.body.clientWidth) < 1132 ) {
+            toc.style.display = "none";
+            key = false;
+            for(let i=0; i < line.length; i++){
+                line[i].className='';
+            }
+        }
+    }
+    postMain[0].addEventListener('click', toc_close, false)
+
+    
+
+ </script>
+
+
+<!-- 
+<script src="/js/push-last-url.js"></script>
+  -->
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+
+<script src="/js/fancy-box.js"></script>
+ 
+            </div>
+        </div>
+    </body>
+    
+
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
+
+
+<script src="/js/highlight.min.js"></script>
+
+
+<script src="/js/highlightjs-line-numbers.js"></script>
+ 
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+
+<script>
+    function setImgAtt() {
+    let allIMG = document.getElementsByTagName('img');
+    for (let i = 0; i < allIMG.length; i++) {
+            allIMG[i].setAttribute('draggable', 'false');
+        }
+    }   
+    document.addEventListener('DOMContentLoaded', setImgAtt, false)
+
+    document.oncontextmenu = function (e) {
+        return false
+    }
+</script>
+</html>

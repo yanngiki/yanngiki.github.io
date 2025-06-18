@@ -1,0 +1,21 @@
+#portf_main {
+ max-width: 900px;
+}
+
+.grid-main {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    width: 100%;
+    overflow: hidden;
+    gap: 5px; /* 图片间的间距 */
+}
+
+.grid-item > img {
+    height: auto;
+    max-height: 800px; /*设置最大的图片高度*/
+    object-fit: cover; /* 确保图片保持良好的视觉效果 */
+    /* flex-shrink: 0; */
+    transition: all 0.3s ease;
+    border-radius: 0;
+}

@@ -1,0 +1,148 @@
+
+.pflo {
+    margin-top: 0px;
+}
+
+@media screen and (max-width: 600px) {
+   .pflo {margin-top: 0px;} 
+}
+
+.pflo-grid {
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); 
+    /* min270px */
+    grid-gap: 16px;
+    margin-top: 24px;
+}
+
+.pflo li {
+    position: relative;
+    z-index: 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 10px;
+    /* vertical-align:0; */
+}
+
+@keyframes tapAnimation {
+    100%{background-color: #f2f2f2;}    
+}
+.pflo li:hover {
+    animation: tapAnimation .4s cubic-bezier(0.31, 1, 0.34, 1) forwards;
+}
+
+.pflo li:hover .icon-link {
+    transform:scale(1.1);
+}
+
+@media screen and (max-width: 600px) {
+    .pflo li {width: 100%;}
+}
+
+.pflo .cont-img {
+    border-radius: 6px;
+    padding-bottom: 74%;
+    height: 0;
+    overflow: hidden;
+}
+.pflo  .bg-placeholder {
+    position: relative;
+    /* border-radius: 6px; */
+    padding-bottom: 74%;
+    height: 0;
+}
+
+.pflo  img{
+    width: 100%;
+    /* border-radius: 6px; */
+    display: block;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.pflo  img :hover {
+    opacity: .92;
+}
+
+.pflo .info {
+    position: relative;
+    width: 100%;
+    height: 48px;
+    padding: 4px 4px;
+    color: #333;
+    text-align: left;
+}
+.pflo .info .pflt-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 6px;
+}
+.pflo .info .icon-link {
+    /* width: 16px; */
+    /* height: 16px; */
+    font-size: 18px;
+    /* color: #121314; */
+    /* stroke-width: 2px; */
+    transition: all 0.4s ease;
+}
+.pflo .info h3 {
+    margin: 4px 0 0 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+@media screen and (max-width: 600px) {
+    .pflo .info h3 {font-size: 16px;}
+}
+
+.pflo .info p {
+    margin: 0 0 4px 0;
+    font-size: 13px;
+    color: var(--text-tertiary);
+}
+
+
+/* 设置默认图的背景色 */
+.figure-mmfbook {
+    background: #fd9c3e;
+}
+.figure-idata {
+    background: #ffffff;
+}
+.figure-datacenter {
+    background: #fafafa;
+}
+.figure-mmf {
+    background: #52c7fd;
+}
+.figure-mmfwebsite {
+    background: #66c7ef;
+}
+.figure-gongxiaomi {
+    background: #eee9dc;
+}
+.figure-mob {
+    background: #aee6fc;
+}
+.figure-mmf-guideline {
+    background: #f6f7f7;
+}
+.figure-mmfbook-pages {
+    background: #faf9f5;
+}
+.figure-mmf-categoryicon{
+    background: #fcfaf2;
+}
+.figure-mmf-emptystate {
+    background: #ebe8ec;
+}
+.figure-running {
+    background:#cee0f5;
+}
+.figure-motion-running {
+    background:#f8fbfc;
+}
+.figure-dazhanggui {
+    background: #2764c8;
+}

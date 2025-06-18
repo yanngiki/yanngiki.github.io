@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+    <link rel="alternate icon" type="image/ico" href="/images/favicon.ico">
+ 
+    <title>
+         公众号个性化菜单的模型抽象化和分析 ·  
+        YANNGIKI
+    </title>
+
+    <!-- CSS引用 -->
+    
+<link rel="stylesheet" href="/css/colors.css">
+
+    
+<link rel="stylesheet" href="/css/reset.css">
+
+    
+<link rel="stylesheet" href="/css/nav.css">
+
+    
+<link rel="stylesheet" href="/css/home.css">
+
+    
+<link rel="stylesheet" href="/css/postmd.css">
+
+    
+<link rel="stylesheet" href="/css/index.css">
+
+    
+<link rel="stylesheet" href="/css/about.css">
+
+    
+<link rel="stylesheet" href="/css/toc.css">
+
+    
+<link rel="stylesheet" href="/css/portf_detail.css">
+
+    
+    <!-- Fanbox图片预览引用 -->
+    <!-- <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+
+    <!-- 引用iconfont Symbol -->
+    <script src="//at.alicdn.com/t/font_1136188_oqq48jgc1lf.js"></script>
+
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+    <body>
+         <nav id="nav">
+    <div class="nav-content">
+        <a class="logo" href="/"><img class="navlogo" src="/images/logo.svg"></a>
+        <ul class="menu-group">
+            
+            <li class="menu-detail">
+                <a href="/" class="menu  ">首页</a>
+                <span class="splash">/</span>
+            </li>
+            
+            <li class="menu-detail">
+                <a href="/portfolio" class="menu  ">作品</a>
+                <span class="splash">/</span>
+            </li>
+            
+            <li class="menu-detail">
+                <a href="/about" class="menu  ">关于</a>
+                <span class="splash">/</span>
+            </li>
+            
+        </ul>
+    </div>
+</nav>
+
+        <div class="paper">
+            <div class="paper-main">   
+                <div class="post-main">
+    
+        <div class="post-main-title">
+            公众号个性化菜单的模型抽象化和分析
+        </div>
+        <div class="post-meta">
+            2019-10-18
+        </div>
+    
+    
+    <div class="post-md" id="post-detail">
+        <h1 id="背景概述"><a href="#背景概述" class="headerlink" title="背景概述"></a>背景概述</h1><p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/personalize_menu/banner.png" alt="banner"></p>
+<p>微信公众号平台提供了<strong>个性化菜单</strong>的接口，第三方开发者可以直接调取使用，可以根据关注者的标签、性别、地区、系统语言等条件自动匹配显示不同的菜单，以达到让公众号上不同的用户群体看到不一样的自定义菜单，实现<strong>精准的个性化营销</strong>。比如我是一位男生用户，显示的菜单与女生用户的会不一样。</p>
+<p>我们的产品同学想要在司内产品接入这项能力，在进行UI设计时，发现产品同学提供的原型设计思路（下面的方案A）在可用性和使用场景上存在一些欠妥的地方，大家双方对个性化菜单上也产生了不一样的理解，于是重新换了种思路设计了方案B与产品同学再沟通。</p>
+<h1 id="方案分歧与验证"><a href="#方案分歧与验证" class="headerlink" title="方案分歧与验证"></a>方案分歧与验证</h1><p>下面是基于两种个性化菜单模型展开分析，虽然在UI设计层面上体现出的差异很少，但在功能的设计思路、数据结构都是不一样的思路。</p>
+<p>方案A存在好几个问题，也正是这几个问题决定了这个方案不太可能继续往下走，主要是由于功能设计的拓展性差和对实际使用场景考虑的不周到。下面通过对两个方案的模型进行分析来两个方案的差异和优缺点。</p>
+<h2 id="方案A"><a href="#方案A" class="headerlink" title="方案A"></a>方案A</h2><p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/personalize_menu/modal1.png" alt="modal1"></p>
+<table>
+<thead>
+<tr>
+<th><span style="display:inline-block; width:100px">分析维度</span></th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>模型结构</strong></td>
+<td align="left"><strong>个性化菜单</strong>是一项独立的<strong>主菜单</strong>（如图中菜单3、菜单2…所示）每项个性化菜单都设定匹配规则「<strong>matchrule</strong>」，匹配替换的时候是以默认菜单为基础，从左起第一项主菜单开始逐项替换。</td>
+</tr>
+<tr>
+<td><strong>替换规则</strong></td>
+<td align="left">1. 将个性化菜单按最近创建时间排序排序； <br />2. 检测个性化菜单中的「菜单3」的 「matchrule」 是否与用户的相关属性或标签匹配； <br />3. 匹配和替换菜单。如果 「matchrule」 符合，即把默认菜单中的第一项菜单A替换成「菜单3」；如果不符合，再检测「菜单2」的匹配规则是否符合用户，符合即替换，不符合即继续检测下一项，直到成功匹配并替换默认菜单的第一项；<br />4. 默认菜单中的第一项菜单被匹配替换成功后，按照上面的规则继续匹配和替换默认菜单中的第二项菜单； <br />5. 直至把默认菜单的所有项都替换完成，即终止剩余个性化菜单的匹配替换；如果剩余的个性化菜单都与用户不匹配，也终止个性化菜单的匹配替换</td>
+</tr>
+<tr>
+<td><strong>问题</strong></td>
+<td align="left">1.替换顺序每次都必须要遵循从左到右依次替换，这种规则容易出现被替换的主菜单并不是业务真实想替换的那一项，这种替换方式较难符合实际场景的使用预期；<br /> 2.最小替换单元是一项主菜单，公众号的关注用户每次进入都要检测匹配，容易给服务器增加不必要的访问压力； <br />3.该模型无法设定菜单的个数，系统设置的默认菜单有几项主菜单，个性化菜单最多就有几项</td>
+</tr>
+</tbody></table>
+<p>经过分析，方案A中个性化菜单的替换逻辑过于局限且不符合实际的使用场景，比如无法控制个性化菜单上的菜单数量，也无法控制具体替换哪一项菜单。</p>
+<h2 id="方案B"><a href="#方案B" class="headerlink" title="方案B"></a>方案B</h2><p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/personalize_menu/modal2.png" alt="modal2"></p>
+<table>
+<thead>
+<tr>
+<th><span style="display:inline-block; width:120px">分析维度</span></th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>模型结构</strong></td>
+<td align="left"><strong>个性化菜单</strong>是一整个<strong>菜单按钮组</strong>（如图中m1、m2、m3…mn所示），每一组个性化菜单里的菜单按钮（如菜单a1）可以设置子菜单，与默认菜单一样。</td>
+</tr>
+<tr>
+<td><strong>替换规则</strong></td>
+<td align="left">1. 个性化菜单按最近创建时间排序，最新创建的排在最前面，优先匹配；<br />2. 检测第一组个性化菜单中的「matchrule」与用户的相关属性或标签是否匹配，如果匹配则替换掉原来的默认菜单，剩余的个性化菜单不再匹配； <br />3. 如果不符合，再检测第二组，符合即替换，如此循环到最后一组。</td>
+</tr>
+<tr>
+<td><strong>优势</strong></td>
+<td align="left">1. 以一整个菜单组为最小单元进行匹配和替换，在软件设计和处理上可以把个性花菜单看成是带有匹配条件的菜单按钮组，结构与默认菜单一致； <br />2. 能够避免方案A中局限且不合实际使用场景的替换逻辑，可以完全控制菜单项的数量、内容、和排放顺序，做到真正意义上的个性化。</td>
+</tr>
+</tbody></table>
+<h2 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h2><p>为了验证方案B的设计思路是否可行和完整性，进行了多次模拟个性化菜单相关的增删操作和设计相关的关键页面。同时为了说服负责这项功能的产品同学，也查看了微信公众号平台开发文档的相关内容，从代码示例中即验证了这种猜想。</p>
+<p>创建个性化菜单的示例代码片段如下所示，有两个主要参数「Button」和「sub_button」，分别对应的是一级菜单和子级菜单。从代码示例中可以看出，个性化菜单与默认菜单的基本结构实际上是一样的，唯一的不同点是个性化菜单增加了匹配规则(Matchrule)，符合规则的订阅者会展示个性化菜单。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>button</td>
+<td>一级菜单数组，个数为1～3个</td>
+<td>今日歌曲</td>
+</tr>
+<tr>
+<td>sub_button</td>
+<td>二级菜单数组，个数为1～5个</td>
+<td>搜索、wxa、赞我一下</td>
+</tr>
+<tr>
+<td>matchrule</td>
+<td>菜单数组的匹配规则</td>
+<td></td>
+</tr>
+</tbody></table>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token punctuation">&#123;</span>
+    <span class="token string-property property">"button"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">&#123;</span>
+            <span class="token string-property property">"type"</span><span class="token operator">:</span> <span class="token string">"click"</span><span class="token punctuation">,</span> 
+            <span class="token string-property property">"name"</span><span class="token operator">:</span> <span class="token string">"今日歌曲"</span><span class="token punctuation">,</span> 
+            <span class="token string-property property">"key"</span><span class="token operator">:</span> <span class="token string">"V1001_TODAY_MUSIC"</span>
+        <span class="token punctuation">&#125;</span><span class="token punctuation">,</span> 
+        <span class="token punctuation">&#123;</span>
+            <span class="token string-property property">"name"</span><span class="token operator">:</span> <span class="token string">"菜单"</span><span class="token punctuation">,</span> 
+            <span class="token string-property property">"sub_button"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                <span class="token punctuation">&#123;</span>
+                    <span class="token string-property property">"type"</span><span class="token operator">:</span> <span class="token string">"view"</span><span class="token punctuation">,</span> 
+                    <span class="token string-property property">"name"</span><span class="token operator">:</span> <span class="token string">"搜索"</span><span class="token punctuation">,</span> 
+                    <span class="token string-property property">"url"</span><span class="token operator">:</span> <span class="token string">"http://www.soso.com/"</span>
+                <span class="token punctuation">&#125;</span><span class="token punctuation">,</span> 
+                <span class="token punctuation">&#123;</span>
+                    <span class="token string-property property">"type"</span><span class="token operator">:</span> <span class="token string">"miniprogram"</span><span class="token punctuation">,</span> 
+                    <span class="token string-property property">"name"</span><span class="token operator">:</span> <span class="token string">"wxa"</span><span class="token punctuation">,</span> 
+                    <span class="token string-property property">"url"</span><span class="token operator">:</span> <span class="token string">"http://mp.weixin.qq.com"</span><span class="token punctuation">,</span> 
+                    <span class="token string-property property">"appid"</span><span class="token operator">:</span> <span class="token string">"wx286b93c14bbf93aa"</span><span class="token punctuation">,</span> 
+                    <span class="token string-property property">"pagepath"</span><span class="token operator">:</span> <span class="token string">"pages/lunar/index"</span>
+                <span class="token punctuation">&#125;</span><span class="token punctuation">,</span> 
+                <span class="token punctuation">&#123;</span>
+                    <span class="token string-property property">"type"</span><span class="token operator">:</span> <span class="token string">"click"</span><span class="token punctuation">,</span> 
+                    <span class="token string-property property">"name"</span><span class="token operator">:</span> <span class="token string">"赞一下我们"</span><span class="token punctuation">,</span> 
+                    <span class="token string-property property">"key"</span><span class="token operator">:</span> <span class="token string">"V1001_GOOD"</span>
+                <span class="token punctuation">&#125;</span>
+            <span class="token punctuation">]</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span> 
+    <span class="token string-property property">"matchrule"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token string-property property">"tag_id"</span><span class="token operator">:</span> <span class="token string">"2"</span><span class="token punctuation">,</span> 
+    <span class="token string-property property">"sex"</span><span class="token operator">:</span> <span class="token string">"1"</span><span class="token punctuation">,</span> 
+    <span class="token string-property property">"country"</span><span class="token operator">:</span> <span class="token string">"中国"</span><span class="token punctuation">,</span> 
+    <span class="token string-property property">"province"</span><span class="token operator">:</span> <span class="token string">"广东"</span><span class="token punctuation">,</span> 
+    <span class="token string-property property">"city"</span><span class="token operator">:</span> <span class="token string">"广州"</span><span class="token punctuation">,</span> 
+    <span class="token string-property property">"client_platform_type"</span><span class="token operator">:</span> <span class="token string">"2"</span><span class="token punctuation">,</span> 
+    <span class="token string-property property">"language"</span><span class="token operator">:</span> <span class="token string">"zh_CN"</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+<h1 id="思考和启发"><a href="#思考和启发" class="headerlink" title="思考和启发"></a>思考和启发</h1><blockquote>
+<p> <strong>🙋🏻 在产品设计过程中，上面这类问题的发生不是偶然，主要原因是对功能的应用场景考虑不到位，以致在方案设计上显得比较局限。</strong></p>
+</blockquote>
+<p>那设计上如何避免这类问题？我一般使用下面的方法：</p>
+<h2 id="1-抽象化功能，总结规律和模式"><a href="#1-抽象化功能，总结规律和模式" class="headerlink" title="1.抽象化功能，总结规律和模式"></a>1.抽象化功能，总结规律和模式</h2><p>当我们在接受需求信息的时候，我们的大脑已经在开始有意识地组织需求信息，寻找规律，搭建业务结构架和流程模型 — 在大脑里形成一定的概念认知。如果只是一味地只是接受信息，不做任何的加工处理，信息最后也只是成为一个简单的记忆符号，很难再有更多的价值。</p>
+<p>特别是我们进行功能设计的时候，一边吸收需求，一边把具体的需求抽象化成某些普适的规律和模式，再把它应用到我们的设计中。</p>
+<p>举个例子，偶数 <code>[2, 4, 6] </code>之于数学公式 <code>2n</code>，<code>[2, 4, 6]</code>是很具体的偶数，但<code>2n</code>能代表所有偶数，有着普适的规律和适用性，可以用来求出其它的偶数。这就是抽象化和模型的魅力和好处。</p>
+<p>如果以后再遇到类似的替换覆盖的操作时，是直接在菜单内部单个元素替换还是采取整体替换的方案，这时候就可以想到我们这次个性化菜单的的两种模型。</p>
+<p><strong>2.抽象化在产品功能设计中的作用：</strong></p>
+<ul>
+<li>能更多地思考顶层业务，主干流程，避免过渡地思考细节，过渡地考虑细节经常带来的问题是主次不分；</li>
+<li>把现象或问题总结成规律和模式，遇到类似的问题可以根据情况适当套用；</li>
+<li>跳出已有的思维模式，切换其它角度看问题，容易寻找创新点和改进点；</li>
+</ul>
+<h2 id="3-优先业务数据建模"><a href="#3-优先业务数据建模" class="headerlink" title="3.优先业务数据建模"></a>3.优先业务数据建模</h2><p>数据建模是指根据业务特点，总结归纳和设计业务数据对象之间关系的过程。虽然数据建模通常用在数据库设计里，但它实质上也是一个抽象化的过程，所以在产品设计过程中可以把它作为抽象化业务、归纳和设计规则的一种方法。</p>
+<p>在B端的产品设计里，有很多的功能需要业务数据建模，比如账号体系、权限(RBAC相关的模型)，还有上面提到的公众号个性化菜单。在进入产品细节方案设计的时候，我们都会经常忽略基本的业务数据建模，直接着手每个页面的具体功能和交互设计，因为基础的底层数据关系没有梳理清楚，导至最后陷入了痛苦的混乱逻辑当中，我们的方案A就是典行没有做好数据建模。理想的做法是，<strong>先进行业务数据建模，然后再梳理流程和确认页面如何流转，最后才是每个页面的细节设计</strong>。</p>
+<p>做数据建模还有一个好处是<strong>团队成员对业务功能的理解比较容易达成一致共识</strong>。当我们在设计或者描述一个业务功能的时候，不同的人大脑里对它的理解经常会不一样，有时甚至是截然相反的想法。出现这一点的原因是我们每个人大脑对业务功能的解析不一样，通过借助一些建模工具，比如<a target="_blank" rel="noopener" href="https://www.visual-paradigm.com/cn/guide/uml-unified-modeling-language/what-is-uml/">建模语言UML</a>、<a target="_blank" rel="noopener" href="https://www.visual-paradigm.com/cn/guide/data-modeling/what-is-entity-relationship-diagram/">ER图</a>，可以让自己梳理清晰流程、对象的关系和状态。模型是非常客观的，其他人在理解上不会容易出现理解偏移。</p>
+<p>下面两个类图分别是方案A和方案B中默认菜单与个性化菜单之间的关系模型。我们也能通过这些模型去分析方案自身的做给缺点，也有助于其它对接人员比如开发人员查看和理解。</p>
+<div style="display:flex; flex-direction:row";>
+<img style="width: 50%" src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/personalize_menu/方案A.png" />
+<img style="width: 50%" src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/personalize_menu/方案B.png" />
+</div>
+
+<!-- ![方案A](https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/personalize_menu/方案A.png)
+
+![方案B](https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/personalize_menu/方案B.png) -->
+
+
+<h2 id="演推和预判"><a href="#演推和预判" class="headerlink" title="演推和预判"></a>演推和预判</h2><p>演推和预判是设计师自己检验设计方案、发现问题的一种好方法。下面是一些常用的演推思考维度：</p>
+<ul>
+<li><p>使用场景是否能满足</p>
+</li>
+<li><p>流程是否完整闭环</p>
+</li>
+<li><p>交互是否清晰高效</p>
+</li>
+<li><p>用户在使用的时候可能会发生哪些问题</p>
+</li>
+</ul>
+<p>在设计方案的过程中，带着这些维度反复在大脑中串连和思考各个场景环节，思考设计这么做会有哪些优缺点，还有没有更好的交互，是否还有其它的应用场景，能不能找到更简单的逻辑去实现同样的功能等等。通过这种方法往往可以发现更多问题，反推着换思路重新思考已有的设计方案。</p>
+
+    </div>
+
+    <footer class="f-cf">
+        
+        <a href="/posts/64854923/" class="link f-fl">
+          <span class="arrow">Prev:</span>
+          深浅模式设计
+        </a>
+      
+
+      
+        <a href="/posts/c7c61052/" class="link f-fr">
+           <span class="arrow">Next:</span>
+          设计之于项目的价值
+        </a>
+      
+    </footer>
+</div>
+
+<!-- 目录入口图标 -->
+<div class="mini_toc">
+  <div class="toc_icn">
+    <span></span>
+    <span></span> 
+    <span></span>
+    <span></span>
+  </div>
+</div> 
+
+
+
+
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%83%8C%E6%99%AF%E6%A6%82%E8%BF%B0"><span class="toc-text">背景概述</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%B9%E6%A1%88%E5%88%86%E6%AD%A7%E4%B8%8E%E9%AA%8C%E8%AF%81"><span class="toc-text">方案分歧与验证</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B9%E6%A1%88A"><span class="toc-text">方案A</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B9%E6%A1%88B"><span class="toc-text">方案B</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AA%8C%E8%AF%81"><span class="toc-text">验证</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%9D%E8%80%83%E5%92%8C%E5%90%AF%E5%8F%91"><span class="toc-text">思考和启发</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%8A%BD%E8%B1%A1%E5%8C%96%E5%8A%9F%E8%83%BD%EF%BC%8C%E6%80%BB%E7%BB%93%E8%A7%84%E5%BE%8B%E5%92%8C%E6%A8%A1%E5%BC%8F"><span class="toc-text">1.抽象化功能，总结规律和模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E4%BC%98%E5%85%88%E4%B8%9A%E5%8A%A1%E6%95%B0%E6%8D%AE%E5%BB%BA%E6%A8%A1"><span class="toc-text">3.优先业务数据建模</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%BC%94%E6%8E%A8%E5%92%8C%E9%A2%84%E5%88%A4"><span class="toc-text">演推和预判</span></a></li></ol></li></ol>
+    </div>
+
+
+<script type="text/javascript">
+    var triggle = document.getElementsByClassName('mini_toc');
+    var toc = document.getElementById('toc');
+    var line = document.querySelectorAll('.toc_icn span');
+    var postMain = document.getElementsByClassName('post-main');
+    
+    var key = false;  // 映射toc的显示和隐藏，并作为真否判断条件，false == toc隐藏
+
+    //控制toc的出现或隐藏
+    function switch_toc() {
+        if(!key) {
+            toc.style.display = "block";
+            key = true;
+        }else {
+            toc.style.display = "none";
+            key = false;
+        } 
+    }
+
+    //目录icn的状态，每点击一次就切换，默认为css设置的状态
+    function toc_icn_state() {
+        for(let i=0; i < line.length; i++){
+            line[i].classList.toggle('op');
+        }
+    }
+
+    triggle[0].addEventListener('click', switch_toc, false);
+
+    triggle[0].addEventListener('click', toc_icn_state, false);
+
+    // >1132px,处理窗口改变大小时，强制让toc出现； 开关变为x，className控制开关隐藏
+    function toc_show(){
+        if((document.body.clientWidth+15) > 1132) {
+            toc.style.display = "block";
+            key = true;
+            for(let i=0; i < line.length; i++){
+                line[i].className='op';
+            }
+        }
+    }
+    window.addEventListener('resize', toc_show, false)
+
+
+    // <1132px toc出现后，点击外围区域可关闭
+    function toc_close(){
+        if((document.body.clientWidth) < 1132 ) {
+            toc.style.display = "none";
+            key = false;
+            for(let i=0; i < line.length; i++){
+                line[i].className='';
+            }
+        }
+    }
+    postMain[0].addEventListener('click', toc_close, false)
+
+    
+
+ </script>
+
+
+<!-- 
+<script src="/js/push-last-url.js"></script>
+  -->
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+
+<script src="/js/fancy-box.js"></script>
+ 
+            </div>
+        </div>
+    </body>
+    
+
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
+
+
+<script src="/js/highlight.min.js"></script>
+
+
+<script src="/js/highlightjs-line-numbers.js"></script>
+ 
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+
+<script>
+    function setImgAtt() {
+    let allIMG = document.getElementsByTagName('img');
+    for (let i = 0; i < allIMG.length; i++) {
+            allIMG[i].setAttribute('draggable', 'false');
+        }
+    }   
+    document.addEventListener('DOMContentLoaded', setImgAtt, false)
+
+    document.oncontextmenu = function (e) {
+        return false
+    }
+</script>
+</html>

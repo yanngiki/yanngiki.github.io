@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+    <link rel="alternate icon" type="image/ico" href="/images/favicon.ico">
+ 
+    <title>
+         表单优化 ·  
+        YANNGIKI
+    </title>
+
+    <!-- CSS引用 -->
+    
+<link rel="stylesheet" href="/css/colors.css">
+
+    
+<link rel="stylesheet" href="/css/reset.css">
+
+    
+<link rel="stylesheet" href="/css/nav.css">
+
+    
+<link rel="stylesheet" href="/css/home.css">
+
+    
+<link rel="stylesheet" href="/css/postmd.css">
+
+    
+<link rel="stylesheet" href="/css/index.css">
+
+    
+<link rel="stylesheet" href="/css/about.css">
+
+    
+<link rel="stylesheet" href="/css/toc.css">
+
+    
+<link rel="stylesheet" href="/css/portf_detail.css">
+
+    
+    <!-- Fanbox图片预览引用 -->
+    <!-- <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+
+    <!-- 引用iconfont Symbol -->
+    <script src="//at.alicdn.com/t/font_1136188_oqq48jgc1lf.js"></script>
+
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+    <body>
+         <nav id="nav">
+    <div class="nav-content">
+        <a class="logo" href="/"><img class="navlogo" src="/images/logo.svg"></a>
+        <ul class="menu-group">
+            
+            <li class="menu-detail">
+                <a href="/" class="menu  ">首页</a>
+                <span class="splash">/</span>
+            </li>
+            
+            <li class="menu-detail">
+                <a href="/portfolio" class="menu  ">作品</a>
+                <span class="splash">/</span>
+            </li>
+            
+            <li class="menu-detail">
+                <a href="/about" class="menu  ">关于</a>
+                <span class="splash">/</span>
+            </li>
+            
+        </ul>
+    </div>
+</nav>
+
+        <div class="paper">
+            <div class="paper-main">   
+                <div class="post-main">
+    
+        <div class="post-main-title">
+            表单优化
+        </div>
+        <div class="post-meta">
+            2019-05-22
+        </div>
+    
+    
+    <div class="post-md" id="post-detail">
+        <h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>表单作为人与计算机信息交互的一种主要载体，表单的易读性决定了用户对信息的理解效率和操作效率。设计一个好的表单信息组织可以提升用户对信息的处理体验。</p>
+<p><strong>在UX走查时发现的痛点问题：</strong></p>
+<ol>
+<li><strong>手机号&#x2F;电话字段限制过严</strong>，格式校验过于僵化；</li>
+<li><strong>相似属性的信息分散</strong>，未按逻辑分组展示；</li>
+<li><strong>文案阅读性混乱</strong>，长短差异大导致视觉跳跃；</li>
+<li><strong>校验提示不明确</strong>，未能明确告诉使用者如何解决造成误解；</li>
+<li><strong>空间布局拥挤</strong>，表单左右区域空间留白不足，视觉压迫感强。</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/form_optimization/page_origin.png" alt="page_origin"></p>
+<h1 id="改进内容"><a href="#改进内容" class="headerlink" title="改进内容"></a>改进内容</h1><h2 id="一、联系方式"><a href="#一、联系方式" class="headerlink" title="一、联系方式"></a>一、联系方式</h2><p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/form_optimization/contact_origin.png" alt="contact_origin"></p>
+<p><strong>1.原方案问题分析</strong></p>
+<p><strong>原产品的字段定义:</strong></p>
+<ul>
+<li><strong>Mobile Number</strong> ：仅限手机号码；</li>
+<li><strong>Secondary Number</strong> ：填其它联系号码，包括手机和固话</li>
+</ul>
+<p><strong>核心问题：</strong></p>
+<ul>
+<li><p><strong>填写负担</strong>：提供两个联系方式容易让用户产生心理负担，如是否都要填写。</p>
+</li>
+<li><p><strong>号码类型难判断</strong>：比如加拿大，手机和固话都是10位数，类似格式647-348-XXXX，系统无法判断。</p>
+</li>
+<li><p><strong>隐私风险</strong>：强制要求手机必填可能引发用户抵触，国外对个人隐私比较注重，手机号并不是所有人都愿意提供给第三方的，海外市场尤其注重隐私。</p>
+</li>
+</ul>
+<p><strong>分析必要性</strong>：<strong>为什么要填写联系号码？</strong></p>
+<ul>
+<li><p><strong>店铺用途</strong>：确认预约、顾客回访、优惠通知等。</p>
+</li>
+<li><p><strong>时效性更高</strong>：邮件同样是可以达到目的（国外有使用邮件交流的习惯），但相比打电话联系就缺乏时效性和触达率。</p>
+</li>
+</ul>
+<p>所以联系号码有它的存在意义，但并不是必要的，再加上基于隐私原因，顾客的个人手机不应该是必须要填写。</p>
+<p><strong>2. 优化方案</strong></p>
+<p>根据这些，把<strong>Mobile Number</strong> 和<strong>Secondary Number</strong> 是可以统一整合成一项联系号码的录入，分为<strong>主要号码</strong>和<strong>次要号码</strong>，不区分手机与固话，减少字段的概念。如下图</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/form_optimization/contact_imp.png" alt="contact_imp"></p>
+<h2 id="二、字段关联性与文案简化"><a href="#二、字段关联性与文案简化" class="headerlink" title="二、字段关联性与文案简化"></a>二、字段关联性与文案简化</h2><p><strong>1. 原结构问题</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/form_optimization/info_struct_origin.png" alt="info_struct_origin"></p>
+<ul>
+<li><p><strong>字段没有属性按属性分类组合：</strong>每一项信息本身是有属性分类的，<strong>Name</strong>和<strong>Birthday</strong>属于人的自然属性，<strong>联系号码</strong>和<strong>邮箱</strong>属于业务属性，所以在信息展示时理应换分类进行组织。</p>
+</li>
+<li><p><strong>文案冗余：</strong>如「Email Address」可简化为「Email」；</p>
+</li>
+<li><p><strong>空间拥挤：</strong>表单整体左右视觉可于拥挤，适当优化间距，提高信息的阅读性</p>
+</li>
+</ul>
+<p><strong>2. 优化方案</strong></p>
+<ul>
+<li>信息分组：将联系方式聚合展示；</li>
+<li>文案简化：字段名称修改为「Phone」「Email」「Comment」等；</li>
+<li>间距优化：增加字段上下间距、左右留白扩大。</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/form_optimization/info_struct_imp.png" alt="info_struct_imp"></p>
+<h2 id="三、-校验提示"><a href="#三、-校验提示" class="headerlink" title="三、 校验提示"></a>三、 校验提示</h2><p><strong>1. 原方案问题分析</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/form_optimization/verification_origin.png" alt="verification"></p>
+<p><strong>核心矛盾点：</strong></p>
+<blockquote>
+<p>系统要求「姓名 &#x2F; 电话 &#x2F; 邮箱」至少填一项作为顾客唯一标识，但校验提示仅针对「Phone Number」，容易误导用户认为电话为必填项</p>
+</blockquote>
+<p><strong>2. 优化方案</strong></p>
+<p>将提示范围扩展至所有标识字段，文案改为：「Please at least enter a Name、Phone or Email」。</p>
+<p>下图是在<strong>校验提醒</strong>的方式上做的优化</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/form_optimization/verification_imp.png" alt="verification_imp"></p>
+<h2 id="四、视觉体验优化"><a href="#四、视觉体验优化" class="headerlink" title="四、视觉体验优化"></a>四、视觉体验优化</h2><p>视觉上有下面两点调整，大大提升表单了整体的阅读舒适性，减轻拥挤的表单内容带来的压迫感。</p>
+<ul>
+<li><p><strong>表单间距</strong></p>
+</li>
+<li><p><strong>弹窗留白</strong>：弹窗左右两边的Padding留白空间</p>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/form_optimization/space.png" alt="表单区域"></p>
+<h1 id="优化前后对比"><a href="#优化前后对比" class="headerlink" title="优化前后对比"></a>优化前后对比</h1><blockquote>
+<p>有时候细节上的改变在肉眼上会比较难发现，但使用起来的时候能让人察觉和体验到差别。</p>
+<p>这个弹窗改动前后的体验差别，在它呈现在用户面前的那一瞬间就能感觉上的不一样，而像这种小小的优化改动虽然不会给产品带来特别大的价值，但这种小优化累积起来后，却能影响着产品的整体使用体验感觉，是粗糙的还是能让人舒服的，用户在每一次浏览、点击的时候应该能有所感受。</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/form_optimization/lastCont.png" alt="before after"></p>
+
+    </div>
+
+    <footer class="f-cf">
+        
+        <a href="/posts/79ed9cfc/" class="link f-fl">
+          <span class="arrow">Prev:</span>
+          移动收银
+        </a>
+      
+
+      
+    </footer>
+</div>
+
+<!-- 目录入口图标 -->
+<div class="mini_toc">
+  <div class="toc_icn">
+    <span></span>
+    <span></span> 
+    <span></span>
+    <span></span>
+  </div>
+</div> 
+
+
+
+
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%97%AE%E9%A2%98"><span class="toc-text">问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%94%B9%E8%BF%9B%E5%86%85%E5%AE%B9"><span class="toc-text">改进内容</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F"><span class="toc-text">一、联系方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%AD%97%E6%AE%B5%E5%85%B3%E8%81%94%E6%80%A7%E4%B8%8E%E6%96%87%E6%A1%88%E7%AE%80%E5%8C%96"><span class="toc-text">二、字段关联性与文案简化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81-%E6%A0%A1%E9%AA%8C%E6%8F%90%E7%A4%BA"><span class="toc-text">三、 校验提示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E8%A7%86%E8%A7%89%E4%BD%93%E9%AA%8C%E4%BC%98%E5%8C%96"><span class="toc-text">四、视觉体验优化</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BC%98%E5%8C%96%E5%89%8D%E5%90%8E%E5%AF%B9%E6%AF%94"><span class="toc-text">优化前后对比</span></a></li></ol>
+    </div>
+
+
+<script type="text/javascript">
+    var triggle = document.getElementsByClassName('mini_toc');
+    var toc = document.getElementById('toc');
+    var line = document.querySelectorAll('.toc_icn span');
+    var postMain = document.getElementsByClassName('post-main');
+    
+    var key = false;  // 映射toc的显示和隐藏，并作为真否判断条件，false == toc隐藏
+
+    //控制toc的出现或隐藏
+    function switch_toc() {
+        if(!key) {
+            toc.style.display = "block";
+            key = true;
+        }else {
+            toc.style.display = "none";
+            key = false;
+        } 
+    }
+
+    //目录icn的状态，每点击一次就切换，默认为css设置的状态
+    function toc_icn_state() {
+        for(let i=0; i < line.length; i++){
+            line[i].classList.toggle('op');
+        }
+    }
+
+    triggle[0].addEventListener('click', switch_toc, false);
+
+    triggle[0].addEventListener('click', toc_icn_state, false);
+
+    // >1132px,处理窗口改变大小时，强制让toc出现； 开关变为x，className控制开关隐藏
+    function toc_show(){
+        if((document.body.clientWidth+15) > 1132) {
+            toc.style.display = "block";
+            key = true;
+            for(let i=0; i < line.length; i++){
+                line[i].className='op';
+            }
+        }
+    }
+    window.addEventListener('resize', toc_show, false)
+
+
+    // <1132px toc出现后，点击外围区域可关闭
+    function toc_close(){
+        if((document.body.clientWidth) < 1132 ) {
+            toc.style.display = "none";
+            key = false;
+            for(let i=0; i < line.length; i++){
+                line[i].className='';
+            }
+        }
+    }
+    postMain[0].addEventListener('click', toc_close, false)
+
+    
+
+ </script>
+
+
+<!-- 
+<script src="/js/push-last-url.js"></script>
+  -->
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+
+<script src="/js/fancy-box.js"></script>
+ 
+            </div>
+        </div>
+    </body>
+    
+
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
+
+
+<script src="/js/highlight.min.js"></script>
+
+
+<script src="/js/highlightjs-line-numbers.js"></script>
+ 
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+
+<script>
+    function setImgAtt() {
+    let allIMG = document.getElementsByTagName('img');
+    for (let i = 0; i < allIMG.length; i++) {
+            allIMG[i].setAttribute('draggable', 'false');
+        }
+    }   
+    document.addEventListener('DOMContentLoaded', setImgAtt, false)
+
+    document.oncontextmenu = function (e) {
+        return false
+    }
+</script>
+</html>

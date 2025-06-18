@@ -1,0 +1,28 @@
+:root
+{
+    --brand-color: #5694f1;
+    --ink-color: #3c3c3c;
+    --white-color: #ffffff;
+    --text-primary: #1f2020;
+    --text-secondary: #464646;  
+    --text-tertiary: #6c6c6c;
+    --text-quaternary: #aaadb1;
+    --border-light: #f2f4f7;
+    --border-regular: #eef1f3;
+    --border-tertiary: #dddddd;
+    --selection-color: #1d1d1d;
+
+    --table-hover: #f8f8f8;
+    --font-color-toc: #81808b;
+    --font-size-regular: 0.9375rem;
+
+    --font-color-0: #04077e;
+    --font-color-1: #000;
+    --font-color-2: #666;
+    --font-color-3: #aaa;
+    --bg-color-1: #eee;
+    --line-1: #ccc;
+    --line-2: #ddd
+    
+
+}

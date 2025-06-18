@@ -1,0 +1,123 @@
+
+.about {
+  background-color: var(--white-color);
+  min-height: 300px;
+  padding: 0;
+  line-height: 30px;
+}
+  
+.about a {
+  color: var(--brand-color);
+}
+
+.about .main-title {
+  text-align: left;
+  margin: 6px 0;
+  font-size: 24px;
+  font-weight: 500;
+  color: #46515C;
+}
+
+.about .table-info {
+  width: 100%;
+  max-width: 1024px;
+  word-wrap: break-word;
+  word-break: break-all;
+  margin: 18px 0 0 0;
+  border-bottom: 1px solid var(--border-light);
+}
+.about .table-info :is(th, tr, td) {
+  border-bottom: none;
+  border-right: none;
+  border-left: none;
+}
+.about>.table-info tr:hover, td:hover {
+  background: none;
+}
+.about .table-info :is(th,td) {
+  text-align: left;
+  border-top: 1px solid var(--border-light);
+  padding: 24px 14px 24px 0 ;
+  color: var(--text-secondary);
+}
+/* .about .table-info td {
+  text-align: left;
+  border-top: 1px solid var(--border-light);
+  padding: 24px 14px 24px 0 ;
+  color: #46515C;
+} */
+.about .table-info th {
+  font-size: 15px;
+  font-weight: 400;
+  width: 35%;
+}
+  
+.about .span-title {
+  display: block;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin: 0;
+}
+.about .span-company {
+  display: block;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 28px;
+  margin: 0 0 8px 0;
+}
+.about .span-desc {
+  display: block;
+  font-size: 14px;
+  color: var(--text-teritiary);
+  line-height: 28px;
+}
+.about .span-line {
+  color: var(--border-regular);
+}
+.about .span-desc-multiline {
+  display: block;
+  font-size: 14px;
+  color: var(--text-tertiary);
+  line-height: 28px;
+  margin-bottom: 16px;
+}
+  
+.about .span-desc li, .span-desc-multiline li {
+  list-style-type: none;
+  padding-left: 12px;
+  margin-bottom: 4px;
+  position: relative;
+}
+
+.about .span-desc li::before {
+  content: '';
+  position: absolute;
+  box-sizing: border-box;
+  left: 0;
+  top: 15px;
+  margin-top: -3px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;;
+  background-color: #c7c7c7;
+}
+
+.about .span-desc-multiline li::before {
+  content: '';
+  position: absolute;
+  box-sizing: border-box;
+  left: 0;
+  top: 15px;
+  margin-top: -3px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;;
+  background-color: #c7c7c7;
+}
+
+@media screen and (max-width:600px) {
+  .about .table-info th {
+    width: 25%;
+  }
+}

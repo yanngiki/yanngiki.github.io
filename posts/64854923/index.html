@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+    <link rel="alternate icon" type="image/ico" href="/images/favicon.ico">
+ 
+    <title>
+         深浅模式设计 ·  
+        YANNGIKI
+    </title>
+
+    <!-- CSS引用 -->
+    
+<link rel="stylesheet" href="/css/colors.css">
+
+    
+<link rel="stylesheet" href="/css/reset.css">
+
+    
+<link rel="stylesheet" href="/css/nav.css">
+
+    
+<link rel="stylesheet" href="/css/home.css">
+
+    
+<link rel="stylesheet" href="/css/postmd.css">
+
+    
+<link rel="stylesheet" href="/css/index.css">
+
+    
+<link rel="stylesheet" href="/css/about.css">
+
+    
+<link rel="stylesheet" href="/css/toc.css">
+
+    
+<link rel="stylesheet" href="/css/portf_detail.css">
+
+    
+    <!-- Fanbox图片预览引用 -->
+    <!-- <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+
+    <!-- 引用iconfont Symbol -->
+    <script src="//at.alicdn.com/t/font_1136188_oqq48jgc1lf.js"></script>
+
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+    <body>
+         <nav id="nav">
+    <div class="nav-content">
+        <a class="logo" href="/"><img class="navlogo" src="/images/logo.svg"></a>
+        <ul class="menu-group">
+            
+            <li class="menu-detail">
+                <a href="/" class="menu  ">首页</a>
+                <span class="splash">/</span>
+            </li>
+            
+            <li class="menu-detail">
+                <a href="/portfolio" class="menu  ">作品</a>
+                <span class="splash">/</span>
+            </li>
+            
+            <li class="menu-detail">
+                <a href="/about" class="menu  ">关于</a>
+                <span class="splash">/</span>
+            </li>
+            
+        </ul>
+    </div>
+</nav>
+
+        <div class="paper">
+            <div class="paper-main">   
+                <div class="post-main">
+    
+        <div class="post-main-title">
+            深浅模式设计
+        </div>
+        <div class="post-meta">
+            2019-12-04
+        </div>
+    
+    
+    <div class="post-md" id="post-detail">
+        <h1 id="关于模式"><a href="#关于模式" class="headerlink" title="关于模式"></a>关于模式</h1><iframe width="100%" height="440" src="//jsrun.net/bFWKp/embedded/result/dark" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+<p>这里所说的模式，可以理解我们肉眼看到的界面外观。点击上面的 <strong><a target="_blank" rel="noopener" href="//jsrun.pro/bFWKp/embedded/all/dark">demo</a></strong> 可以了解深浅两种模式在视觉上的感官区别。</p>
+<p>它们有着相同的布局、相同的文字内容、相同的icon，还有其它相同的元素。仅仅除了颜色，它们所有的属性和操作其实都是一样的。</p>
+<p>同样，在我们整个系统的设计中，深色模式与浅色模式实际上是一样的，在不改变任何布局、任何功能和内容的前提下，通过改变颜色（当然还会有其它的一些元素和属性）来设计不同的模式。</p>
+<p><strong>为什么做深色模式？</strong></p>
+<ul>
+<li><p><strong>对比度</strong></p>
+<p>每个用户、每个商家显示器的显示质量不一样，在显示质量差的显示器上由于对浅灰度区域的颜色显示效果不好，浅灰色的背景肉眼所看到的是偏白色，缺少这部分的颜色的还原显示，界面上信息的可读性很差。</p>
+<p>恰巧这部分的颜色在整个设计中多用在背景、内容区块和分隔线等，用于设计信息之间的层级关系，影响了信息的展示和可阅读性。</p>
+<p>如果单纯把显示有问题的颜色加深加重，在显示质量好的显示器上，所改的颜色反而会显得过深，影响了整体的设计，这是一个很矛盾的问题。</p>
+</li>
+<li><p><strong>A New Look  For A New Experience</strong></p>
+<p>在很多专业领域的产品里面，大多默认使用深色界面，因为在深色背景下信息可以处理得更突出，让人在使用的时候更专注，提升使用产品时的感官体验。</p>
+</li>
+<li><p>在室内或暗光环境下，相对于浅色模式下的屏幕亮光，深色模式能够减少用户的视觉疲劳，也减少屏幕亮光对周围他人影响。</p>
+</li>
+</ul>
+<p>下图是系统设计的部分示例。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/ModeCon.png" alt="ModeCon"></p>
+<section style="font-size:15px;color:#8c8c8c;text-align:center;">深浅模式示例</section>
+
+<h1 id="颜色"><a href="#颜色" class="headerlink" title="颜色"></a>颜色</h1><p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/color.png" alt="color"></p>
+<section style="font-size:15px;color:#8c8c8c;text-align:center;margin:0 0 40px 0;">系统颜色</section>
+
+
+<p>颜色，是最基础和也是最重要的部分，在设计时按照使用功能把颜色分成三部分：<a href="#%E4%B8%BB%E8%89%B2">主色</a>、<a href="#%E8%BE%85%E5%8A%A9%E8%89%B2">辅助色</a>、<a href="#%E5%9F%BA%E6%9C%AC%E8%89%B2">基本色</a>。</p>
+<p>每种类型的颜色分为10个阶级，（除了基本色设了15级，因为这里深浅模式共用了同一套基本色），用在系统不同元素和交互状态上。</p>
+<h2 id="主色"><a href="#主色" class="headerlink" title="主色"></a>主色</h2><p>主色： <code>primary</code> ，通常取决于品牌色，一般在UIKits上的重要按钮和点击元素。我们把主色分为10个层级，默认的是<code>color-primary-600</code>，向上的层级更浅，向下的层级更深，后缀的数值越小表示越浅，数值越大表示越深。</p>
+<p>不同层级的颜色，可以适当使用在组件的hover、点击等状态，还有图标、背景等元素的颜色。</p>
+<p>为了在深浅模式下有更好的对比度和显示效果，深浅两个模式下的主色是拥有不同的色值。在切换到深色模式时，系统会动态调整主色的色值（对应 <code>color-primary-500</code>）。</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token property">color-primary-100</span><span class="token punctuation">:</span> #F0F8FF<span class="token punctuation">,</span>
+<span class="token property">color-primary-200</span><span class="token punctuation">:</span> #D1E8FF<span class="token punctuation">,</span>
+<span class="token property">color-primary-300</span><span class="token punctuation">:</span> #A7D1FF<span class="token punctuation">,</span>
+<span class="token property">color-primary-400</span><span class="token punctuation">:</span> #80B7FF<span class="token punctuation">,</span>
+<span class="token property">color-primary-500</span><span class="token punctuation">:</span> #589AFF<span class="token punctuation">,</span> // 默认主色，深色模式
+<span class="token property">color-primary-600</span><span class="token punctuation">:</span> #2C77F4<span class="token punctuation">,</span> // 默认主色，浅色模式
+<span class="token property">color-primary-700</span><span class="token punctuation">:</span> #1B57CF<span class="token punctuation">,</span>
+<span class="token property">color-primary-800</span><span class="token punctuation">:</span> #0D3CA8<span class="token punctuation">,</span>
+<span class="token property">color-primary-900</span><span class="token punctuation">:</span> #042682<span class="token punctuation">,</span>
+<span class="token property">color-primary-1000</span><span class="token punctuation">:</span> #02175C<span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+<h2 id="辅助色"><a href="#辅助色" class="headerlink" title="辅助色"></a>辅助色</h2><p>有四种辅助色：分别是 <code>success</code>, <code>warning</code>, <code>danger</code>, <code>info</code>。每一个辅助色也同样是分成了10个层级，它们同样大多数是用在组件的状态，比如成功、警告、错误和普通提示。</p>
+<p>下面以<code>Success</code>为例。</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token property">color-success-100</span><span class="token punctuation">:</span> #E3FAEF<span class="token punctuation">,</span>
+<span class="token property">color-success-200</span><span class="token punctuation">:</span> #B2EDD2<span class="token punctuation">,</span>
+<span class="token property">color-success-300</span><span class="token punctuation">:</span> #84E0BC<span class="token punctuation">,</span>
+<span class="token property">color-success-400</span><span class="token punctuation">:</span> #5BD4A7<span class="token punctuation">,</span>
+<span class="token property">color-success-500</span><span class="token punctuation">:</span> #36C797<span class="token punctuation">,</span> // 默认，深色模式
+<span class="token property">color-success-600</span><span class="token punctuation">:</span> #15BA89<span class="token punctuation">,</span> // 默认，浅色模式
+<span class="token property">color-success-700</span><span class="token punctuation">:</span> #09946F<span class="token punctuation">,</span>
+<span class="token property">color-success-800</span><span class="token punctuation">:</span> #016E54<span class="token punctuation">,</span>
+<span class="token property">color-success-900</span><span class="token punctuation">:</span> #004739<span class="token punctuation">,</span>
+<span class="token property">color-success-1000</span><span class="token punctuation">:</span> #00211C<span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="基本色"><a href="#基本色" class="headerlink" title="基本色"></a>基本色</h2><p>基本色： <code>basic color</code>，即从黑到白的一系列中性灰（包括黑白），系统中使用最多的颜色，也是颜色中最复杂的部分。主要用于背景、描边、阴影、字体、图标等。</p>
+<p>在设计深浅模式时，基本色可以共用同一套，也可以单独做两套（设计上会比较轻松），根据实际需要自行定制。我们的是共用同一套基本色。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/basic_color.png" alt="basic_color"></p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token property">color-basic-100</span><span class="token punctuation">:</span> #FFFFFF<span class="token punctuation">,</span>
+<span class="token property">color-basic-200</span><span class="token punctuation">:</span> #FAFAFA<span class="token punctuation">,</span>
+<span class="token property">color-basic-300</span><span class="token punctuation">:</span> #F4F4F6<span class="token punctuation">,</span>
+<span class="token property">color-basic-400</span><span class="token punctuation">:</span> #F0F0F0<span class="token punctuation">,</span>
+<span class="token property">color-basic-500</span><span class="token punctuation">:</span> #E8E8E8<span class="token punctuation">,</span>
+<span class="token property">color-basic-600</span><span class="token punctuation">:</span> #DBDBDB<span class="token punctuation">,</span>
+<span class="token property">color-basic-700</span><span class="token punctuation">:</span> #CCCCCC<span class="token punctuation">,</span>
+<span class="token property">color-basic-800</span><span class="token punctuation">:</span> #A6A6A6<span class="token punctuation">,</span>
+<span class="token property">color-basic-900</span><span class="token punctuation">:</span> #6C6C6C<span class="token punctuation">,</span>
+<span class="token property">color-basic-1000</span><span class="token punctuation">:</span> #8C8C8C<span class="token punctuation">,</span>
+<span class="token property">color-basic-1100</span><span class="token punctuation">:</span> #525252<span class="token punctuation">,</span>
+<span class="token property">color-basic-1200</span><span class="token punctuation">:</span> #404040<span class="token punctuation">,</span>
+<span class="token property">color-basic-1300</span><span class="token punctuation">:</span> #333333<span class="token punctuation">,</span>
+<span class="token property">color-basic-1400</span><span class="token punctuation">:</span> #262626<span class="token punctuation">,</span>
+<span class="token property">color-basic-1500</span><span class="token punctuation">:</span> #121212<span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+<h1 id="重新思考颜色的使用"><a href="#重新思考颜色的使用" class="headerlink" title="重新思考颜色的使用"></a>重新思考颜色的使用</h1><p>有了上面这些颜色之后，如何使用它们将是一个关键问题，因为直接影响到我们如何设计深浅模式。</p>
+<p>下面先分析我们以前使用颜色的方法，在进行多模式设计时会出现哪些问题，针对这些问题，重新思考了颜色在整个设计中的使用方法，这将让我们换一个角度重新看待颜色在界面设计中的使用。</p>
+<Section class="caption-yellow">BEFORE</Section>
+
+
+<p><strong>以前是这样使用颜色的：</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">颜色</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">#262626</td>
+<td align="left">正文文字 &#x2F; 重要标题 &#x2F; 组件文字 &#x2F; 按钮颜色 &#x2F; 背景颜色 &#x2F;</td>
+</tr>
+<tr>
+<td align="left">#F4F4F6</td>
+<td align="left">背景颜色 &#x2F; 分隔线 &#x2F; hover颜色 &#x2F;</td>
+</tr>
+<tr>
+<td align="left">……</td>
+<td align="left">……</td>
+</tr>
+</tbody></table>
+<section style="background:#FAFAFA;color:#8C5200; padding:10px 18px;margin:20px 0 20px 0px; line-height:32px; font-size:15px">1. 定义有哪些颜色色值 <br> 2. 备注这些颜色分别是用在什么地方，在界面元素上直接指明用的是什么色值。
+</section>
+
+<p>实例如下面两张图所示：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/color_define.png" alt="color_define"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/color_define_2.png" alt="color_define_2"></p>
+<p><strong>Yep！</strong>对于一个普通的APP或简单网页来说，这种方法是可行的。</p>
+<p>但对于有着数百个页面和交互状态的系统来说，我们在实际应用的时候，设计上会有下面两个严重的问题：</p>
+<ul>
+<li><p>同一模式下，替换某一个颜色时容易把其它元素的也一起替换。</p>
+<p>曾经遇到过整体设计字体颜色太浅，需要更换字体颜色，但这时极有可能会把某个描边、某个背景颜色也一起替换掉。这种情况可以说是灾难性的，因为我们在使用颜色的时候，经常同一个色值会重复使用，可能既用在文字，又用在描边或背景，色值虽然相同，但作用范围不同。</p>
+</li>
+<li><p>不同模式之间的颜色映射对应不上。</p>
+<p>浅色模式下的字体颜色 <code>#262626</code> 对应着深色模式的 <code>#DBDBDB</code>，但 <code>#262626</code> 同时也用在背景，那它的使用范围与<code>#DBDBDB</code>其实只有部分有交集。在模式切换时，总会有一些界面元素的颜色对应不上。这种要让每个颜色的映射关系时找到最优解是很困难的，在设计深浅模式或者其它多模式时会让人十分挠脑。</p>
+</li>
+</ul>
+<Section class="caption-green">AND NOW</Section>
+
+<p><strong>现在，对于颜色的使用，有不一样方法：</strong></p>
+<section style="background:#FAFAFA;color:#106369; padding:10px 18px;margin:20px 0 20px 0px; line-height:32px; font-size:15px">1. 每种模式下可以设置不同的颜色集，互不影响。<br>2. 拆解界面设计语言，划分不同类型的基础要素（如字体、背景等），主要用于区分颜色的使用范围。<br>3. 语义化颜色，根据拆解的基础要素来命名颜色，并且作为变量使用。
+</section>
+
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/Scope.png" alt="Scope"></p>
+<section style="font-size:15px;color:#8c8c8c;text-align:center;">多模式下的颜色结构</section>
+
+
+<h2 id="颜色作用域"><a href="#颜色作用域" class="headerlink" title="颜色作用域"></a>颜色作用域</h2><p>我们把每个模式下所拥有的<strong>颜色集</strong>称为<strong>作用域（Scope）</strong>，每个模式都会有自己的颜色作用域，用于处理模式之间切换的颜色集管理。</p>
+<p><span style="font-weight:900;">模式之间颜色处理的方式有两种：</span></p>
+<p style="background:#FAFAFA;color:#106369; padding:10px 18px;margin:20px 0 20px 0px; line-height:32px; font-size:15px">方式1(建议)：设置一个默认模式（Default Mode -- 例如浅色模式），另外，其它模式相对默认模式**有差异的部分单独定义**，作为该模式独有的颜色作用域，在模式切换时，这部分颜色集会有更高的优先级。对于某些没有被定义的颜色，会获取和复用默认模式的颜色作用域里对应部分。</p>
+
+<p style="background:#FAFAFA;color:#106369; padding:10px 18px;margin:20px 0 20px 0px; line-height:32px; font-size:15px">方式2：每种模式都单独设置颜色作用域，模式切换时，只读取自己的颜色作用域。</p>
+
+
+<h2 id="解构基础要素"><a href="#解构基础要素" class="headerlink" title="解构基础要素"></a>解构基础要素</h2><p>在设计语言里面，除了颜色，我们发现能够影响UI外观的是一系列通用的基础要素，它们不是按钮、选择器这种级别的组件。当我们把这些界面组件继续往下解构时，它们可以拆分成下面几项（如上面所示）：</p>
+<ul>
+<li>背景填充</li>
+<li>描边</li>
+<li>字体</li>
+<li>投影</li>
+<li>图标</li>
+<li>图片</li>
+<li>组件状态</li>
+</ul>
+<p><span style="color:#8c8c8c">  PS：这些是我们设计不同模式时，界面上需要改变的基础要素。不同的设计语言会有不一样的拆解内容，比如iOS还有材质层 — 也就是我们常说的透明磨沙层。</span></p>
+<p>这一步可以让我们理解到颜色在界面上的使用范围，为接下来 <strong><a href="#%E8%AF%AD%E4%B9%89%E5%8C%96%E9%A2%9C%E8%89%B2%EF%BC%8C%E5%8A%A8%E6%80%81%E6%94%B9%E5%8F%98%E8%89%B2%E5%80%BC">语义化颜色</a></strong> 做准备。</p>
+<p>对于背景、描边、字体和投影，它们自身会有着不同的层级。我们常见的字体，这次设计了3 ~ 4种层级的深浅度，用在标题、正文、辅助等文字，因为做这种系统UI设计的大多数时候是在处理信息的层级关系（hierarchy）。拆解之后，我们可以单独定义每项基础要素及其不同层级的颜色，而且它们之间互不影响。</p>
+<h2 id="语义化颜色，动态改变色值"><a href="#语义化颜色，动态改变色值" class="headerlink" title="语义化颜色，动态改变色值"></a>语义化颜色，动态改变色值</h2><p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/color_define_3.png" alt="color_define_3"></p>
+<section style="font-size:15px;color:#8c8c8c;text-align:center;">语义化颜色</section>
+
+<p>所谓语义化，简单来说就是给对象起个与之意义相符合和容易理解的名字。</p>
+<p>我们会给上面拆解的基础要素赋值颜色色值，并且给这个色值命名，每一个基础要素的颜色名称要唯一，并且作为 <strong>变量</strong> 使用。比如某个字体的颜色是<code>#262626</code>，我们不再是说这个字体的具体色  值，而是叫它<code>primaryText</code>。</p>
+<p>在不同模式下使用相同的命名，在切换模式时，相同命名的颜色的色值进行动态化改变。上图中的 <code>primaryText</code> 在浅色模式下是<code>#262626</code>，在深色模式下就变为了<code>#FFFFFF</code>；我们的主色在浅色模式下是<code>#2C77F4</code>，在深色模式下是<code>#589AFF</code>，都有共同且唯一的名称<code>primaryColor</code>。</p>
+<p><strong>Yep！！!</strong> 这是语义化颜色带来的好处，可以轻松的改变颜色。如果有需要，在切换模式时，页面的元素甚至也可以动态使用其它命名的颜色，相当灵活。</p>
+<p>再来看看已经调好的深色模式和浅色模式的一些组件，每项基础要素通过使用变量（颜色的命名）来赋值色值，模式切换的时候可以做到无缝对应。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/States/Components.png" alt="Components"></p>
+<section style="font-size:15px;color:#8c8c8c;text-align:center;">组件示例</section>
+
+
+<h1 id="定义颜色"><a href="#定义颜色" class="headerlink" title="定义颜色"></a>定义颜色</h1><p>为了确保深浅模式在切换时界面上的颜色能够对应得上，需要定义每个基础要素（也就是上面<a href="#%E8%A7%A3%E6%9E%84%E5%9F%BA%E7%A1%80%E8%A6%81%E7%B4%A0">解构基础要素</a>拆解出来的内容），以及它们不同层级的颜色。</p>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>背景，有界面整体布局用到的背景，也有组件比如弹窗、下拉菜单所用到的背景，还有某些信息通过添加填充背景以与周围的信息区分隔离开。所以背景颜色不是单指某一个颜色色值，而且是一组颜色集。</p>
+<p>界面整体的框架布局我们用到3个层级的背景，浅色模式下的白色是用到比较多的背景色，在它上面的还有稍微深一点的二级和三级的背景色，有了这些可以很轻松的构建系统页面的信息层级。</p>
+<p>同样，深色模式的也一样。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/background.png" alt="background"></p>
+<section style="font-size:15px;color:#8c8c8c;text-align:center;">Layout背景色</section>
+
+
+<p>由于系统本身的复杂，除了整体框架布局用到的背景填充，还有一系列的组件也要用到背景填充，它们是作为上面3个层级背景色的补充。目的是将布局的背景填充与组件拆分处理，可以让组件灵活设计不受太多限制。</p>
+<p>浅色模式下，这部分背景色有4个层级，虽然部分色值与上面的会有重复，但它们是不一样的变量，作用范围也不一样。同样对应到深色模式下也是有4个层级，与浅色模式形成一对一的映射关系。</p>
+<p>深色模式下，<code>fillBackground-1 ~ fillBackground-3</code> 这三个的色值其实都是同一个，但它们也同样是不一样的变量。当然他们的色值可以不一样，视设计需要而定。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/fill_color.png" alt="fill_color"></p>
+<section style="font-size:15px;color:#8c8c8c;text-align:center;">辅助背景色</section>
+
+
+<h2 id="描边"><a href="#描边" class="headerlink" title="描边"></a>描边</h2><p>我们把描边分为三个等级，每个等级的颜色都有使用的地方。<code>primaryBorder</code>大多数用在输入框、默认按钮的描边，<code>sceondaryBorder</code>用在表格分隔线、下拉菜单、弹窗的描边，<code>tertiaryBorder</code>用在内容块之间的分隔。</p>
+<p><span style="color:#8c8c8c">PS：这里对描边定义的颜色，实际上是包括了Divider分隔线，因为不想用太多颜色定义它们，描边的颜色一多使用起来会容易混乱。</span></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/Border.png" alt="Border"></p>
+<section style="font-size:15px;color:#8c8c8c;text-align:center;">Border颜色</section>
+
+
+<h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><p>界面中实际上出现最多的是文字，文字信息可以看作是人机交互最直接的交流媒介。</p>
+<p>为了可以在设计上更好地处理信息展示的层级关系（hierarchy），我们在定义字体颜色的时候把它分成了4个等级，分别是<code>primaryText </code>  <code>secondaryText</code>   <code>tertiaryText</code>  <code>quaternaryText</code>，应用的范围包括placeholder、组件默认文字、标题、正文、辅助和描述性文字等等，基本上揽括了我们整个设计中的字体用色。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/Text.png" alt="Text"></p>
+<section style="font-size:15px;color:#8c8c8c;text-align:center;">Text颜色</section>
+
+
+<h2 id="图标"><a href="#图标" class="headerlink" title="图标"></a>图标</h2><p>作为视觉设计的一部分，图标和字体一样，在深浅模式下需要改变颜色，以达到更好的显示效果。使用有彩色的、使用渐变色的和使用组合颜色的图标需要特别注意。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/icon_color.png" alt="icon_color"></p>
+<section style="font-size:15px;color:#8c8c8c;text-align:center;">图标（不同颜色）</section>
+
+<p>不过，通常有大量的图标实际上是可以不需要重新修改颜色的，只要通过调整图标的颜色在深色和浅色背景上能有明显的对比度。这种图标通常使用<a href="#%E5%9F%BA%E6%9C%AC%E8%89%B2">基本色</a>，像下拉菜单上的图标、输入框、选择框中使用的图标。</p>
+<p>下图这4组图标分别放在不同深浅的常用背景填充上，都能有不错对比度，而且图标的颜色都是同一个。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/icon_basic.png" alt="icon_basic"></p>
+<section style="font-size:15px;color:#8c8c8c;text-align:center;">图标（相同颜色）</section>
+
+
+<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>大多数时候，对于需要配图的地方，在不同模式下我们会倾向选择使用同一张图片。</p>
+<p>除非有以下两点的考虑：</p>
+<p>一，为了更好的显示效果，有时候浅色模式下使用的图片在深色模式下不一定能搭配得上，反之亦然。</p>
+<p>二，图片在不同模式下可能含有某些意义，可以使用与模式相匹配的图片，比如yahoo天气早上、中午、黄昏、和夜晚的图片，还有晴天、阴天、雨天的图片，都是根据当时的日照情况和天气情况而适配显示的。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/pic.png" alt="pic"></p>
+<section style="font-size:15px;color:#8c8c8c;text-align:center;">不同模式下的图片</section>
+
+
+<h2 id="投影"><a href="#投影" class="headerlink" title="投影"></a>投影</h2><p>投影在我们的设计中是不可忽视的一部分，在设计信息层级（hierarchy）的时候用得比较多。它的使用可以让元素更突出，如浮层一样，与周围的信息形成更强的对比和区分。我们常用的Dropdown Menu、Dialog、Card就是典型的使用。</p>
+<p>除此之处，投影也可以用在Button、Card等基础组件的hover、pressed的操作状态上，增强用户操作时的视觉反馈。</p>
+<p>下图做了5个层级的投影，适用在上面所提到这些组件和操作。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/Shadows.png" alt="Shadows"></p>
+<section style="font-size:15px;color:#8c8c8c;text-align:center;">投影</section>
+
+
+<h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p>状态（States）的变化可以说是无处不在，只要有操作，界面上就会有状态的改变，这些状态是可以被感知到的，作为用户在操作时的一种反馈，通常是视觉上的感知（当然还有声音、振动，这里没有涉及到），这些都需要我们单独设计，</p>
+<p>在界面设计中，有一些已经相当普适化的基本状态（参考下面的表格）。</p>
+<p><code>Normal</code>  <code>Disabled</code>  <code>Hover</code>  <code>Focus</code>  <code>Selected</code>  <code>Activated</code>  <code>Pressed</code>  <code>Dragged</code>  这几个基本状态，一般应用在按钮、输入框、下拉菜单等组件上面，并不是所有组件都会有这些状态，对于不同组件的状态一般都可以单独设计。</p>
+<p>关于状态远不止这些，还有很多涉及到业务流程上的状态变化，它们对应到界面设计上也会有状态变化，比如订单流程从下单到成功交易或取消交易，订单是有不同的状态流转，通常这部分是最容易被设计忽略。</p>
+
+<div class="table-container">
+
+<table>
+<thead>
+<tr>
+<th align="left">基本类型</th>
+<th align="center">示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Normal</td>
+<td align="center"><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/States/Normal2.png" height="32px"></td>
+</tr>
+<tr>
+<td align="left">Hover</td>
+<td align="center"><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/States/Hover.png" height="36px"></td>
+</tr>
+<tr>
+<td align="left">Pressed</td>
+<td align="center"><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/States/Pressed.png" height="36px"></td>
+</tr>
+<tr>
+<td align="left">Focused</td>
+<td align="center"><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/States/Focus.png" height="34px"></td>
+</tr>
+<tr>
+<td align="left">Disabled</td>
+<td align="center"><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/States/Disabled.png" height="32px"></td>
+</tr>
+<tr>
+<td align="left">Activated</td>
+<td align="center"><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/States/Activated.png" height="32px" ></td>
+</tr>
+<tr>
+<td align="left">Selected</td>
+<td align="center"><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/States/Selected2.png" height="204px"></td>
+</tr>
+<tr>
+<td align="left">Dragged</td>
+<td align="center"><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/States/Dragged.png" height="202px"></td>
+</tr>
+</tbody></table>
+
+</div>
+
+
+
+<p>下图是定义了通用的Hover、Disabled的状态所关联到的描边和背景填充颜色。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/States.png" alt="States"></p>
+<section style="font-size:15px;color:#8c8c8c;text-align:center;">部分通用状态</section>
+
+
+<h1 id="One-More-Thing"><a href="#One-More-Thing" class="headerlink" title="One More Thing"></a>One More Thing</h1><p>当上线后，如果需要调整设计，比如修改描边、字体、甚至背景颜色时，以前需要抓破头皮去想究竟还有哪些地方会受影响，现在只要把要改的部分直接改掉就可以。</p>
+<p>以字体为例，如果要把字体颜色加亮或加深，只需要单独把这部分的颜色集修改就可以了。</p>
+<p>因为它们都是单独的，而且可以看成是模块化，各基础要素在模式之间可以做到互不影响，在模式内也互不影响。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/textMagic.png" alt="textMagic"></p>
+<section style="font-size:15px;color:#8c8c8c;text-align:center;">替换字体颜色示例</section>
+
+</br>
+
+<section class="desc-page-bottom">📮 到底了</section>
+    </div>
+
+    <footer class="f-cf">
+        
+        <a href="/posts/5fbba3cc/" class="link f-fl">
+          <span class="arrow">Prev:</span>
+          顾问SaaS
+        </a>
+      
+
+      
+        <a href="/posts/9f178846/" class="link f-fr">
+           <span class="arrow">Next:</span>
+          公众号个性化菜单的模型抽象化和分析
+        </a>
+      
+    </footer>
+</div>
+
+<!-- 目录入口图标 -->
+<div class="mini_toc">
+  <div class="toc_icn">
+    <span></span>
+    <span></span> 
+    <span></span>
+    <span></span>
+  </div>
+</div> 
+
+
+
+
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E6%A8%A1%E5%BC%8F"><span class="toc-text">关于模式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A2%9C%E8%89%B2"><span class="toc-text">颜色</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BB%E8%89%B2"><span class="toc-text">主色</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%85%E5%8A%A9%E8%89%B2"><span class="toc-text">辅助色</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E8%89%B2"><span class="toc-text">基本色</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%87%8D%E6%96%B0%E6%80%9D%E8%80%83%E9%A2%9C%E8%89%B2%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-text">重新思考颜色的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%9C%E8%89%B2%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-text">颜色作用域</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E6%9E%84%E5%9F%BA%E7%A1%80%E8%A6%81%E7%B4%A0"><span class="toc-text">解构基础要素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%AD%E4%B9%89%E5%8C%96%E9%A2%9C%E8%89%B2%EF%BC%8C%E5%8A%A8%E6%80%81%E6%94%B9%E5%8F%98%E8%89%B2%E5%80%BC"><span class="toc-text">语义化颜色，动态改变色值</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E9%A2%9C%E8%89%B2"><span class="toc-text">定义颜色</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%83%8C%E6%99%AF"><span class="toc-text">背景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%8F%E8%BE%B9"><span class="toc-text">描边</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E4%BD%93"><span class="toc-text">字体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E6%A0%87"><span class="toc-text">图标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E7%89%87"><span class="toc-text">图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%95%E5%BD%B1"><span class="toc-text">投影</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8A%B6%E6%80%81"><span class="toc-text">状态</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#One-More-Thing"><span class="toc-text">One More Thing</span></a></li></ol>
+    </div>
+
+
+<script type="text/javascript">
+    var triggle = document.getElementsByClassName('mini_toc');
+    var toc = document.getElementById('toc');
+    var line = document.querySelectorAll('.toc_icn span');
+    var postMain = document.getElementsByClassName('post-main');
+    
+    var key = false;  // 映射toc的显示和隐藏，并作为真否判断条件，false == toc隐藏
+
+    //控制toc的出现或隐藏
+    function switch_toc() {
+        if(!key) {
+            toc.style.display = "block";
+            key = true;
+        }else {
+            toc.style.display = "none";
+            key = false;
+        } 
+    }
+
+    //目录icn的状态，每点击一次就切换，默认为css设置的状态
+    function toc_icn_state() {
+        for(let i=0; i < line.length; i++){
+            line[i].classList.toggle('op');
+        }
+    }
+
+    triggle[0].addEventListener('click', switch_toc, false);
+
+    triggle[0].addEventListener('click', toc_icn_state, false);
+
+    // >1132px,处理窗口改变大小时，强制让toc出现； 开关变为x，className控制开关隐藏
+    function toc_show(){
+        if((document.body.clientWidth+15) > 1132) {
+            toc.style.display = "block";
+            key = true;
+            for(let i=0; i < line.length; i++){
+                line[i].className='op';
+            }
+        }
+    }
+    window.addEventListener('resize', toc_show, false)
+
+
+    // <1132px toc出现后，点击外围区域可关闭
+    function toc_close(){
+        if((document.body.clientWidth) < 1132 ) {
+            toc.style.display = "none";
+            key = false;
+            for(let i=0; i < line.length; i++){
+                line[i].className='';
+            }
+        }
+    }
+    postMain[0].addEventListener('click', toc_close, false)
+
+    
+
+ </script>
+
+
+<!-- 
+<script src="/js/push-last-url.js"></script>
+  -->
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+
+<script src="/js/fancy-box.js"></script>
+ 
+            </div>
+        </div>
+    </body>
+    
+
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
+
+
+<script src="/js/highlight.min.js"></script>
+
+
+<script src="/js/highlightjs-line-numbers.js"></script>
+ 
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+
+<script>
+    function setImgAtt() {
+    let allIMG = document.getElementsByTagName('img');
+    for (let i = 0; i < allIMG.length; i++) {
+            allIMG[i].setAttribute('draggable', 'false');
+        }
+    }   
+    document.addEventListener('DOMContentLoaded', setImgAtt, false)
+
+    document.oncontextmenu = function (e) {
+        return false
+    }
+</script>
+</html>

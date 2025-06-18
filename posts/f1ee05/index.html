@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+    <link rel="alternate icon" type="image/ico" href="/images/favicon.ico">
+ 
+    <title>
+         MMF BOOK ·  
+        YANNGIKI
+    </title>
+
+    <!-- CSS引用 -->
+    
+<link rel="stylesheet" href="/css/colors.css">
+
+    
+<link rel="stylesheet" href="/css/reset.css">
+
+    
+<link rel="stylesheet" href="/css/nav.css">
+
+    
+<link rel="stylesheet" href="/css/home.css">
+
+    
+<link rel="stylesheet" href="/css/postmd.css">
+
+    
+<link rel="stylesheet" href="/css/index.css">
+
+    
+<link rel="stylesheet" href="/css/about.css">
+
+    
+<link rel="stylesheet" href="/css/toc.css">
+
+    
+<link rel="stylesheet" href="/css/portf_detail.css">
+
+    
+    <!-- Fanbox图片预览引用 -->
+    <!-- <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+
+    <!-- 引用iconfont Symbol -->
+    <script src="//at.alicdn.com/t/font_1136188_oqq48jgc1lf.js"></script>
+
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+    <body>
+         <nav id="nav">
+    <div class="nav-content">
+        <a class="logo" href="/"><img class="navlogo" src="/images/logo.svg"></a>
+        <ul class="menu-group">
+            
+            <li class="menu-detail">
+                <a href="/" class="menu  ">首页</a>
+                <span class="splash">/</span>
+            </li>
+            
+            <li class="menu-detail">
+                <a href="/portfolio" class="menu  ">作品</a>
+                <span class="splash">/</span>
+            </li>
+            
+            <li class="menu-detail">
+                <a href="/about" class="menu  ">关于</a>
+                <span class="splash">/</span>
+            </li>
+            
+        </ul>
+    </div>
+</nav>
+
+        <div class="paper">
+            <div class="paper-main">   
+                <div class="post-main">
+    
+        <div class="post-main-title">
+            MMF BOOK
+        </div>
+        <div class="post-meta">
+            2021-05-12
+        </div>
+    
+    
+    <div class="post-md" id="post-detail">
+        <h1 id="关于-MMFBOOK"><a href="#关于-MMFBOOK" class="headerlink" title="关于 MMFBOOK"></a>关于 MMFBOOK</h1><p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/mmfbook/introduction.png" alt="introduction"></p>
+<p>MMF Book是一款给用户提供在线预约服务的 App，针对北美市场，预约服务包含美容、美发、美甲、健身、按摩、桑拿、纹身等；用户和商家可以通过短视频和图片分享展示自己的服务效果，或者是查看别人的分享；平台提供资讯内容让用户学习和了解更多时尚相关的知识。</p>
+
+<div class="int-sp">
+<p>这篇案例主要介绍MMF BOOK的设计语言、细节和规范，其它信息点击下方的链接。</p>
+
+<p>🔖 产品介绍：<a target="_blank" rel="noopener" href="https://www.behance.net/gallery/118971257/MMFBOOK">Behance</a> <br>🌇 设计图：<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/portfolio/mmfbook_design_intro.webp">打开查看</a><br>📲 App(iOS)：<a target="_blank" rel="noopener" href="https://itunes.apple.com/us/app/mmf-book/id1436022744?mt=8">Appstore下载</a></p>
+
+</div>
+
+
+
+<h1 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h1><h2 id="栅格"><a href="#栅格" class="headerlink" title="栅格"></a>栅格</h2><p>栅格是用于组织信息的工具，定位、对齐、制造间距分割比例。栅格由四部分组成：容器（Container）、列宽（Columns）、间隙（Gutters）、出血（Margin）。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/mmfbook/grid_sample2a.png" alt="grid_sample2a"></p>
+<p>我们页面的基础布局采用的是12栅格，因为可以被 2、3、4、6 整除，也就是可以把容器的空间等分为 2、3、4、6份，在移动端上能满足大多复杂信息布局 。具体参数参考下图:</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/mmfbook/grid_base.png" alt="grid_base"></p>
+<section class="caption-image">由于375是奇数，栏数是偶数，不能被整除，需要调整部分栅栏的宽度以达到兼容，仅是在设计上作微调</section>
+
+</br>
+
+<p><strong>使用示例：</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/mmfbook/grid_sample.png" alt="grid_sample"></p>
+<blockquote>
+<p>注意：不需要限制死只使用一组栅格来控制所有的页面信息，特别是内容分块数不能整除栅格数时，这部分内容可以单独设定一组栅格组织它的信息。有时为了更好的显示效果，界面上局部内容也可以单独设置一组栅格。</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/mmfbook/grid_othercase.png" alt="grid_othercase"></p>
+<h2 id="间距"><a href="#间距" class="headerlink" title="间距"></a>间距</h2><p>间距的定义，跟文本密切关联，间距之间的差异可以用来表达信息与信息之间的关系，根据亲密性原则，相关的内容之间的间距越小。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/mmfbook/spacing_scale.png" alt="spacing_scale"></p>
+<p>以 4 px 作为起点及最小增长单位，前部分增长节凑漫，增长比例为<code>1~5</code>，用于营造信息的相关性；后部分增长节凑快，增长比例为<code>8</code>和<code> 12</code>，用于营造信息的独立性。</p>
+
+<div class="int-sp">
+
+<p>比例:     1 : 2 : 3 : 4 : 5 : 8 : 13<br>起点:     4<br>增长单位:  4   </p>
+
+</div>
+
+
+
+</br>
+
+<p><strong>间距的实例应用</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/mmfbook/spacing_legend.png" alt="spacing_legend"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/mmfbook/spacing_sample.png" alt="spacing_sample"></p>
+<h2 id="内容框架"><a href="#内容框架" class="headerlink" title="内容框架"></a>内容框架</h2><p>不同信息内容有不一样的组织形式，根据信息内容的类型以及要符合用户在移动端上的认知和操作习惯，将一些常用场景设定为页面框架，并保持统一使用。</p>
+<p><strong>下面是一些内容组织框架示例：</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/mmfbook/templates_eg1.png" alt="templates_eg1"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/mmfbook/templates_eg2.png" alt="templates_eg2"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/mmfbook/templates_eg3.png" alt="templates_eg3"></p>
+<h1 id="颜色"><a href="#颜色" class="headerlink" title="颜色"></a>颜色</h1><p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/mmfbook/color_palette.png" alt="color_palette"></p>
+<p><strong>品牌色 (Brand Color)</strong></p>
+<p>MMF BOOK 的品牌定位是活力、时尚和趋势，Brand-05的黄色能匹配和映射出我们的品牌个性和定位。</p>
+<p>另外，也从品牌色延伸出了它的其它色阶，由浅到深的9色色板，用在我们整套设计语言的组件和品牌物流宣传中。</p>
+</br>
+
+<p><strong>辅助色 (Additional Color)</strong></p>
+<p>用于状态、信息提示，比如成功、错误或普通信息提示。</p>
+</br>
+
+<p><strong>中性色 (Neutral Gray)</strong></p>
+<p>中性色是应用最多也是最复杂的颜色，将界面上的元素进行拆解，包括字体、描边(线条)、背景、状态，以对它们进行颜色的使用定义，为什么这么做可从<a target="_blank" rel="noopener" href="http://localhost:4000/posts/64854923/#%E9%87%8D%E6%96%B0%E6%80%9D%E8%80%83%E9%A2%9C%E8%89%B2%E7%9A%84%E4%BD%BF%E7%94%A8">这里</a>了解。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/mmfbook/variable_text.png" alt="variable_text"></p>
+<section class="caption-image">字体颜色定义</section>
+
+
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/mmfbook/variable_border.png" alt="variable_border"></p>
+<section class="caption-image">描边颜色定义</section>
+
+
+
+
+
+<p><strong>投影</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/mmfbook/shadow_level.png" alt="shadow_level"></p>
+
+<div class="table-container">
+
+<table>
+<thead>
+<tr>
+<th>Shadow</th>
+<th>Color</th>
+<th align="center">Alpha</th>
+<th align="center">X</th>
+<th align="center">Y</th>
+<th align="center">Blur</th>
+<th align="center">Spread</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Level1</td>
+<td>Gray-08 &#x3D; #2C2C2B</td>
+<td align="center">0.1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">6</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td>Level2</td>
+<td>Gray-08 &#x3D; #2C2C2B</td>
+<td align="center">0.1</td>
+<td align="center">0</td>
+<td align="center">4</td>
+<td align="center">14</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td>Level3</td>
+<td>Gray-08 &#x3D; #2C2C2B</td>
+<td align="center">0.2</td>
+<td align="center">0</td>
+<td align="center">12</td>
+<td align="center">32</td>
+<td align="center">0</td>
+</tr>
+</tbody></table>
+
+</div>
+
+<p>为了更好的营造出界面上的层感，以 <code>gray-08(#2C2C2B)</code>为基准颜色，通过调整Y、Blur、Alpha等参数设定了3个层级的投影，分别使用于工具栏或导航栏、卡片、弹窗等地方。</p>
+<h1 id="字体排版"><a href="#字体排版" class="headerlink" title="字体排版"></a>字体排版</h1><p>在UI界面上，字体排版是关于怎样组织和传达信息，包括几个关键因素：字族、字重、字号、行高、字距。</p>
+<p>为了快速建立一个统一的排版系统，在这几个关键因素上做了规范约束。</p>
+</br>
+
+<p><strong>字族</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/mmfbook/font-family.png" alt="font-family"></p>
+</br>
+
+<p><strong>字重</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/mmfbook/font_weight.png" alt="font_weight"></p>
+<p>共4种字重：Light、Regular、Medium、Bold，字重从左到右依次加大。正文和辅助文字建议使用 Regular 字重，当需要比Regular更细的字体搭配形成层次感时，用Light字重；小标题、大标题使用Medium或Bold字重（根据需要的层次感选择）；一般的字体加粗表示强调建议使用Medium字重。</p>
+</br>
+
+<p><strong>字号 &amp; 行高</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/mmfbook/font_hierarchy.png" alt="font_hierarchy"></p>
+<p>由于英文字体普遍都比中文字体小一号，MMFBook的字号从13开始，也能保证信息的可读性，更为清晰（中文最小的会使用12，原生应用的还可使用更小比如11、10）。</p>
+<p>不同的字号需要定义对应的行高以保证字体排版的空间感和易读性，这里的英文行高&#x2F;字号的比例范围在1.2 ~ 1.4之间。再结合<a href="#%E9%97%B4%E8%B7%9D">间距</a>所定义的Spacing共同设计信息与信息之间的亲疏关系和制造留白空间。</p>
+</br>
+
+<p><strong>字距</strong></p>
+<p>默认为<code>auto</code>，如果为了让排版更紧凑，字距调小；如果要让排版稀松，字距调大。</p>
+<h1 id="图标"><a href="#图标" class="headerlink" title="图标"></a>图标</h1><p>外框区域：图标切图的大小</p>
+<p>保护间距：导出时周围的留白区域</p>
+<p>安全区域：图标的真实占用区域，设计尽量保持在这区域内，可适当微调</p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">外框区域</th>
+<th align="center">保护间距</th>
+<th align="center">安全区域</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">16px</td>
+<td align="center">1px</td>
+<td align="center">14px</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">28px</td>
+<td align="center">2px</td>
+<td align="center">24px</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">32px</td>
+<td align="center">2px</td>
+<td align="center">28px</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">56px</td>
+<td align="center">4px</td>
+<td align="center">48px</td>
+</tr>
+</tbody></table>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/mmfbook/icon_16.png" alt="icon_16"></p>
+<section class="caption-image">通用图标</section>
+
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/mmfbook/icon_tabbar.png" alt="icon_tabbar"></p>
+<section class="caption-image">Tab图标</section>
+
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/mmfbook/icon_appointment.png" alt="icon_appointment2"></p>
+<section class="caption-image">预约相关图标</section>
+
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/mmfbook/icon_categories.png" alt="icon_categories"></p>
+<section class="caption-image">Salon分类图标</section>
+
+
+<h1 id="圆角"><a href="#圆角" class="headerlink" title="圆角"></a>圆角</h1><p>设计上使用圆角看起来会温和、友善；其次圆角在内容容器上很有用，因为圆角弧线向内指向容器中心，容易让视线聚集中心；还有的是人眼结构更容易处理圆角，大脑在处理边缘的时候会动用更多的神经（也就是需要更多注意力），但圆角会让大脑识别起来更容易。</p>
+<p>我们设计的元素中用到了圆角，图片、按钮、卡片、Toast等，根据不同的需要，制定了两种类型的圆角值：固定值和百分比。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/mmfbook/radius_corners.png" alt="radius_corners"></p>
+<ol>
+<li>固定值：4  |  用于按钮、图片、部分卡片；</li>
+<li>固定值：8  |  用于部分卡片、Toast；</li>
+<li>固定值：12  |  底部弹窗顶部边角、模态弹窗；</li>
+<li>百分比：30%  |  选择项目按钮、选择日期的激活状态；</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/mmfbook/radius_sample.png" alt="radius_sample"></p>
+<h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1><p>MMFBOOK APP 使用到的图片比例有3种：<code> 4:5</code>、<code>1:1</code>、<code> 5:4</code>。</p>
+<p>主要应用到门店图片、评价图、Portfolio、博客封面图、相册、Feeds信息流等，在不同设备上呈现出来的比例保持一致。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/mmfbook/image_ratio.png" alt="image_ratio"></p>
+</br>
+
+<p><strong>图片组合</strong></p>
+<p>1张、2张、3张 … 6张，不同数量的图片组合成一块，在Feed信息流中，每一块的信息的图片会有不同数量的图片进行组合，这里会根据图片数量对它们进行模块化布局。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/mmfbook/image_layout.png" alt="image_layout"></p>
+</br>
+
+<p><strong>预加载</strong></p>
+<p>图片预加载时，会对图片提取颜色，填充在其所在区域。好处是可以给用户对图片内容在颜色上的感知，其次是减少用户等待加载时的焦虑感。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/mmfbook/color_extract.png" alt="color_extract"></p>
+</br>
+
+<p><strong>加载失败</strong></p>
+<p>当图片加载失败时（多数是因为网络原因），显示图片加载失败的样式，以便告知用户图片加载失败。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/mmfbook/image_loadfaillure.png" alt="image_loadfaillure"></p>
+<h1 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h1><p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/mmfbook/components_preview.png" alt="components_preview"></p>
+<p>组件根据我们的设计语言规范和App功能制定，将基本的通用的交互组件进行约束和定义，并做成规范，在统一设计和协作设计上都会有好处。</p>
+<p><strong>下面是MMFBOOK的部分组件规范</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/mmfbook/components_cards.png" alt="components_cards"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/mmfbook/components_infoviews.png" alt="components_infoviews "></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/mmfbook/components_activityviews.png" alt="components_activityviews"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/mmfbook/components_buttons.png" alt="components_buttons"></p>
+<h1 id="空状态"><a href="#空状态" class="headerlink" title="空状态"></a>空状态</h1><p>在部分内容页面如预约、个人评价、个人收藏、视频图片发布等页面，还有搜索无结果时的状态。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/mmfbook/empty.png" alt="empty"></p>
+<section class="desc-page-bottom">📮 到底了</section>
+    </div>
+
+    <footer class="f-cf">
+        
+        <a href="/posts/24f58410/" class="link f-fl">
+          <span class="arrow">Prev:</span>
+          嘉佳智能
+        </a>
+      
+
+      
+        <a href="/posts/5fbba3cc/" class="link f-fr">
+           <span class="arrow">Next:</span>
+          顾问SaaS
+        </a>
+      
+    </footer>
+</div>
+
+<!-- 目录入口图标 -->
+<div class="mini_toc">
+  <div class="toc_icn">
+    <span></span>
+    <span></span> 
+    <span></span>
+    <span></span>
+  </div>
+</div> 
+
+
+
+
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E-MMFBOOK"><span class="toc-text">关于 MMFBOOK</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B8%83%E5%B1%80"><span class="toc-text">布局</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%85%E6%A0%BC"><span class="toc-text">栅格</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%B4%E8%B7%9D"><span class="toc-text">间距</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%85%E5%AE%B9%E6%A1%86%E6%9E%B6"><span class="toc-text">内容框架</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A2%9C%E8%89%B2"><span class="toc-text">颜色</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AD%97%E4%BD%93%E6%8E%92%E7%89%88"><span class="toc-text">字体排版</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%BE%E6%A0%87"><span class="toc-text">图标</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9C%86%E8%A7%92"><span class="toc-text">圆角</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%BE%E7%89%87"><span class="toc-text">图片</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%84%E4%BB%B6"><span class="toc-text">组件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%A9%BA%E7%8A%B6%E6%80%81"><span class="toc-text">空状态</span></a></li></ol>
+    </div>
+
+
+<script type="text/javascript">
+    var triggle = document.getElementsByClassName('mini_toc');
+    var toc = document.getElementById('toc');
+    var line = document.querySelectorAll('.toc_icn span');
+    var postMain = document.getElementsByClassName('post-main');
+    
+    var key = false;  // 映射toc的显示和隐藏，并作为真否判断条件，false == toc隐藏
+
+    //控制toc的出现或隐藏
+    function switch_toc() {
+        if(!key) {
+            toc.style.display = "block";
+            key = true;
+        }else {
+            toc.style.display = "none";
+            key = false;
+        } 
+    }
+
+    //目录icn的状态，每点击一次就切换，默认为css设置的状态
+    function toc_icn_state() {
+        for(let i=0; i < line.length; i++){
+            line[i].classList.toggle('op');
+        }
+    }
+
+    triggle[0].addEventListener('click', switch_toc, false);
+
+    triggle[0].addEventListener('click', toc_icn_state, false);
+
+    // >1132px,处理窗口改变大小时，强制让toc出现； 开关变为x，className控制开关隐藏
+    function toc_show(){
+        if((document.body.clientWidth+15) > 1132) {
+            toc.style.display = "block";
+            key = true;
+            for(let i=0; i < line.length; i++){
+                line[i].className='op';
+            }
+        }
+    }
+    window.addEventListener('resize', toc_show, false)
+
+
+    // <1132px toc出现后，点击外围区域可关闭
+    function toc_close(){
+        if((document.body.clientWidth) < 1132 ) {
+            toc.style.display = "none";
+            key = false;
+            for(let i=0; i < line.length; i++){
+                line[i].className='';
+            }
+        }
+    }
+    postMain[0].addEventListener('click', toc_close, false)
+
+    
+
+ </script>
+
+
+<!-- 
+<script src="/js/push-last-url.js"></script>
+  -->
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+
+<script src="/js/fancy-box.js"></script>
+ 
+            </div>
+        </div>
+    </body>
+    
+
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
+
+
+<script src="/js/highlight.min.js"></script>
+
+
+<script src="/js/highlightjs-line-numbers.js"></script>
+ 
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+
+<script>
+    function setImgAtt() {
+    let allIMG = document.getElementsByTagName('img');
+    for (let i = 0; i < allIMG.length; i++) {
+            allIMG[i].setAttribute('draggable', 'false');
+        }
+    }   
+    document.addEventListener('DOMContentLoaded', setImgAtt, false)
+
+    document.oncontextmenu = function (e) {
+        return false
+    }
+</script>
+</html>
