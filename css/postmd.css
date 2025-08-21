@@ -140,10 +140,10 @@ h1 {
 .post-md ul
 {
     list-style: disc;
-    padding-left: 24px;
+    padding-left: 0px;
 }
 .post-md ul, ol {
-    margin: 15px 0 15px 15px;
+    margin: 0px 0 16px 12px;
     list-style: none;
 }
 .post-md ul>li, ol>li {
@@ -160,7 +160,8 @@ h1 {
     margin-top: -3px;
     width: 6px;
     height: 6px;
-    background-color: #aaadb1;
+    background-color: #6a6a6a;
+    border-radius: 4px;
 }
 .post-md li>li, li>li {
     padding-left: 20px;
@@ -185,14 +186,14 @@ h1 {
 .post-md hr
 {
     border: none;
-    height: 1px;
-    background: var(--line-1);
+    height: 2px;
+    background: var(--line-3);
     margin: 24px 0;
 }
 
 .post-md p
 {
-    /* width: 100%; */
+    color: var(--text-secondary);
     margin: 12px 0;
 }
 .post-md blockquote
@@ -422,7 +423,7 @@ h1 {
 .post-md .hljs-ln-numbers
 {
     opacity: .5;
-    padding-right: 12px;
+    padding-right: 0px;
 }
 .hljs-ln td,
 .hljs-ln tr {
@@ -432,3 +433,143 @@ h1 {
 .hljs-ln tr:hover {
     background: none !important;
 }
+
+
+/* ----------------------- 附近卡片 --------------------- */
+.card-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.card-link {
+  width: 20%;
+  box-sizing: border-box;
+  border: 1px solid #efefef; 
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 0 12px 12px 0;
+}
+.card-link:hover {
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.05);
+    color:--brand-color;
+}
+
+
+#card-img{
+  display: block;
+  width: 100%;
+  margin: 0;
+  border-radius: 6px;
+    pointer-events: none;
+}
+
+.card-content .card-link .card-title {
+  font-size: 14px;
+  padding: 8px 16px;
+  text-align: center;
+  line-height: 22px;
+  color:--text-secondary;
+  margin: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .card-content {
+        flex-direction: column;
+    }
+    .card-link {
+        width: 100%;
+    }
+    .card-link a{
+        display:flex;
+        flex-direction: row;
+    }
+     #card-img {
+        width: 80px;
+        height: 80px;
+    }
+    .card-content .card-link .card-title {
+        text-align: left;
+        justify-content: center;
+        align-items: center;
+        margin: auto 0;
+    }
+}
+
+/* ------------------------文章内容分组标题标签样式(逐步弃用)------------------------------------- */
+
+
+/* 辅助标题 - 浅色 */
+.caption-light {
+  font-size:16px;
+  color:#aaadb1;
+  text-align:left;
+}
+/* 辅助标题 - 以前 */
+.caption-yellow {
+  text-align:left; 
+  font-weight:900; 
+  color:#8C5200; 
+  border-bottom:1px solid #F0F0F0;
+  padding:16px 0px; 
+  margin:40px 0px;
+}
+/* 辅助标题 - 现在 */
+.caption-green {
+  text-align:left; 
+  font-weight:900; 
+  color:#106369; 
+  border-bottom:1px solid #F0F0F0; 
+  padding:16px 0px; 
+  margin:40px 0px;
+}
+
+/* 文章黄色标签-问题点 */
+.question {
+  display: inline-block;
+  background: rgba(255, 243, 190, 0.25);
+  color: #bd8708;
+  padding: 4px 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  text-align: center;
+  margin: 16px 0 4px 0;
+  font-weight: 600;
+}
+/* 文章绿色标签-优化点 */
+.optimization {
+  display: inline-block;
+  background: rgba(43, 168, 118, 0.08);
+  color: #178483;
+  padding: 4px 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  text-align: center;
+  margin: 16px 0 4px 0;
+  font-weight: 600;
+}
+/* 文章Regular标签 */
+.label-regular {
+  display: inline-block;
+  background: rgba(206, 206, 206, 0.25);
+  color: var(--text-secondary);
+  padding: 4px 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  text-align: center;
+  margin: 16px 0 4px 0;
+  font-weight: 600;
+}
+
+  @media screen and (max-width:600px) {
+    .caption-yellow,
+    .caption-green,
+    .caption-light {
+      text-align: center;
+    }
+    .question,
+    .optimization,
+    .label-regular {
+        margin: 32px auto 12px auto;
+        width: 100%;
+    }
+  }

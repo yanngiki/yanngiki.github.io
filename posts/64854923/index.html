@@ -40,20 +40,11 @@
 
     
     <!-- Fanbox图片预览引用 -->
-    <!-- <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" /> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
 
     <!-- 引用iconfont Symbol -->
     <script src="//at.alicdn.com/t/font_1136188_oqq48jgc1lf.js"></script>
 
-
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "s1dprxywnm");
-</script>
 
 
     <!-- Google tag (gtag.js) -->
@@ -66,7 +57,15 @@
   gtag('config', 'G-6MJSP6QY2Z');
 </script>
 
-<meta name="generator" content="Hexo 5.4.2"></head>
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "s1dprxywnm");
+</script>
+
+<meta name="generator" content="Hexo 7.3.0"></head>
     <body>
          <nav id="nav">
     <div class="nav-content">
@@ -75,17 +74,17 @@
             
             <li class="menu-detail">
                 <a href="/" class="menu  ">首页</a>
-                <span class="splash">/</span>
+                <span class="splash"> </span>
             </li>
             
             <li class="menu-detail">
                 <a href="/portfolio" class="menu  ">作品</a>
-                <span class="splash">/</span>
+                <span class="splash"> </span>
             </li>
             
             <li class="menu-detail">
                 <a href="/about" class="menu  ">关于</a>
-                <span class="splash">/</span>
+                <span class="splash"> </span>
             </li>
             
         </ul>
@@ -136,59 +135,49 @@
 <h2 id="主色"><a href="#主色" class="headerlink" title="主色"></a>主色</h2><p>主色： <code>primary</code> ，通常取决于品牌色，一般在UIKits上的重要按钮和点击元素。我们把主色分为10个层级，默认的是<code>color-primary-600</code>，向上的层级更浅，向下的层级更深，后缀的数值越小表示越浅，数值越大表示越深。</p>
 <p>不同层级的颜色，可以适当使用在组件的hover、点击等状态，还有图标、背景等元素的颜色。</p>
 <p>为了在深浅模式下有更好的对比度和显示效果，深浅两个模式下的主色是拥有不同的色值。在切换到深色模式时，系统会动态调整主色的色值（对应 <code>color-primary-500</code>）。</p>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token property">color-primary-100</span><span class="token punctuation">:</span> #F0F8FF<span class="token punctuation">,</span>
-<span class="token property">color-primary-200</span><span class="token punctuation">:</span> #D1E8FF<span class="token punctuation">,</span>
-<span class="token property">color-primary-300</span><span class="token punctuation">:</span> #A7D1FF<span class="token punctuation">,</span>
-<span class="token property">color-primary-400</span><span class="token punctuation">:</span> #80B7FF<span class="token punctuation">,</span>
-<span class="token property">color-primary-500</span><span class="token punctuation">:</span> #589AFF<span class="token punctuation">,</span> // 默认主色，深色模式
-<span class="token property">color-primary-600</span><span class="token punctuation">:</span> #2C77F4<span class="token punctuation">,</span> // 默认主色，浅色模式
-<span class="token property">color-primary-700</span><span class="token punctuation">:</span> #1B57CF<span class="token punctuation">,</span>
-<span class="token property">color-primary-800</span><span class="token punctuation">:</span> #0D3CA8<span class="token punctuation">,</span>
-<span class="token property">color-primary-900</span><span class="token punctuation">:</span> #042682<span class="token punctuation">,</span>
-<span class="token property">color-primary-1000</span><span class="token punctuation">:</span> #02175C<span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-
-
+<pre><code class="css">color-primary-100: #F0F8FF,
+color-primary-200: #D1E8FF,
+color-primary-300: #A7D1FF,
+color-primary-400: #80B7FF,
+color-primary-500: #589AFF, // 默认主色，深色模式
+color-primary-600: #2C77F4, // 默认主色，浅色模式
+color-primary-700: #1B57CF,
+color-primary-800: #0D3CA8,
+color-primary-900: #042682,
+color-primary-1000: #02175C,
+</code></pre>
 <h2 id="辅助色"><a href="#辅助色" class="headerlink" title="辅助色"></a>辅助色</h2><p>有四种辅助色：分别是 <code>success</code>, <code>warning</code>, <code>danger</code>, <code>info</code>。每一个辅助色也同样是分成了10个层级，它们同样大多数是用在组件的状态，比如成功、警告、错误和普通提示。</p>
 <p>下面以<code>Success</code>为例。</p>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token property">color-success-100</span><span class="token punctuation">:</span> #E3FAEF<span class="token punctuation">,</span>
-<span class="token property">color-success-200</span><span class="token punctuation">:</span> #B2EDD2<span class="token punctuation">,</span>
-<span class="token property">color-success-300</span><span class="token punctuation">:</span> #84E0BC<span class="token punctuation">,</span>
-<span class="token property">color-success-400</span><span class="token punctuation">:</span> #5BD4A7<span class="token punctuation">,</span>
-<span class="token property">color-success-500</span><span class="token punctuation">:</span> #36C797<span class="token punctuation">,</span> // 默认，深色模式
-<span class="token property">color-success-600</span><span class="token punctuation">:</span> #15BA89<span class="token punctuation">,</span> // 默认，浅色模式
-<span class="token property">color-success-700</span><span class="token punctuation">:</span> #09946F<span class="token punctuation">,</span>
-<span class="token property">color-success-800</span><span class="token punctuation">:</span> #016E54<span class="token punctuation">,</span>
-<span class="token property">color-success-900</span><span class="token punctuation">:</span> #004739<span class="token punctuation">,</span>
-<span class="token property">color-success-1000</span><span class="token punctuation">:</span> #00211C<span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
+<pre><code class="css">color-success-100: #E3FAEF,
+color-success-200: #B2EDD2,
+color-success-300: #84E0BC,
+color-success-400: #5BD4A7,
+color-success-500: #36C797, // 默认，深色模式
+color-success-600: #15BA89, // 默认，浅色模式
+color-success-700: #09946F,
+color-success-800: #016E54,
+color-success-900: #004739,
+color-success-1000: #00211C,
+</code></pre>
 <h2 id="基本色"><a href="#基本色" class="headerlink" title="基本色"></a>基本色</h2><p>基本色： <code>basic color</code>，即从黑到白的一系列中性灰（包括黑白），系统中使用最多的颜色，也是颜色中最复杂的部分。主要用于背景、描边、阴影、字体、图标等。</p>
 <p>在设计深浅模式时，基本色可以共用同一套，也可以单独做两套（设计上会比较轻松），根据实际需要自行定制。我们的是共用同一套基本色。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/basic_color.png" alt="basic_color"></p>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token property">color-basic-100</span><span class="token punctuation">:</span> #FFFFFF<span class="token punctuation">,</span>
-<span class="token property">color-basic-200</span><span class="token punctuation">:</span> #FAFAFA<span class="token punctuation">,</span>
-<span class="token property">color-basic-300</span><span class="token punctuation">:</span> #F4F4F6<span class="token punctuation">,</span>
-<span class="token property">color-basic-400</span><span class="token punctuation">:</span> #F0F0F0<span class="token punctuation">,</span>
-<span class="token property">color-basic-500</span><span class="token punctuation">:</span> #E8E8E8<span class="token punctuation">,</span>
-<span class="token property">color-basic-600</span><span class="token punctuation">:</span> #DBDBDB<span class="token punctuation">,</span>
-<span class="token property">color-basic-700</span><span class="token punctuation">:</span> #CCCCCC<span class="token punctuation">,</span>
-<span class="token property">color-basic-800</span><span class="token punctuation">:</span> #A6A6A6<span class="token punctuation">,</span>
-<span class="token property">color-basic-900</span><span class="token punctuation">:</span> #6C6C6C<span class="token punctuation">,</span>
-<span class="token property">color-basic-1000</span><span class="token punctuation">:</span> #8C8C8C<span class="token punctuation">,</span>
-<span class="token property">color-basic-1100</span><span class="token punctuation">:</span> #525252<span class="token punctuation">,</span>
-<span class="token property">color-basic-1200</span><span class="token punctuation">:</span> #404040<span class="token punctuation">,</span>
-<span class="token property">color-basic-1300</span><span class="token punctuation">:</span> #333333<span class="token punctuation">,</span>
-<span class="token property">color-basic-1400</span><span class="token punctuation">:</span> #262626<span class="token punctuation">,</span>
-<span class="token property">color-basic-1500</span><span class="token punctuation">:</span> #121212<span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-
-
+<pre><code class="css">color-basic-100: #FFFFFF,
+color-basic-200: #FAFAFA,
+color-basic-300: #F4F4F6,
+color-basic-400: #F0F0F0,
+color-basic-500: #E8E8E8,
+color-basic-600: #DBDBDB,
+color-basic-700: #CCCCCC,
+color-basic-800: #A6A6A6,
+color-basic-900: #6C6C6C,
+color-basic-1000: #8C8C8C,
+color-basic-1100: #525252,
+color-basic-1200: #404040,
+color-basic-1300: #333333,
+color-basic-1400: #262626,
+color-basic-1500: #121212,
+</code></pre>
 <h1 id="重新思考颜色的使用"><a href="#重新思考颜色的使用" class="headerlink" title="重新思考颜色的使用"></a>重新思考颜色的使用</h1><p>有了上面这些颜色之后，如何使用它们将是一个关键问题，因为直接影响到我们如何设计深浅模式。</p>
 <p>下面先分析我们以前使用颜色的方法，在进行多模式设计时会出现哪些问题，针对这些问题，重新思考了颜色在整个设计中的使用方法，这将让我们换一个角度重新看待颜色在界面设计中的使用。</p>
 <Section class="caption-yellow">BEFORE</Section>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+    <link rel="alternate icon" type="image/ico" href="/images/favicon.ico">
+ 
+    <title>
+         从 0-1 吃透业务！ 设计师的破局指南 ·  
+        YANNGIKI
+    </title>
+
+    <!-- CSS引用 -->
+    
+<link rel="stylesheet" href="/css/colors.css">
+
+    
+<link rel="stylesheet" href="/css/reset.css">
+
+    
+<link rel="stylesheet" href="/css/nav.css">
+
+    
+<link rel="stylesheet" href="/css/home.css">
+
+    
+<link rel="stylesheet" href="/css/postmd.css">
+
+    
+<link rel="stylesheet" href="/css/index.css">
+
+    
+<link rel="stylesheet" href="/css/about.css">
+
+    
+<link rel="stylesheet" href="/css/toc.css">
+
+    
+<link rel="stylesheet" href="/css/portf_detail.css">
+
+    
+    <!-- Fanbox图片预览引用 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+
+    <!-- 引用iconfont Symbol -->
+    <script src="//at.alicdn.com/t/font_1136188_oqq48jgc1lf.js"></script>
+
+
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6MJSP6QY2Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6MJSP6QY2Z');
+</script>
+
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "s1dprxywnm");
+</script>
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+    <body>
+         <nav id="nav">
+    <div class="nav-content">
+        <a class="logo" href="/"><img class="navlogo" src="/images/logo.svg"></a>
+        <ul class="menu-group">
+            
+            <li class="menu-detail">
+                <a href="/" class="menu  ">首页</a>
+                <span class="splash"> </span>
+            </li>
+            
+            <li class="menu-detail">
+                <a href="/portfolio" class="menu  ">作品</a>
+                <span class="splash"> </span>
+            </li>
+            
+            <li class="menu-detail">
+                <a href="/about" class="menu  ">关于</a>
+                <span class="splash"> </span>
+            </li>
+            
+        </ul>
+    </div>
+</nav>
+
+        <div class="paper">
+            <div class="paper-main">   
+                <div class="post-main">
+    
+        <div class="post-main-title">
+            从 0-1 吃透业务！ 设计师的破局指南
+        </div>
+        <div class="post-meta">
+            2025-07-02
+        </div>
+    
+    
+    <div class="post-md" id="post-detail">
+        <p>设计师时常会面临接触全新业务领域的情况，基于思维惯性可能把更多的关注放在表现层的视觉样式、交互等内容上。如果要想更好地完成体验设计，比如涉及到流程优化、或者改版，往往需要躬身入局深入了解业务。</p>
+<p>近期在参与网易内部产品 APC 的重大改版设计，该产品发展了有10余年，业务不断变化迭代，功能也持续地累积，与第三方系统有功能&#x2F;数据交互，其复杂性不言而喻。</p>
+<p>面对这个案例，在实际工作中通过下面4个维度 <strong>（功能矩阵、业务场景、用户角色、关键词）</strong> 以快速对业务有全局的了解，并建立一个清晰的认知模型。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_business_analysis/key_dimension.svg" alt="key_dimension"></p>
+<h1 id="功能矩阵"><a href="#功能矩阵" class="headerlink" title="功能矩阵"></a><strong>功能矩阵</strong></h1><p>使用功能矩阵可以全貌了解系统的完整功能和推导业务内容，避免业务认知的碎片化。</p>
+<p>在了解功能矩阵时，除了系统本体功能，也需要额外考虑有哪些平台（Web、移动端），是否有接入第三方系统等因素，这样可以得到一个更全面的业务认知框架。</p>
+<p><strong>一、APC 本体功能</strong></p>
+<p>APC 的主要功能集中在「工作台」，包括任务单据的流转和审批、结算、供应商管理等重要功能；其次是任务单所依赖的相关内容如里程碑、预算申请审批、资产库等功能，需要有单独的模块来承载。</p>
+<p><strong>二、APC 外部协作功能</strong></p>
+<p>APC 与公司其它的业务系统在功能和数据上有联动交互，比如从易协作下需求单和成本方案评估，需求验收从 APC 推送回易协作。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_business_analysis/sys_framework.svg" alt="sys_framework"></p>
+<p>在了解具体功能点后，建议根据业务内容性质做进一步的归类，目的是做将功能分类，可以归纳为以下几大类：</p>
+<table>
+<thead>
+<tr>
+<th>功能分类</th>
+<th>范围描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>任务需求管理</strong></td>
+<td>预算管理–&gt; 成本方案 –&gt; 任务单管理 –&gt; 结算</td>
+</tr>
+<tr>
+<td><strong>供应商管理</strong></td>
+<td>供应商准入、合同等</td>
+</tr>
+<tr>
+<td><strong>艺设部门管理</strong></td>
+<td>人天积分绩效、团队成员、数据报告等</td>
+</tr>
+<tr>
+<td><strong>业务&#x2F;系统配置</strong></td>
+<td>项目相关业务设置、人员账号等</td>
+</tr>
+</tbody></table>
+<h1 id="业务场景"><a href="#业务场景" class="headerlink" title="业务场景"></a><strong>业务场景</strong></h1><p>如上述功能矩阵所示，APC 系统上提供了很多功能点，那它们是如何服务于业务需求的？</p>
+<p>当我们想了解 <strong>“用户在什么情况下用软件做什么”</strong> **，本质上了解用户使用我们的系统解决某类需求。业务场景可以为设计提供一个很好的视角，从场景去看功能会理解得更深入，也为后续设计带来具象化的依据：</p>
+<ul>
+<li><p>帮助设计师更聚集核心任务，明确用户使用产品的核心需求，避免设计盲目。</p>
+</li>
+<li><p>通过场景模拟用户操作以演推发现流程痛点，成为设计改进的切入口。</p>
+</li>
+</ul>
+<p>在 APC 系统上，根据业务重要性分为两类业务场景：<strong>「核心场景」</strong>和<strong>「基础场景」</strong>。</p>
+<p><strong>核心场景</strong>：包括任务的建单、拆单和流转管理，以及对供应商的结算跟踪。</p>
+<p><strong>基础场景</strong>：包括基础的业务设置、预算录入和查看、数据报告、艺设内部的绩效管理等非核心功能的应用场景。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_business_analysis/business_context.svg" alt="business_context"></p>
+<h1 id="用户角色"><a href="#用户角色" class="headerlink" title="用户角色"></a><strong>用户角色</strong></h1><p>用户角色是业务分析的 “透视镜”，为了进一步深入业务，以用户角色为切入口，了解各类角色可以在后续的设计中起到持续性作用：</p>
+<ul>
+<li>明确需求边界</li>
+<li>聚集核心目标</li>
+<li>识别需求场景优先级</li>
+<li>观察流程环节的触点问题</li>
+<li>定义角色权限和交互逻辑</li>
+</ul>
+<p>经与产品梳理后，使用 APC 的主要用户角色已超过10类：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_business_analysis/roles.png" alt="roles"></p>
+<p>APC 的角色是基于业务职责划分，不同的用户角色反射了不同的功能集合，都有各自的侧重点。而对于每一类角色使用系统的哪部分功能，在全链路设计过程中也需要做到心中有数。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_business_analysis/roles_function.png" alt="roles_function"></p>
+<p>最后，结合业务流程，梳理这些角色跟 APC 系统之间的主要关系，可以清晰全貌了解 APC 业务流中各用户角色的作用。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_business_analysis/relation_map.svg" alt="relation_map"></p>
+<h1 id="关键词"><a href="#关键词" class="headerlink" title="关键词"></a><strong>关键词</strong></h1><p>任何行业都有对应领域的信息（如商业模式、产业链、技术术语、用户群体等），而其中的<strong>关键词</strong>能精准提炼最核心的概念，它们是业务信息的压缩包。</p>
+<p>初次接触 APC， 发现有较多未接触过的字段概念，单看完全不清楚具体在描述什么内容。当我们充分了解这些关键名词的概念后，业务上的很多疑惑也会迎刃而解。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_business_analysis/field_tags.svg" alt="field_tags"></p>
+<p>单个关键词就像一个 “信息奇点”，能通过逻辑推导裂变出多维业务信息，如果把一块行业的业务比作为一张网络，那关键词就是这个网络中高度浓缩的节点。借助关键词能快速在大脑中建立行业的基础图式，加快认知业务的进程。</p>
+<ul>
+<li>业务背景：在业务中承担着什么作用，一个业务名词的产生，基本上是有一定的业务背景推动。比如字段「分配」可以控制和区分任务单是内包还是外包。</li>
+<li>使用场景：什么时候会用到这些功能&#x2F;信息。</li>
+<li>逻辑交互&#x2F;功能：涉及到哪些操作、数据交互、关联内容。</li>
+<li>关键角色：作用于哪些相干的主要用户，比如谁会填写谁会查看</li>
+</ul>
+<p>至此，借助上述4大维度可以快速了解业务的核心要点，深入了解业务是提升设计价值，打造优质产品的核心密码。它能为设计工作带来多维度的积极影响，重塑设计在项目中的角色与价值。</p>
+<p>同时，设计师能跳出单纯的界面设计思维，培养产品思维，得到跨领域能力的提升。</p>
+
+    </div>
+
+    <footer class="f-cf">
+        
+        <a href="/posts/edd1b2be/" class="link f-fl">
+          <span class="arrow">Prev:</span>
+          APC Redesign
+        </a>
+      
+
+      
+        <a href="/posts/a675595/" class="link f-fr">
+           <span class="arrow">Next:</span>
+          谈谈时区在BI工具中的应用和核心逻辑
+        </a>
+      
+    </footer>
+</div>
+
+<!-- 目录入口图标 -->
+<div class="mini_toc">
+  <div class="toc_icn">
+    <span></span>
+    <span></span> 
+    <span></span>
+    <span></span>
+  </div>
+</div> 
+
+
+
+
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8A%9F%E8%83%BD%E7%9F%A9%E9%98%B5"><span class="toc-text">功能矩阵</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%9A%E5%8A%A1%E5%9C%BA%E6%99%AF"><span class="toc-text">业务场景</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E8%A7%92%E8%89%B2"><span class="toc-text">用户角色</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E8%AF%8D"><span class="toc-text">关键词</span></a></li></ol>
+    </div>
+
+
+<script type="text/javascript">
+    var triggle = document.getElementsByClassName('mini_toc');
+    var toc = document.getElementById('toc');
+    var line = document.querySelectorAll('.toc_icn span');
+    var postMain = document.getElementsByClassName('post-main');
+    
+    var key = false;  // 映射toc的显示和隐藏，并作为真否判断条件，false == toc隐藏
+
+    //控制toc的出现或隐藏
+    function switch_toc() {
+        if(!key) {
+            toc.style.display = "block";
+            key = true;
+        }else {
+            toc.style.display = "none";
+            key = false;
+        } 
+    }
+
+    //目录icn的状态，每点击一次就切换，默认为css设置的状态
+    function toc_icn_state() {
+        for(let i=0; i < line.length; i++){
+            line[i].classList.toggle('op');
+        }
+    }
+
+    triggle[0].addEventListener('click', switch_toc, false);
+
+    triggle[0].addEventListener('click', toc_icn_state, false);
+
+    // >1132px,处理窗口改变大小时，强制让toc出现； 开关变为x，className控制开关隐藏
+    function toc_show(){
+        if((document.body.clientWidth+15) > 1132) {
+            toc.style.display = "block";
+            key = true;
+            for(let i=0; i < line.length; i++){
+                line[i].className='op';
+            }
+        }
+    }
+    window.addEventListener('resize', toc_show, false)
+
+
+    // <1132px toc出现后，点击外围区域可关闭
+    function toc_close(){
+        if((document.body.clientWidth) < 1132 ) {
+            toc.style.display = "none";
+            key = false;
+            for(let i=0; i < line.length; i++){
+                line[i].className='';
+            }
+        }
+    }
+    postMain[0].addEventListener('click', toc_close, false)
+
+    
+
+ </script>
+
+
+<!-- 
+<script src="/js/push-last-url.js"></script>
+  -->
+
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+
+<script src="/js/fancy-box.js"></script>
+ 
+            </div>
+        </div>
+    </body>
+    
+
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
+
+
+<script src="/js/highlight.min.js"></script>
+
+
+<script src="/js/highlightjs-line-numbers.js"></script>
+ 
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+
+<script>
+    function setImgAtt() {
+    let allIMG = document.getElementsByTagName('img');
+    for (let i = 0; i < allIMG.length; i++) {
+            allIMG[i].setAttribute('draggable', 'false');
+        }
+    }   
+    document.addEventListener('DOMContentLoaded', setImgAtt, false)
+
+    document.oncontextmenu = function (e) {
+        return false
+    }
+</script>
+</html>

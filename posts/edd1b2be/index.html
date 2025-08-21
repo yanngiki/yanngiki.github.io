@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+    <link rel="alternate icon" type="image/ico" href="/images/favicon.ico">
+ 
+    <title>
+         APC Redesign ·  
+        YANNGIKI
+    </title>
+
+    <!-- CSS引用 -->
+    
+<link rel="stylesheet" href="/css/colors.css">
+
+    
+<link rel="stylesheet" href="/css/reset.css">
+
+    
+<link rel="stylesheet" href="/css/nav.css">
+
+    
+<link rel="stylesheet" href="/css/home.css">
+
+    
+<link rel="stylesheet" href="/css/postmd.css">
+
+    
+<link rel="stylesheet" href="/css/index.css">
+
+    
+<link rel="stylesheet" href="/css/about.css">
+
+    
+<link rel="stylesheet" href="/css/toc.css">
+
+    
+<link rel="stylesheet" href="/css/portf_detail.css">
+
+    
+    <!-- Fanbox图片预览引用 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+
+    <!-- 引用iconfont Symbol -->
+    <script src="//at.alicdn.com/t/font_1136188_oqq48jgc1lf.js"></script>
+
+
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6MJSP6QY2Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6MJSP6QY2Z');
+</script>
+
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "s1dprxywnm");
+</script>
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+    <body>
+         <nav id="nav">
+    <div class="nav-content">
+        <a class="logo" href="/"><img class="navlogo" src="/images/logo.svg"></a>
+        <ul class="menu-group">
+            
+            <li class="menu-detail">
+                <a href="/" class="menu  ">首页</a>
+                <span class="splash"> </span>
+            </li>
+            
+            <li class="menu-detail">
+                <a href="/portfolio" class="menu  ">作品</a>
+                <span class="splash"> </span>
+            </li>
+            
+            <li class="menu-detail">
+                <a href="/about" class="menu  ">关于</a>
+                <span class="splash"> </span>
+            </li>
+            
+        </ul>
+    </div>
+</nav>
+
+        <div class="paper">
+            <div class="paper-main">   
+                <div class="post-main">
+    
+        <div class="post-main-title">
+            APC Redesign
+        </div>
+        <div class="post-meta">
+            2025-08-10
+        </div>
+    
+    
+    <div class="post-md" id="post-detail">
+        <h1 id="项目背景"><a href="#项目背景" class="headerlink" title="项目背景"></a>项目背景</h1><p><strong>介绍</strong></p>
+<p>网易互娱游戏制作所涉及到的美术、音频、视频、GUI等资源，除了游戏工作室会承担一部分制作，还会分配给内部的网易互娱「艺术设计中心」和签约的供应商&#x2F;个人画师。<strong>APC 的核心作用是制作任务的流转和审批（任务单据跟踪管理）</strong>，使整个资产制作任务链路的拆单、分配、报价、质量审核、业务验收等操作实现数字化管理。</p>
+<blockquote>
+<p><strong>APC</strong>：<strong>A</strong>rt <strong>P</strong>roject <strong>C</strong>ooperative System</p>
+<p><strong>A</strong>：Art，服务于艺术设计</p>
+<p><strong>P</strong>：Project，基于项目维度管理</p>
+<p><strong>C</strong>：Cooperative，满足「内外」协同制作流程，「内」互娱艺术设计中心（简称：艺设），「外」供应商&#x2F;个人画师</p>
+</blockquote>
+<p>APC 系统的业务比较复杂，在网易期间主要是处理这类复杂业务功能的设计，所以当时被抽调去支持该项目的设计。</p>
+<hr>
+<p><strong>改版原因</strong></p>
+<p>APC 在2025年有重大的业务变化，其在网易使用了已有十余年，多年来业务持续变化调整，功能也不断累加（多数是只增不减），较难及时翻身适配新业务的变化，同时累积了一系列体验等问题，这些已经被高层看在眼里。</p>
+<hr>
+<p><strong>面临困境</strong></p>
+<p>产品希望以换肤和局部交互调整的形式，快速改造 APC 的视觉风格和体验，用低成本的方式先让高层看到有所改动。但这个方向很快被否定，高层希望更彻底地解决。</p>
+<p>当时的状态是：大家都知道要做什么，但没人知道怎么做！要改成什么样？要改动哪些内容？没人能说得清楚。</p>
+<h1 id="前置准备"><a href="#前置准备" class="headerlink" title="前置准备"></a>前置准备</h1><p>为了尽快了解和消化 APC 的业务，分别从「功能矩阵」「业务场景」「用户角色」「关键词」**4个维度作为切入口，构建了一个对 APC 相关业务全貌的认知模型。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_redesign/key_dimension.svg" alt="key_dimension"></p>
+<table>
+<thead>
+<tr>
+<th><div style="width:80px">维度 </div></th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>功能矩阵</strong></td>
+<td>了解系统有哪些功能点、功能之间的关系，包括本体功能和第三方系统的关联。</td>
+</tr>
+<tr>
+<td><strong>业务场景</strong></td>
+<td>了解用户使用这些功能完成哪些业务述求，同时划分核心场景和基础场景，以及这些场景所对应的业务流程，把更多的精力放在重要的内容上。</td>
+</tr>
+<tr>
+<td><strong>用户角色</strong></td>
+<td>从业务角度看，不同的用户角色去负责不同的业务内容，了解用户分别使用什么功能，参与哪些流程环节，对设计上的思路和决策有影响。我们的用户角色是按业务岗划分的，不同的用户角色实际上是反映了不同的功能集合。</td>
+</tr>
+<tr>
+<td><strong>关键词</strong></td>
+<td>每个关键词都有它的业务背景、作用意义和交互逻辑，以及它的使用场景和相关联的关键角色。</td>
+</tr>
+</tbody></table>
+<p>如果想更详细了解 APC 的业务和用户，<a href="">查看链接</a>。</p>
+<h1 id="探索与聚焦问题"><a href="#探索与聚焦问题" class="headerlink" title="探索与聚焦问题"></a>探索与聚焦问题</h1><p>随着深入了解业务和真实用户反馈的使用问题，从设计的角度认为，仅优化表现层的视觉风格是治标不治本，系统多年来累积的问题不去解决是不会有实质性的收益，因为这是一个系统性问题，不仅视觉样式问题，还包括业务调整问题、技术历史问题和用户体验问题。</p>
+<h2 id="结合用户反馈探索问题"><a href="#结合用户反馈探索问题" class="headerlink" title="结合用户反馈探索问题"></a>结合用户反馈探索问题</h2><p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_redesign/issue_discover.svg" alt="issue_discover"></p>
+<h2 id="剖析和聚焦问题"><a href="#剖析和聚焦问题" class="headerlink" title="剖析和聚焦问题"></a>剖析和聚焦问题</h2><p>以上只是通过指标初步定位问题方向，为了进一步明晰 APC 的问题细节和产生原因，我们设计上做了一系列的前置工作：梳理 APC 的功能框架并分类、用户角色-功能明细、结合具体的页面做体验问题分析等，系统性去剖析影响 APC 体验的问题。</p>
+<div class="image-container">
+    <div style="flex:1" class="image-item">
+        <img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_redesign/function_structure_2.svg">
+    </div>
+    <div style="flex:1" class="image-item" >
+        <img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_redesign/old_homepage.png" >
+    </div>
+    <div style="flex:1" class="image-item">
+        <img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_redesign/old_details.png" >
+    </div>
+</div>
+
+<p>一、梳理系统的功能框架并分类</p>
+<p>根据业务内容把它们划分为上面几大类。</p>
+<p>可以看到APC的功能是很分散，用户「找功能」本身也要花费不少时间。同时还有不少历史业务的功能还保留在系统内</p>
+<p>二、结合具体的页面做体验问题分析</p>
+<p>![image-20250810112443248](&#x2F;Users&#x2F;liu.jianyang&#x2F;Library&#x2F;Mobile Documents&#x2F;com<del>apple</del>CloudDocs&#x2F;Typora&#x2F;images&#x2F;image-20250810112443248.png)</p>
+<section class="question">🚨 全局性问题</section>
+
+<p><strong>一、业务负担</strong></p>
+<ul>
+<li><p><strong>过时业务场景</strong>：部分历史功能在业务调整后已不存在使用场景，但旧功能仍在系统上保留，所以系统越来越冗肿；</p>
+</li>
+<li><p><strong>定制非核心功能</strong>：为极少数团队定制保留一些非核心功能，又与其它功能有耦合，日常迭代的设计和研发都需要额外考虑是否有影响；</p>
+</li>
+<li><p><strong>非业务驱动</strong>：某些功能（抢单、内部竞价）是由于领导基于KPI压力拍板去做，实际上做完没几个人用，脱离了实际业务发展需要；</p>
+</li>
+</ul>
+<p><strong>二、导航混乱</strong></p>
+<p><span style="display:inline-block; color: #888; margin:0px 0px 0px 32px">主要问题体现在功能的组织逻辑不符合用户认知习惯，导致用户难以理解信息层级、定位目标内容和完成操作。</span></p>
+<ul>
+<li><strong>信息架构熵增</strong>：功能组织逻辑随时间无序化，缺乏稳定的层级与优先级；</li>
+<li><strong>功能分类逻辑混乱</strong>：属于同一模块的功能，被收纳到不同的模块，信息组织上违反了“聚类原则”。</li>
+<li><strong>可发现性低</strong>：缺泛直观性和自然映射，用户无法通过常识或逻辑推断快速定位目标功能入口，被迫依赖经验积累形成 “位置记忆” 来完成操作，新用户面临徒峭的学习曲线和过高的认知负荷。</li>
+</ul>
+<p><strong>三、品质感</strong></p>
+<p><span style="display:inline-block; color: #888; margin:0px 0px 0px 32px">视觉品质过时（包括页面风格上使用了过多的投影、分隔线、高亮颜色，造成视觉干扰）、信息密度大、文案不一致、歧义等问题</span></p>
+<ul>
+<li>视觉品质过时：表现层的页面视觉风格存在过度装饰性元素（如冗余的投影效果、密集的分隔线、高饱和高亮色的滥用），此类元素缺乏功能性意义，反而形成强烈的视觉干扰，分散用户捕获核心信息的注意力。</li>
+<li>信息密度失衡：单位视觉空间内承载的信息元素过量，超出合理认知负荷范围，进一步加剧了视觉噪音的负面影响，导致用户难以快速聚焦关键内容。</li>
+<li>文案一致性：缺泛一致性、连续性，同一个业务概念有不同的名词（如标准工作量、标准人天、标准成本）。</li>
+</ul>
+<section class="question">🚨 核心功能问题</section>
+
+
+<p><strong>「工作台」</strong>和<strong>「单据」</strong>是 APC 系统核心业务的载体，同时也是整个产品体验中问题最突出的所在地方。</p>
+<p><strong>一、工作台</strong></p>
+<ul>
+<li><strong>功能堆砌</strong>：当前工作台已成为单纯的多个业务功能的切换入口，主要价值局限于导航与定位。由于聚合逻辑缺乏长期规划，持续纳入不同阶段的所谓 “重点功能入口”，且未执行有效的功能迭代与淘汰机制（只增不减），导致用户一进入系统就要面对<strong>信息冗余膨胀</strong>的界面，已经偏离了工作台<strong>“以任务导向的高效操作中枢”</strong>设计初衷，削弱了用户对关键任务的快速定位和处理能力。</li>
+<li><strong>信息与用户需求匹配度低</strong>：<ul>
+<li>未基于用户角色实施差异化设计，内容千篇一律，与用户实际需求的匹配度低，忽略了不同用户群体的核心关注焦点差异 —（如采购外包管理人员与接口人，前者更侧重外包单的全链路节点监控，后者则聚焦于职责范围内的任务单处理节点及团队人天数据等信息）。</li>
+</ul>
+</li>
+<li><strong>信息筛选成本高</strong>：信息架构采用同质化的【选项卡-列表】形式，重要信息无法突出，用户可能需要在大量无关信息中寻找自己需要的，这会增加他们的认知负担，降低办公效率。</li>
+</ul>
+<p><strong>二、任务单据详情</strong></p>
+<ul>
+<li><strong>字段缺少组织逻辑</strong>：<ul>
+<li>没有基于业务属性分类，增量式无序堆砌(新增字段没有分类组织），布局分散导致信息间关联性缺失；</li>
+<li>没有基于用户角色与任务阶段的信息差异化展示，增加用户的信息检索成本与认知负荷。</li>
+</ul>
+</li>
+<li><strong>信噪比低</strong>：存在大量冗余过时字段（已失效的业务字段未移除）和杂乱的视觉细节，无效信息干扰用户对有效信息的识别与获取。</li>
+<li><strong>阅读与填写冲突</strong>：空间利用和布局缺陷，信息阅读区与操作区存在空间侵占冲突，有效信息可视区域和真正的作业区域变少，直接导致阅读流畅性下降与信息输入效率低2大问题并存，造成用户操作过程中的交互摩擦感与情绪不适感。</li>
+<li><strong>性能体验问题</strong>：单据详情页存在明显的加载延迟（耗时 6-10 秒），导致交互响应滞后，容易引发用户焦虑情绪与操作挫败感，甚至导致任务放弃率上升。（主要原因在于每次进入详情需要拉取目录树的全量数据，表单字段数据显示有一系列的状态和权限等相关逻辑的判断。）</li>
+<li><strong>视觉层级混乱</strong>：从视觉呈现上，页面元素（文字大小、颜色、间距、区块划分）未通过视觉权重区分优先级，导致用户无法快速识别关键信息。例如，目录树与内容详情区域、按钮与背景色对比微弱，用户难以判断操作焦点。</li>
+</ul>
+<h1 id="设计思考"><a href="#设计思考" class="headerlink" title="设计思考"></a>设计思考</h1><p>至此，APC的重点问题已经清晰明确了，那接下来我们该如何解决？？</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_redesign/design_before.svg" alt="design_before"></p>
+<p>首先，我们应该要先明确用户真正需要的是什么？不同的用户群体对上述问题有什么不一样的期望？</p>
+<p>其次，基于用户的角度去思辨业务，结合问题找出具备业务价值的体验目标</p>
+<p>最后，确定设计改进大方向&#x2F;策略。根据前期对业务的理解、对问题的探索和聚焦收敛，圈定了4个有比较高价值的方向进行设计，包括功能框架和导航结构、重构工作台、优化单据详情、提升整体品质感。</p>
+<hr>
+<p>基于 APC 的重点问题源于各种历史包袱，我们整个设计过程上遵循两个基本设计法则：<strong>减法</strong>和<strong>分类</strong>。</p>
+<p>目的是将复杂功能和信息逻辑揉碎后再重组，降低体验摩擦。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_redesign/design_principle.svg" alt="design_principle"></p>
+<p><strong>一、减法</strong>：功能上做减法，砍掉不存在业务场景的历史功能；信息上做减法，删减冗余字段。可以很大程度降低系统的复杂性，不管是业务层面、技术或设计层面。（这一块最终由产品跟业务方沟通决定明细）。</p>
+<p><strong>二、分类</strong>：功能导航优先按业务性质做聚合，属于同一业务模块的功能应该要放在一起，能让用户轻松记忆的触达路径；同样，字段上也要做分类，将字段属性或业务上强关联的字段组合在一起。</p>
+<p>整体的思路是要做到<strong>「化繁为简」</strong>，这实际上是一个降维过程，将复杂功能和逻辑揉碎后再重组，能让用户更多容易理解的界面&#x2F;信息载体，然后按照他们自己的认知和习惯高效达成使用目的。</p>
+<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><h2 id="重组功能框架和导航结构"><a href="#重组功能框架和导航结构" class="headerlink" title="重组功能框架和导航结构"></a>重组功能框架和导航结构</h2><p><strong>一、导航框架</strong></p>
+<p>APC系统产品功能架构有<strong>延伸多级</strong>的功能菜单。旧版使用侧边导航<strong>单一结构</strong>，子层级放右侧内容区的顶部，用户对产品功能缺少全局认知，<strong>导航效率低</strong>。</p>
+<p>重新规划整体的系统信息框架时，主要考虑保持业务功能的同时能让用户从已习得的使用习惯中快速适应，另外要更有利于各模块的<strong>规划分类</strong>和后续的<strong>扩展性</strong>。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_redesign/navigation_constructure.png" alt="navigation_constructure"></p>
+<p><span style="color: #BB2425">– 导航结构框架效果图 –</span></p>
+<p><strong>二、内容结构</strong></p>
+<p><span style="color: #BB2425">– 功能结构图 –</span>业务性质重新分类和聚合</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_redesign/navigation_role.png" alt="navigation_role"></p>
+<p><strong>精简化</strong>：删减不存在业务场景的历史功能和部分定制化功能，如工时登记、周报&#x2F;月报、成本管理等。</p>
+<p><strong>导航分类场景化</strong>：按业务场景重新分类和聚合，主要分为七大工作场景：任务单据跟踪管理、费用结算、供应商管理、项目相关配置、查看报告、艺设团队管理，有效帮助用户记忆和定位，解决过往功能分散的问题。</p>
+<p><strong>按用户群体的权限划分范围</strong>：结合业务调整，导航菜单根据角色权限划分范围，看到的更简洁且符合期职责所需，解决过往菜单权限混乱的问题。</p>
+<p><strong>缩短核心功能触达路径</strong>：任务单据的跟踪管理是APC的主干业务，将其从原工作台拆出来放在一级菜单，并将单据类型作为子级菜单，功能路径更清晰，同时也缩短用户触达目标的路径。</p>
+<p><span style="color: #AAA">– 效果图展示 –</span></p>
+<h2 id="重新定义工作台的业务价值"><a href="#重新定义工作台的业务价值" class="headerlink" title="重新定义工作台的业务价值"></a>重新定义工作台的业务价值</h2><blockquote>
+<p>设计之前：基于用户的角度去思辨业务，工作台应该承载的作用是什么？各类角色的用户需要的是什么？</p>
+</blockquote>
+<p>一、了解工作台的定位</p>
+<p>二、从功能视角转换为用户视角</p>
+<p>我们原来的工作台主要是承担用户接触和完成任务的作用，以功能为导向</p>
+<h2 id="单据详情优化"><a href="#单据详情优化" class="headerlink" title="单据详情优化"></a>单据详情优化</h2><p>APC 的单据是业务核心载体，单据详情的设计难点主要来源于业务上的复杂性，所以在开始设计之前就优先<strong>拆解各类业务表单的复杂性</strong>。</p>
+<table>
+<thead>
+<tr>
+<th><div style="width:80px;" >复杂来源 </div></th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>字段概念</strong></td>
+<td>数量多达100多个字段，垂直领域的字段晦涩难懂，要通过背后的其业务含义了解。</td>
+</tr>
+<tr>
+<td><strong>单据多类型</strong></td>
+<td>按业务内容可划分为3种类型的单据：<strong>需求单</strong>、<strong>任务底单</strong>、<strong>结算单</strong>。按表单类型可划分为2种：<strong>流程类单据</strong>和<strong>阅读类单据</strong>，同时流程类单据还可以根据分配对象划分为内包单、国内供应商单、国外供应商单、个画单。</td>
+</tr>
+<tr>
+<td><strong>多角色和多节点</strong></td>
+<td>流程类单据不同类型的单据有不同业务节点线，不同的用户会关注不同的单据和流程节点，每个流程节点所填写&#x2F;阅读的信息均有差异。</td>
+</tr>
+</tbody></table>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_redesign/form_complexity.png" alt="form_complexity"></p>
+<p>APC 的单据是业务核心载体，基于用户的行为将表单的交互拆分为3个关键动作：<strong>阅读</strong>、<strong>编辑</strong>和<strong>提交</strong>，结合上述探索聚焦的问题制定相对应的设计目标和设计策略。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_redesign/form_design_keypoint.svg" alt="form_design_keypoint"></p>
+<p>在梳理清楚单据的复杂性之后，结合总结的问题，设计上主要对单据详情做了以下的优化：</p>
+<p><span style="color: #BB2425">– 效果图展示 –</span></p>
+<p><strong>统一表单结构</strong></p>
+<ul>
+<li>一种载体框架，适用于APC多种类型的业务表单。</li>
+<li>结合阅读场景提供「抽屉形式」和「独立页面」2种查看形式，前者便捷填单和切换，后者专注沉浸式查看。</li>
+</ul>
+<p><strong>信息分组</strong></p>
+<ul>
+<li>结合业务属性，将字段大致分为几大类：标题区、基本信息、成本信息、制作信息、底部操作等，遵循格式塔-接近性原理，将零散的字段信息有规律的组织，并且同时考虑不同类型的业务单据。</li>
+<li>分角色、阶段重点信息及状态突出展示：结合业务流程，针对不同阶段、不同用户展示所需关注信息。</li>
+</ul>
+<p><span style="color: #BB2425">– 效果图展示 –</span></p>
+<p><strong>表单轻量化</strong></p>
+<ul>
+<li><p>结构轻量化：</p>
+<ul>
+<li>砍掉让用户难受的占了半屏的节点信息填写区域，降低页面布局的复杂性。</li>
+<li>结合用户的填单习惯，简化单据的目录树层级结构（从原来的4层简化为3层），默认仅展示需求单所关联的底单，根据需要收纳或展开。从原来的展示全量列表数据或里程碑-需求单-环节单-任务底单，改为仅展示当前需求单下的任务底单。</li>
+</ul>
+</li>
+<li><p>内容轻量化：</p>
+<ul>
+<li>删减冗余字段<span style="color:#888; font-style:italic">（这部分主要与产品决定</span>），以卡片化的形式组织和展示字段，提升阅读效率。</li>
+<li>信息展示根据流程节点和角色控制，默认定位和展开当前节点和角色所关注的卡片内容。</li>
+</ul>
+</li>
+<li><p>视觉轻量化：</p>
+<ul>
+<li>通过优化色彩体系、精简视觉元素和优化信息密度等，降低用户的视觉认知负担。</li>
+<li>同时保持重要信息的清晰传递和界面的呼吸感。</li>
+</ul>
+</li>
+</ul>
+<p><strong>制定阅读和编辑的交互范式</strong></p>
+<ul>
+<li><p>【流程类单据】：当各流程节点需展示&#x2F;填写不同内容时，根据用户角色和节点状态共同判断可编辑字段，平铺展示，整个填写过程所见即所得，提升阅读和填写效率，解决表单阅读与填写区域侵占的问题。</p>
+</li>
+<li><p>【展示类单据】：以阅读为主要述求，默认状态下更聚集于阅读，如有编辑需要，通过提供独立的编辑入口触发编辑态。</p>
+</li>
+<li><p>减少填写工作量：在部分流程节点自动继承默认值，无需用户二次填写。</p>
+</li>
+</ul>
+<h2 id="品质感提升"><a href="#品质感提升" class="headerlink" title="品质感提升"></a>品质感提升</h2><p>提升 APC 整体的品质感，从各种设计细节入手，主要有以下几类设计策略：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_redesign/design_quality.png" alt="design_quality"></p>
+<ul>
+<li><strong>设计语言升级和规范统一</strong><ul>
+<li>层级化色彩体系：明确的「主色+辅助色+中性色」体系，符合Web WCAG 2.1 标准</li>
+<li>样式梯度：颜色、圆角、阴影、字体大小、间距留白等有具体层级关系，并且针对不同场景有适配的参数</li>
+<li>图标：统一图标风格</li>
+<li>统一的组件：Web端交互所涉及的基础组件和业务组件</li>
+</ul>
+</li>
+<li><strong>边缘场景覆盖</strong><ul>
+<li>极端内容适配：目录树标题自动换行+中省略，最多2行，末尾保留5个字符；</li>
+<li>金额超万显示：数值底部金额标识符；</li>
+<li>分辨率适配：高分屏和低分屏自动或手动调整内容显示大小</li>
+</ul>
+</li>
+<li><strong>文案</strong><ul>
+<li>贴近业务目标：节点文案结合业务场景重新命名，格式统一。</li>
+<li>术语统一：同一概念的内容统一叫法，减少用户认知的成本。</li>
+<li>精简表达：删除冗余词汇，控制长度</li>
+</ul>
+</li>
+<li>内容结构化与可读性<ul>
+<li>复杂内容“模块化”拆解：表单详情的字段信息以卡片形式重新分类组合。</li>
+<li>信息展示优先级：列表内容、表单详情等通过 “字号 + 字重 + 颜色” 建立内容层级。</li>
+</ul>
+</li>
+<li><strong>简化视觉噪音</strong><ul>
+<li>去除冗余元素：删除不必要的分割线、阴影（可用留白或分层底色替代）</li>
+<li>克制的视觉层级：通过留白、字体层级、色彩对比突出核心内容，减少高亮颜色的使用</li>
+<li>隐藏次要功能：非高频操作放入下拉菜单或“更多”按钮</li>
+</ul>
+</li>
+</ul>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><style>
+.image-container {
+  margin: 0 auto;
+  border-radius: 8px;
+  display:flex;
+  gap:8px;
+  padding:16px;
+  box-sizing:border-box
+}
+  .image-container:hover {
+    background-color: #F7F8F9;
+  }
+  .image-item img {
+    width:100%;
+    height: 200px;
+    display: block;
+    border:1px solid #EEE;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+</style>
+    </div>
+
+    <footer class="f-cf">
+        
+
+      
+        <a href="/posts/ed8efc35/" class="link f-fr">
+           <span class="arrow">Next:</span>
+          从 0-1 吃透业务！ 设计师的破局指南
+        </a>
+      
+    </footer>
+</div>
+
+<!-- 目录入口图标 -->
+<div class="mini_toc">
+  <div class="toc_icn">
+    <span></span>
+    <span></span> 
+    <span></span>
+    <span></span>
+  </div>
+</div> 
+
+
+
+
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E8%83%8C%E6%99%AF"><span class="toc-text">项目背景</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E7%BD%AE%E5%87%86%E5%A4%87"><span class="toc-text">前置准备</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8E%A2%E7%B4%A2%E4%B8%8E%E8%81%9A%E7%84%A6%E9%97%AE%E9%A2%98"><span class="toc-text">探索与聚焦问题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E5%90%88%E7%94%A8%E6%88%B7%E5%8F%8D%E9%A6%88%E6%8E%A2%E7%B4%A2%E9%97%AE%E9%A2%98"><span class="toc-text">结合用户反馈探索问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%96%E6%9E%90%E5%92%8C%E8%81%9A%E7%84%A6%E9%97%AE%E9%A2%98"><span class="toc-text">剖析和聚焦问题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%80%83"><span class="toc-text">设计思考</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-text">解决方案</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E7%BB%84%E5%8A%9F%E8%83%BD%E6%A1%86%E6%9E%B6%E5%92%8C%E5%AF%BC%E8%88%AA%E7%BB%93%E6%9E%84"><span class="toc-text">重组功能框架和导航结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E6%96%B0%E5%AE%9A%E4%B9%89%E5%B7%A5%E4%BD%9C%E5%8F%B0%E7%9A%84%E4%B8%9A%E5%8A%A1%E4%BB%B7%E5%80%BC"><span class="toc-text">重新定义工作台的业务价值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E6%8D%AE%E8%AF%A6%E6%83%85%E4%BC%98%E5%8C%96"><span class="toc-text">单据详情优化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%93%81%E8%B4%A8%E6%84%9F%E6%8F%90%E5%8D%87"><span class="toc-text">品质感提升</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol>
+    </div>
+
+
+<script type="text/javascript">
+    var triggle = document.getElementsByClassName('mini_toc');
+    var toc = document.getElementById('toc');
+    var line = document.querySelectorAll('.toc_icn span');
+    var postMain = document.getElementsByClassName('post-main');
+    
+    var key = false;  // 映射toc的显示和隐藏，并作为真否判断条件，false == toc隐藏
+
+    //控制toc的出现或隐藏
+    function switch_toc() {
+        if(!key) {
+            toc.style.display = "block";
+            key = true;
+        }else {
+            toc.style.display = "none";
+            key = false;
+        } 
+    }
+
+    //目录icn的状态，每点击一次就切换，默认为css设置的状态
+    function toc_icn_state() {
+        for(let i=0; i < line.length; i++){
+            line[i].classList.toggle('op');
+        }
+    }
+
+    triggle[0].addEventListener('click', switch_toc, false);
+
+    triggle[0].addEventListener('click', toc_icn_state, false);
+
+    // >1132px,处理窗口改变大小时，强制让toc出现； 开关变为x，className控制开关隐藏
+    function toc_show(){
+        if((document.body.clientWidth+15) > 1132) {
+            toc.style.display = "block";
+            key = true;
+            for(let i=0; i < line.length; i++){
+                line[i].className='op';
+            }
+        }
+    }
+    window.addEventListener('resize', toc_show, false)
+
+
+    // <1132px toc出现后，点击外围区域可关闭
+    function toc_close(){
+        if((document.body.clientWidth) < 1132 ) {
+            toc.style.display = "none";
+            key = false;
+            for(let i=0; i < line.length; i++){
+                line[i].className='';
+            }
+        }
+    }
+    postMain[0].addEventListener('click', toc_close, false)
+
+    
+
+ </script>
+
+
+<!-- 
+<script src="/js/push-last-url.js"></script>
+  -->
+
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+
+<script src="/js/fancy-box.js"></script>
+ 
+            </div>
+        </div>
+    </body>
+    
+
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
+
+
+<script src="/js/highlight.min.js"></script>
+
+
+<script src="/js/highlightjs-line-numbers.js"></script>
+ 
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+
+<script>
+    function setImgAtt() {
+    let allIMG = document.getElementsByTagName('img');
+    for (let i = 0; i < allIMG.length; i++) {
+            allIMG[i].setAttribute('draggable', 'false');
+        }
+    }   
+    document.addEventListener('DOMContentLoaded', setImgAtt, false)
+
+    document.oncontextmenu = function (e) {
+        return false
+    }
+</script>
+</html>

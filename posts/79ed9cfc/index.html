@@ -40,20 +40,11 @@
 
     
     <!-- Fanbox图片预览引用 -->
-    <!-- <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" /> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
 
     <!-- 引用iconfont Symbol -->
     <script src="//at.alicdn.com/t/font_1136188_oqq48jgc1lf.js"></script>
 
-
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "s1dprxywnm");
-</script>
 
 
     <!-- Google tag (gtag.js) -->
@@ -66,7 +57,15 @@
   gtag('config', 'G-6MJSP6QY2Z');
 </script>
 
-<meta name="generator" content="Hexo 5.4.2"></head>
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "s1dprxywnm");
+</script>
+
+<meta name="generator" content="Hexo 7.3.0"></head>
     <body>
          <nav id="nav">
     <div class="nav-content">
@@ -75,17 +74,17 @@
             
             <li class="menu-detail">
                 <a href="/" class="menu  ">首页</a>
-                <span class="splash">/</span>
+                <span class="splash"> </span>
             </li>
             
             <li class="menu-detail">
                 <a href="/portfolio" class="menu  ">作品</a>
-                <span class="splash">/</span>
+                <span class="splash"> </span>
             </li>
             
             <li class="menu-detail">
                 <a href="/about" class="menu  ">关于</a>
-                <span class="splash">/</span>
+                <span class="splash"> </span>
             </li>
             
         </ul>
@@ -139,7 +138,7 @@
 <p>通过流程和交互优化，减少对商家使用产品的教学培训</p>
 <h1 id="用户分析"><a href="#用户分析" class="headerlink" title="用户分析"></a>用户分析</h1><p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/mobile-cashier/userpicture.png" alt="用户画像"></p>
 <p>🌁 体验地图: <a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/mobile-cashier/uxmp_cashier.svg">点击查看</a></p>
-<h1 id="问题-amp-优化"><a href="#问题-amp-优化" class="headerlink" title="问题&amp;优化"></a>问题&amp;优化</h1><p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/mobile-cashier/problems.png" alt="旧版问题"></p>
+<h1 id="问题-优化"><a href="#问题-优化" class="headerlink" title="问题&amp;优化"></a>问题&amp;优化</h1><p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/mobile-cashier/problems.png" alt="旧版问题"></p>
 <p>原来的版本上线后，有上面几大方面的问题，最终导致的结果的移动收银的<strong>口碑差</strong>、<strong>使用率低</strong>，对购买服务的商家和我们平台来说都是一种损失。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/mobile-cashier/enhanceWay.png" alt="优化方向"></p>
 <p>接下来，下面会从<strong>流程</strong>、<strong>交互</strong>和<strong>功能</strong>三个方面选取部分问题进入分析，以及对应的解决方案。主要的优化方向是流程交互，重塑用户在使用移动收银时的心智模型，目的是提升收银的效率和使用体验。</p>
@@ -154,22 +153,15 @@
 
 <section class="question">🤯 问题</section>
 
-<p>问题概括：</p>
-
-<section class="label-yellow" style="display:inline-block;">业务流程单线程</section>
-<section class="label-yellow" style="display:inline-block;">产品交互不符合心智模型</section>
-<section class="label-yellow" style="display:inline-block;">不必要的重复流程</section>
-<section class="label-yellow" style="display:inline-block;">页面跳转多/连贯性差</section>
-
-
-<div style="height:1.2rem"></div>
-
-<p><strong>查找会员不符合一般用户养成的心智模型</strong></p>
-<p><code>输入手机号 ⇢ 选择功能  ⇢  搜索会员和选择 ⇢ 进入功能详情</code></p>
-<p>输入手机号接下来的操作直觉就是搜索会员，但这里在输入完手机号之后的操作是先选功能（开单、充值等）才能搜索会员。这种与一般人已养成的心智模型不一样，把两个不一样作用的操作交叉组合在一起，在操作流程的认识上会出现断层。</p>
-<p><strong>收银首页面示能不突出</strong></p>
-<p>主页上面放置的是数字键盘用来输入手机号，底下放置的是功能集，但这两块区域静态地放在一起，并看不出是有关联。特别是在输入手机号后，用户会愣一下“我接下来该怎么操作？要点什么？”。在示能设计上是失败的。</p>
-<p><strong>开单流程单线程</strong></p>
+<p><strong>产品交互不符合心智模型</strong></p>
+<p>查找会员不符合一般用户养成的认识：<code>输入手机号 ⇢ 选择功能  ⇢  搜索会员和选择 ⇢ 进入功能详情</code></p>
+<ul>
+<li>输入手机号接下来的操作直觉就是搜索会员，但这里在输入完手机号之后的操作是先选功能（开单、充值等）才能搜索会员，这种与一般人已养成的心智模型不一样。把两个不一样作用的操作交叉组合在一起，对操作流程会出现<strong>认识断层</strong>。</li>
+<li>如果从某个功能切换到其它功能，还需要选退回到收银首页，再重选输入手机号和选择功能，用户使用时<strong>页面跳转多并且交互连贯性差</strong>。</li>
+</ul>
+<p><strong>示能效果弱</strong></p>
+<p>收银的主页上面放置的是数字键盘用来输入手机号，底下放置的是功能集，但这两块区域静态地放在一起，并看不出是有关联。特别是在输入手机号后，用户会愣一下“我接下来该怎么操作？要点什么？”。在示能设计上是失败的。</p>
+<p><strong>业务流程单线程</strong></p>
 <p>同一会员，在执行每一项功能（开卡、充值等）操作前，都要返回到收银主页输入一次手机号或会员卡号进行会员搜索，增加了交互步长，而且繁琐。具体体现有下面两点：</p>
 <ul>
 <li><p>同一个会员在开单（服务&#x2F;商品）时，无法直接给顾客充值或开卡，极大影响操作的便捷性。</p>
@@ -461,7 +453,7 @@
 
 
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%A7%E5%93%81%E4%BB%B7%E5%80%BC"><span class="toc-text">产品价值</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%97%E9%93%BA%E4%BB%B7%E5%80%BC"><span class="toc-text">店铺价值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B9%B3%E5%8F%B0%E4%BB%B7%E5%80%BC"><span class="toc-text">平台价值</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E5%88%86%E6%9E%90"><span class="toc-text">用户分析</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%97%AE%E9%A2%98-amp-%E4%BC%98%E5%8C%96"><span class="toc-text">问题&amp;优化</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%81%E7%A8%8B%E9%97%AE%E9%A2%98"><span class="toc-text">流程问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%8D%95%E6%B5%81%E7%A8%8B"><span class="toc-text">开单流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A2%9E%E5%88%A0%E6%94%B9%E9%A1%B9%E7%9B%AE%E6%B5%81%E7%A8%8B"><span class="toc-text">增删改项目流程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%A4%E4%BA%92%E9%97%AE%E9%A2%98"><span class="toc-text">交互问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%B6%E9%93%B6%E4%B8%BB%E9%A1%B5"><span class="toc-text">收银主页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%8D%95%E4%B8%BB%E9%A1%B5%E9%9D%A2"><span class="toc-text">开单主页面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%85%E6%94%AF%E4%BB%98%E8%AE%A2%E5%8D%95%E9%A1%B5"><span class="toc-text">待支付订单页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%83%A8%E5%88%86%E5%BC%B9%E7%AA%97%E4%BA%A4%E4%BA%92%E5%92%8C%E8%AE%BE%E8%AE%A1%E9%97%AE%E9%A2%98"><span class="toc-text">部分弹窗交互和设计问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%9F%E8%83%BD"><span class="toc-text">功能</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-text">设计的作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E6%9E%84%E7%9A%84%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99"><span class="toc-text">重构的设计原则</span></a></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%A7%E5%93%81%E4%BB%B7%E5%80%BC"><span class="toc-text">产品价值</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%97%E9%93%BA%E4%BB%B7%E5%80%BC"><span class="toc-text">店铺价值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B9%B3%E5%8F%B0%E4%BB%B7%E5%80%BC"><span class="toc-text">平台价值</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E5%88%86%E6%9E%90"><span class="toc-text">用户分析</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%97%AE%E9%A2%98-%E4%BC%98%E5%8C%96"><span class="toc-text">问题&amp;优化</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%81%E7%A8%8B%E9%97%AE%E9%A2%98"><span class="toc-text">流程问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%8D%95%E6%B5%81%E7%A8%8B"><span class="toc-text">开单流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A2%9E%E5%88%A0%E6%94%B9%E9%A1%B9%E7%9B%AE%E6%B5%81%E7%A8%8B"><span class="toc-text">增删改项目流程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%A4%E4%BA%92%E9%97%AE%E9%A2%98"><span class="toc-text">交互问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%B6%E9%93%B6%E4%B8%BB%E9%A1%B5"><span class="toc-text">收银主页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%8D%95%E4%B8%BB%E9%A1%B5%E9%9D%A2"><span class="toc-text">开单主页面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%85%E6%94%AF%E4%BB%98%E8%AE%A2%E5%8D%95%E9%A1%B5"><span class="toc-text">待支付订单页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%83%A8%E5%88%86%E5%BC%B9%E7%AA%97%E4%BA%A4%E4%BA%92%E5%92%8C%E8%AE%BE%E8%AE%A1%E9%97%AE%E9%A2%98"><span class="toc-text">部分弹窗交互和设计问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%9F%E8%83%BD"><span class="toc-text">功能</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-text">设计的作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E6%9E%84%E7%9A%84%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99"><span class="toc-text">重构的设计原则</span></a></li></ol></li></ol>
     </div>
 
 

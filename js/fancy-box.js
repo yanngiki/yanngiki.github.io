@@ -1,6 +1,6 @@
 // 该文档为自定义fancybox的使用
 
-// 在DOM加载时，遍历post-md里所有的图片，并加上‘data-fancybox’属性
+// 遍历post-md里所有的图片，并加上‘data-fancybox’属性
 function imgsetAttPost() {
     let Paper = document.getElementById('post-detail');
     let fancyimg = Paper.getElementsByTagName('img');
@@ -11,7 +11,7 @@ function imgsetAttPost() {
 }
 document.addEventListener('DOMContentLoaded', imgsetAttPost, false)
 
-//遍历portf-showcase里所有的图片，并加上‘data-fancybox’属性
+//遍历portf-showcase里所有的图片，并加上‘data-fancybox=”port”’属性
 function imgsetAttPortf() {
     let PaperPortf = document.getElementById('portf_detail');
     let fancyimg = PaperPortf.getElementsByTagName('img');
@@ -23,7 +23,7 @@ function imgsetAttPortf() {
 document.addEventListener('DOMContentLoaded', imgsetAttPortf, false)
 
 
-// Fancybox 5.0    
+// Fancybox 普通图片事件   
 // "close" "slideshow", "thumbs", 
 // "prev", "infobar","next",
 // "zoomIn","zoomOut","toggle1to1","rotateCCW","rotateCW","flipX","flipY",
@@ -36,7 +36,7 @@ Fancybox.bind('[data-fancybox]', {
       },
     Toolbar: {
         display: {
-            left: ["close"],
+            left: ["toggle1to1", "thumbs"],
             middle: [
             // "zoomIn",
             // "zoomOut",
@@ -46,7 +46,7 @@ Fancybox.bind('[data-fancybox]', {
             // "flipX",
             // "flipY",
             ],
-            right: ["toggle1to1", "thumbs"],
+            right: ["close"],
         },
     },
 });
@@ -58,7 +58,7 @@ Fancybox.bind('[data-fancybox="portf" ]', {
       },
     Toolbar: {
         display: {
-            left: ["close"],
+            left: ["toggle1to1", "thumbs"],
             middle: [
             // "zoomIn",
             // "zoomOut",
@@ -68,29 +68,7 @@ Fancybox.bind('[data-fancybox="portf" ]', {
             // "flipX",
             // "flipY",
             ],
-            right: ["toggle1to1", "thumbs"],
+            right: ["close"],
         },
     },
 });
-
-
-// Fancybox.bind('[data-fancybox]', {
-//     Thumbs : {
-//         type: "modern"
-//       },
-//     Toolbar: {
-//         display: {
-//           left: ["close", "infobar"],
-//           middle: [
-//             "zoomIn",
-//             "zoomOut",
-//             "toggle1to1",
-//             "rotateCCW",
-//             "rotateCW",
-//             "flipX",
-//             "flipY",
-//           ],
-//           right: ["slideshow", "thumbs"],
-//         },
-//       },
-// });

@@ -40,20 +40,11 @@
 
     
     <!-- Fanbox图片预览引用 -->
-    <!-- <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" /> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
 
     <!-- 引用iconfont Symbol -->
     <script src="//at.alicdn.com/t/font_1136188_oqq48jgc1lf.js"></script>
 
-
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "s1dprxywnm");
-</script>
 
 
     <!-- Google tag (gtag.js) -->
@@ -66,7 +57,15 @@
   gtag('config', 'G-6MJSP6QY2Z');
 </script>
 
-<meta name="generator" content="Hexo 5.4.2"></head>
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "s1dprxywnm");
+</script>
+
+<meta name="generator" content="Hexo 7.3.0"></head>
     <body>
          <nav id="nav">
     <div class="nav-content">
@@ -75,17 +74,17 @@
             
             <li class="menu-detail">
                 <a href="/" class="menu  ">首页</a>
-                <span class="splash">/</span>
+                <span class="splash"> </span>
             </li>
             
             <li class="menu-detail">
                 <a href="/portfolio" class="menu  ">作品</a>
-                <span class="splash">/</span>
+                <span class="splash"> </span>
             </li>
             
             <li class="menu-detail">
                 <a href="/about" class="menu  ">关于</a>
-                <span class="splash">/</span>
+                <span class="splash"> </span>
             </li>
             
         </ul>
@@ -146,31 +145,23 @@
 <section style="width:100%;color:#15BA89;text-align:center;font-weight:700" >以一个简单的登录为例</section>
 
 <p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/design-values/Login.png" alt="Login"></p>
-<p>登录认证的大概过程：</p>
+<p><strong>登录认证的过程：</strong></p>
+<blockquote>
 <ol>
-<li><p>判断账号和密码输入框是否已经有内容输入，如果没有保持禁用状态，如果已经都输入了，按钮变为可点击状态。</p>
-</li>
-<li><p>点击登录按钮后，客户端将账号密码传输到服务器进行鉴权。</p>
-</li>
-<li><p>服务器将用户信息取出、解密，将他们与数据库进行比对验证，判断账号密码是否匹配正确。</p>
-</li>
-<li><p>服务器将结果返回给用户，如果正确就可以直接登录，如果不正确则提示用户账号或密码错误。</p>
-</li>
-<li><p>登录成功后，还要给服务器返回登录状态，并授权客户端的用户相对应的功能权限（有的可能要先选择某个范围内的权限，比如多设备管理）</p>
-</li>
-<li><p>登录信息过期后，要求重新登录</p>
-<p> 上面步骤还得要考虑上网络问题的影响，比如数据发送不出去，数据传输不进来。</p>
-<p> 这只是几个简单的步骤描述，因为实际上不同的登录需求复杂度不一样，都基本要好几个步骤协作才能完成整个过程。</p>
-<p> 不过，在对整个登录认证有了一些基本了解后，相比起界面上的两个输入框和按钮，可以让我们看到背后隐藏着更多在界面上看不到的过程，设计的可能只是冰山一角。</p>
-<p> 那么，了解这些对设计有什么用嘛？不还得要依旧画线框、调整比例、填充颜色吗？</p>
-<p> <strong>Yep！！</strong>从某中意义上来说，这并不影响设计的美观性，但如果了解了，知道为什么会有密码提示错误，提示什么内容，知道还有网络问题还要处理，用什么方式处理。我们经常说交互交互，人与机器之间的交互，还是要先了解背后如何运作的，才能设计好作为中间介质的界面交互，更可以<strong>保证设计的合理性和工程化</strong>。</p>
-</li>
+<li>判断账号和密码输入框是否已经有内容输入，如果没有保持禁用状态，如果已经都输入了，按钮变为可点击状态。</li>
+<li>点击登录按钮后，客户端将账号密码传输到服务器进行鉴权。</li>
+<li>服务器将用户信息取出、解密，将他们与数据库进行比对验证，判断账号密码是否匹配正确。</li>
+<li>服务器将结果返回给用户，如果正确就可以直接登录，如果不正确则提示用户账号或密码错误。</li>
+<li>登录成功后，还要给服务器返回登录状态，并授权客户端的用户相对应的功能权限.</li>
+<li>登录信息过期后，要求重新登录.</li>
 </ol>
-<p>所有这些，不管是过程还是结果，设计师本身的受益可能比项目本身还大，因为在踩着坑学习，认知和体会是不一样的。</p>
-<section class="desc-page-bottom">📮 到底了</section>
-
-
-
+</blockquote>
+<p>除此之外，还得要考虑上网络问题的影响，比如数据发送不出去，数据传输不进来。</p>
+<p>这只是几个简单的步骤描述，实际上不同的登录需求复杂度不一样，都基本要好几个步骤协作才能完成整个过程。</p>
+<p>在对整个登录认证有了一些基本了解后，相比起界面上的两个输入框和按钮，可以让我们看到背后隐藏着更多在界面上看不到的过程，设计的可能只是冰山一角。</p>
+<p><strong>那么，了解这些对设计有什么用嘛？</strong></p>
+<p>从某中意义上来说，这并不影响设计的美观性，但了解后就知道为什么会有密码提示错误，提示什么内容，知道还有网络问题还要处理，用什么方式处理。我们经常说交互，人与机器之间的交互，还是要先了解背后如何运作的，才能设计好作为中间介质的界面交互，更可以保证设计的合理性和符合工程标准。</p>
+<p>所有这些，不管是过程还是结果，设计师本身的受益可能比项目本身还大，因为在踩着坑学习，做项目前后的认知也会不一样。</p>
 
     </div>
 

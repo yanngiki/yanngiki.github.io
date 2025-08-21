@@ -40,20 +40,11 @@
 
     
     <!-- Fanbox图片预览引用 -->
-    <!-- <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" /> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
 
     <!-- 引用iconfont Symbol -->
     <script src="//at.alicdn.com/t/font_1136188_oqq48jgc1lf.js"></script>
 
-
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "s1dprxywnm");
-</script>
 
 
     <!-- Google tag (gtag.js) -->
@@ -66,7 +57,15 @@
   gtag('config', 'G-6MJSP6QY2Z');
 </script>
 
-<meta name="generator" content="Hexo 5.4.2"></head>
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "s1dprxywnm");
+</script>
+
+<meta name="generator" content="Hexo 7.3.0"></head>
     <body>
          <nav id="nav">
     <div class="nav-content">
@@ -75,17 +74,17 @@
             
             <li class="menu-detail">
                 <a href="/" class="menu  ">首页</a>
-                <span class="splash">/</span>
+                <span class="splash"> </span>
             </li>
             
             <li class="menu-detail">
                 <a href="/portfolio" class="menu  ">作品</a>
-                <span class="splash">/</span>
+                <span class="splash"> </span>
             </li>
             
             <li class="menu-detail">
                 <a href="/about" class="menu  ">关于</a>
-                <span class="splash">/</span>
+                <span class="splash"> </span>
             </li>
             
         </ul>
@@ -108,35 +107,39 @@
         <h1 id="背景介绍"><a href="#背景介绍" class="headerlink" title="背景介绍"></a>背景介绍</h1><p>伊智OA（顾问SaaS）是公司内部销售顾问、运营顾问、和管理人员使用的工具，主要用于在与客户谈合作时能快速拟定合同和完成签约，利用数字化手段提升业务端录入客户、签发合同的效率；其次是做客户资源管理（包括构建公海客户和线索跟踪等客资管理功能）、实时的量化数据管理。对内部来说是一个提升合同签约效率和客户信息管理维护的工具。</p>
 <h1 id="挑战"><a href="#挑战" class="headerlink" title="挑战"></a>挑战</h1><section class="question">🤯 时间紧迫</section>
 
-<p>设计+研发，16个工作日</p>
+<p><strong>设计+研发，16个工作日</strong></p>
 <section class="question">🤯 需求问题</section>
 
-<p><strong>1.) 缺少流程</strong></p>
-<p>e.g. 签约流程、续约流程、合同改价审批流程都缺少，这些都是这个项目的核心流程。</p>
-</br>
-
-<p><strong>2.) 功能描述仅基于业务考虑，缺少对基础交互、技术限制的考虑</strong></p>
-<p>e.g. 创建客户表单分为基本信息和合同信息，合同信息为非必填项，但只要有一项填写了，合同信息剩余的项都必须要填写。</p>
-</br>
-
-<p><strong>3.) 信息框架、功能交互不合理</strong></p>
-<p>e.g. 客户名片（客户详情）页面的功能按钮排放杂乱无逻辑，仅是为了表明有这么一个功能。</p>
-<p>e.g. 基础交互组件如时间选择、下拉选择等都基于PC，不适合移动端。</p>
-</br>
-
-<p><strong>4.) 功能细节描述不完整</strong></p>
-<p>e.g. 不同类型的合同签约、续约、升单等操作缺少前置条件和结果事件。</p>
-<p>e.g. 单店、连锁签约续约的约束条件不明确。</p>
+<table>
+<thead>
+<tr>
+<th><div style="width:180px">问题</div></th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>缺少业务流程</strong></td>
+<td>缺少签约流程、续约流程、合同改价审批等核心流程。</td>
+</tr>
+<tr>
+<td><strong>功能描述不完整</strong></td>
+<td>不同类型的合同签约、续约、升单等重要操作缺少前置条件和结果事件，缺少对基础交互、技术限制的考虑。</td>
+</tr>
+<tr>
+<td><strong>信息框架、交互不合理</strong></td>
+<td>页面上的信息组织、功能布局杂乱无逻辑，操作交互使用桌面端的范式。</td>
+</tr>
+</tbody></table>
 <section class="question">🤯 跨团队跨区域合作</section>
 
-<p>顾问、产品和后端在一处办公地点，设计和前端又在另一处办公地点，在前期有沟通困难，而且时效性长。</p>
-<h1 id="做了什么"><a href="#做了什么" class="headerlink" title="做了什么"></a>做了什么</h1><p><strong>重新沟通和确认需求</strong></p>
+<p><strong>顾问、产品和后端在一处办公地点，设计和前端又在另一处办公地点，在前期有沟通困难，而且时效性长。</strong></p>
+<h1 id="做了什么"><a href="#做了什么" class="headerlink" title="做了什么"></a>做了什么</h1><p><strong>一、重新沟通和确认需求</strong></p>
 <p>现有的需求文档缺少关键流程和细节交互操作说明，如果直接设计，会预判到进入开发阶段会有很多问题。整理需求疑问点和，再拉着产品和开发逐点沟通，确定相关方案和让开发考虑实现可行性问题。</p>
 </br>
 
-<p><strong>明确业务模型</strong></p>
+<p><strong>二、明确业务模型</strong></p>
 <p>电子合同的完整功能交互，包括签约、续签、升单，都依赖于 <code>门店 - 合同类型 - 合同版本</code> 这三者的模型关系。在没确定之前，基础的事件交互容易做得天马行空。为了让产品和开发明确了解清楚，以及保证整体交互和设计方案的完整性、可行性，对它们进行了简单的业务建模。</p>
-<p>合同签约有针对单店和连锁（包含主店和分店），这两者的在签约处理上会有差别。下面这个界面是门店签约的入口页面，可以选择签约哪种类型的合同，但在这之前我们需要解决几个关键问题，才能知道在具体签约合同时的交互要怎么做。</p>
+<p>合同签约有针对单店和连锁（包含主店和分店），这两者的在签约处理上会有差别。下图是门店签约的入口页面，可以选择签约哪种类型的合同，但在这之前我们需要解决几个关键问题，才能知道在具体签约合同时的交互要怎么做。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/yizhioa/key_problem.png" alt="key_problem"></p>
 <p>要回答这些问题 ，其实是先整理清楚<code>门店--合同类型--合同版本</code>三者之间的对应关系，下图所示</p>
 <p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/yizhioa/entity_shopcontract.png" alt="entity"></p>
@@ -147,7 +150,7 @@
 <p>除了上面这个门店-合同类型-合同版本的关系问题，也存在其它方面不确定的问题，比如不同合同类型的计价方式，特别是连锁的主店或分店在签约时的价格计算方式；还有合同在续约、升单后的记录要怎么处理等。</p>
 </br>
 
-<p><strong>梳理流程</strong></p>
+<p><strong>三、梳理流程</strong></p>
 <p>创建合同（首签、续签、升单）、合同管理、合同审批，这三者的流程在产品提供的文档都缺少清晰的描述，在沟通后，将这部分流程的需求重新转译为可实现的合理的方案，以及整理整条流程之间涉及到的干系人、操作和状态流转关系。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/yizhioa/process.svg" alt="process"></p>
 <section class="caption-image">创建合同-审批-签约流程图 </section> 
@@ -162,7 +165,7 @@
 </br>
 
 
-<p><strong>优化交互和页面框架</strong></p>
+<p><strong>四、优化交互和页面框架</strong></p>
 <p>由于产品所设计的原型没有考虑到基本的移动端交互、表单校验、信息框架如何合理布局等问题，在设计阶段充分了解和把握真实需求动机后，把这些问题逐一想办法解决，最大程度地保证了设计的可行性。</p>
 <p>下面两图是部分做过调整的页面：</p>
 <p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/yizhioa/form_adjustment.png" alt="form_adjustment"></p>
