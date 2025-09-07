@@ -22,6 +22,18 @@ function imgsetAttPortf() {
 }
 document.addEventListener('DOMContentLoaded', imgsetAttPortf, false)
 
+//遍历post里类名为 image-item 的图片，并加上‘data-fancybox=”img-question”’属性
+function imgsetAttimgQuestion() {
+    let Paper = document.getElementById('post-detail');
+    let ImgContainer = Paper.getElementsByClassName('image-container')[0];
+    let fancyimg = ImgContainer.getElementsByTagName('img');
+    for (let i = 0; i < fancyimg.length; i++) {
+        fancyimg[i].setAttribute('data-fancybox', 'img-question');
+        fancyimg[i].style.setProperty('cursor', 'zoom-in');
+    }  
+}
+document.addEventListener('DOMContentLoaded', imgsetAttimgQuestion, false)
+
 
 // Fancybox 普通图片事件   
 // "close" "slideshow", "thumbs", 
@@ -53,6 +65,27 @@ Fancybox.bind('[data-fancybox]', {
 
 //protf-showcase图片事件
 Fancybox.bind('[data-fancybox="portf" ]', {
+    Thumbs : {
+        type: "classic"
+      },
+    Toolbar: {
+        display: {
+            left: ["toggle1to1", "thumbs"],
+            middle: [
+            // "zoomIn",
+            // "zoomOut",
+            "infobar",
+            // "rotateCCW",
+            // "rotateCW",
+            // "flipX",
+            // "flipY",
+            ],
+            right: ["close"],
+        },
+    },
+});
+
+Fancybox.bind('[data-fancybox="img-question" ]', {
     Thumbs : {
         type: "classic"
       },

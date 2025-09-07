@@ -73,7 +73,7 @@
         <ul class="menu-group">
             
             <li class="menu-detail">
-                <a href="/" class="menu  ">首页</a>
+                <a href="/" class="menu  ">案例</a>
                 <span class="splash"> </span>
             </li>
             
@@ -104,12 +104,12 @@
     
     
     <div class="post-md" id="post-detail">
-        <h1 id="背景概述"><a href="#背景概述" class="headerlink" title="背景概述"></a>背景概述</h1><p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/personalize_menu/banner.png" alt="banner"></p>
+        <h1 id="背景概述"><a href="#背景概述" class="headerlink" title="背景概述"></a>背景概述</h1><p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@main/img/personalize_menu/banner.png" alt="banner"></p>
 <p>微信公众号平台提供了<strong>个性化菜单</strong>的接口，第三方开发者可以直接调取使用，可以根据关注者的标签、性别、地区、系统语言等条件自动匹配显示不同的菜单，以达到让公众号上不同的用户群体看到不一样的自定义菜单，实现<strong>精准的个性化营销</strong>。比如我是一位男生用户，显示的菜单与女生用户的会不一样。</p>
 <p>我们的产品同学想要在司内产品接入这项能力，在进行UI设计时，发现产品同学提供的原型设计思路（下面的方案A）在可用性和使用场景上存在一些欠妥的地方，大家双方对个性化菜单上也产生了不一样的理解，于是重新换了种思路设计了方案B与产品同学再沟通。</p>
 <h1 id="方案分歧与验证"><a href="#方案分歧与验证" class="headerlink" title="方案分歧与验证"></a>方案分歧与验证</h1><p>下面是基于两种个性化菜单模型展开分析，虽然在UI设计层面上体现出的差异很少，但在功能的设计思路、数据结构都是不一样的思路。</p>
 <p>方案A存在好几个问题，也正是这几个问题决定了这个方案不太可能继续往下走，主要是由于功能设计的拓展性差和对实际使用场景考虑的不周到。下面通过对两个方案的模型进行分析来两个方案的差异和优缺点。</p>
-<h2 id="方案A"><a href="#方案A" class="headerlink" title="方案A"></a>方案A</h2><p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/personalize_menu/modal1.png" alt="modal1"></p>
+<h2 id="方案A"><a href="#方案A" class="headerlink" title="方案A"></a>方案A</h2><p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@main/img/personalize_menu/modal1.png" alt="modal1"></p>
 <table>
 <thead>
 <tr>
@@ -131,7 +131,7 @@
 </tr>
 </tbody></table>
 <p>经过分析，方案A中个性化菜单的替换逻辑过于局限且不符合实际的使用场景，比如无法控制个性化菜单上的菜单数量，也无法控制具体替换哪一项菜单。</p>
-<h2 id="方案B"><a href="#方案B" class="headerlink" title="方案B"></a>方案B</h2><p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/personalize_menu/modal2.png" alt="modal2"></p>
+<h2 id="方案B"><a href="#方案B" class="headerlink" title="方案B"></a>方案B</h2><p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@main/img/personalize_menu/modal2.png" alt="modal2"></p>
 <table>
 <thead>
 <tr>
@@ -238,13 +238,13 @@
 <p>做数据建模还有一个好处是<strong>团队成员对业务功能的理解比较容易达成一致共识</strong>。当我们在设计或者描述一个业务功能的时候，不同的人大脑里对它的理解经常会不一样，有时甚至是截然相反的想法。出现这一点的原因是我们每个人大脑对业务功能的解析不一样，通过借助一些建模工具，比如<a target="_blank" rel="noopener" href="https://www.visual-paradigm.com/cn/guide/uml-unified-modeling-language/what-is-uml/">建模语言UML</a>、<a target="_blank" rel="noopener" href="https://www.visual-paradigm.com/cn/guide/data-modeling/what-is-entity-relationship-diagram/">ER图</a>，可以让自己梳理清晰流程、对象的关系和状态。模型是非常客观的，其他人在理解上不会容易出现理解偏移。</p>
 <p>下面两个类图分别是方案A和方案B中默认菜单与个性化菜单之间的关系模型。我们也能通过这些模型去分析方案自身的做给缺点，也有助于其它对接人员比如开发人员查看和理解。</p>
 <div style="display:flex; flex-direction:row";>
-<img style="width: 50%" src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/personalize_menu/方案A.png" />
-<img style="width: 50%" src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/personalize_menu/方案B.png" />
+<img style="width: 50%" src="https://cdn.jsdelivr.net/gh/yanngiki/resource@main/img/personalize_menu/方案A.png" />
+<img style="width: 50%" src="https://cdn.jsdelivr.net/gh/yanngiki/resource@main/img/personalize_menu/方案B.png" />
 </div>
 
-<!-- ![方案A](https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/personalize_menu/方案A.png)
+<!-- ![方案A](https://cdn.jsdelivr.net/gh/yanngiki/resource@main/img/personalize_menu/方案A.png)
 
-![方案B](https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/personalize_menu/方案B.png) -->
+![方案B](https://cdn.jsdelivr.net/gh/yanngiki/resource@main/img/personalize_menu/方案B.png) -->
 
 
 <h2 id="演推和预判"><a href="#演推和预判" class="headerlink" title="演推和预判"></a>演推和预判</h2><p>演推和预判是设计师自己检验设计方案、发现问题的一种好方法。下面是一些常用的演推思考维度：</p>
@@ -265,15 +265,15 @@
     <footer class="f-cf">
         
         <a href="/posts/64854923/" class="link f-fl">
-          <span class="arrow">Prev:</span>
+          <span class="arrow">⇠</span>
           深浅模式设计
         </a>
       
 
       
         <a href="/posts/c7c61052/" class="link f-fr">
-           <span class="arrow">Next:</span>
           设计之于项目的价值
+          <span class="arrow">⇢</span>
         </a>
       
     </footer>
@@ -379,6 +379,9 @@
 
 <script src="/js/highlightjs-line-numbers.js"></script>
  
+<!-- 
+<script src="/js/cdn-accelerator.js"></script>
+  -->
 
 <script>
     hljs.initHighlightingOnLoad();

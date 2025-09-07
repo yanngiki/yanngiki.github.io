@@ -73,7 +73,7 @@
         <ul class="menu-group">
             
             <li class="menu-detail">
-                <a href="/" class="menu  ">首页</a>
+                <a href="/" class="menu  ">案例</a>
                 <span class="splash"> </span>
             </li>
             
@@ -137,7 +137,7 @@
             <div class="int-title">📘 家长账号、嘉佳ID与多设备的底层关系和交互逻辑设计</div>
             <div class="int-desc">
                 <p>从0到1搭建设计嘉佳生态的账号体系与多设备的底层数据关系和交互逻辑，作为用户使用产品的基础支撑能力之一。</p>
-                <a href="https://cdn.jsdelivr.net/gh/yangbe/resource@master/PDF/%E5%98%89%E4%BD%B3%E6%99%BA%E8%83%BD%E8%B4%A6%E5%8F%B7%E4%B8%8E%E8%AE%BE%E5%A4%87%E5%85%B3%E7%B3%BB.pdf" target="_blank">
+                <a href="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/PDF/%E5%98%89%E4%BD%B3%E6%99%BA%E8%83%BD%E8%B4%A6%E5%8F%B7%E4%B8%8E%E8%AE%BE%E5%A4%87%E5%85%B3%E7%B3%BB.pdf" target="_blank">
                     <span class="document-attachment">浏览文档</span>
                 </a>
             </div>
@@ -150,7 +150,7 @@
 
 <h1 id="设计内容"><a href="#设计内容" class="headerlink" title="设计内容"></a>设计内容</h1><p>RBT嘉佳智能机器人的操作系统基于Android定制，有我们的内置应用和第三方应用，同时RBT有着丰富的多模态交互方式。MOB嘉佳智能APP不是一个在手机上独立使用的APP，它的功能交互设计要结合嘉佳智能机器人，并且两者功能之间有关联，是连接着家长、设备和宝宝的工具。</p>
 <p>围绕 <code>家长-设备-宝宝</code> 的全局角度，将整体的设计内容进行结构化分层：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/jiajia/design-scope.svg" alt="design scope"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/robot_jiajia/design-scope.svg" alt="design scope"></p>
 <section class="caption-image">嘉佳智能机器人(RBT) + 嘉佳智能App(MOB)的整体设计范围</section>
 
 
@@ -238,7 +238,7 @@
 </blockquote>
 <p>这些问题在刚开始做这个项目的时候是没有深入考虑，因为我们都陷进在具体的功能设计中，像账号与设备的深层次关系在界面上是很难体现出来，也会容易被忽略掉。</p>
 <p>下图是重新梳理后的多家长-多设备关系图，解释家长、嘉佳ID、设备之间的关系。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/jiajia/account_usercase.png" alt="用例图-完整"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/robot_jiajia/account_usercase.png" alt="用例图-完整"></p>
 <section class="caption-image">多家长-多设备关系图，具体的关系细节不在这里叙述</section>
 
 
@@ -286,13 +286,13 @@
 <p>设备绑定：将宝宝通过嘉佳ID与智能设备关联在一起，宝宝与智能设备互动所产生的数据和行为都会关联到嘉佳ID上。</p>
 <h2 id="初始化连网"><a href="#初始化连网" class="headerlink" title="初始化连网"></a>初始化连网</h2><p>最初版本的RBT不是触控屏幕，在某些人机交互上会相对麻烦一点，像WiFi连接就需要借助MOB手机端进行操作。</p>
 <p>在RBT初始化设置中，理想情况下RBT的连网和绑定流程是连在一起的，即先帮助RBT连接WiFi，然后再将小孩与RBT绑定在一起（因为绑定设备的前提是要设备连网与服务器进行数据交互），仅且当这两步完成后，RBT设备才能正常使用。基本流程如下图</p>
-<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/jiajia/WiFi&Bilnding.svg" alt="WiFi&amp;Bilnding"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/robot_jiajia/WiFi&Bilnding.svg" alt="WiFi&amp;Bilnding"></p>
 <section class="caption-image">RBT初始化连网和绑定示意图</section>
 
 
 <p>因为绑定设备要依赖设备连网，所以我们在最初设计的时候也是把流程设计成线性的连续两步同时完成，导致用户被其它事情干扰离开当前流程后(比如退出APP)，找不到入口继续完成绑定操作，只能重新连接WiFi再进行绑定。而且用户也不知道激活绑定设备有几步和要执行什么操作，会在心理上造成因未知操作而产生的恐惧感和负担感。</p>
 <p>所以在添加绑定RBT设备或者其它设备时，增加一个添加设备的内容页（下图），主要目的有下面几点：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/jiajia/WiFi&Blinding2.png" alt="wifi&amp;blind"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/robot_jiajia/WiFi&Blinding2.png" alt="wifi&amp;blind"></p>
 <h2 id="不同场景不同角色连接WiFi"><a href="#不同场景不同角色连接WiFi" class="headerlink" title="不同场景不同角色连接WiFi"></a>不同场景不同角色连接WiFi</h2><p>RBT连接WiFi有不同的场景，未激活的时候即是出厂初始化连网，已激活的情况下有断网连接和重设网络。</p>
 <p>帮助RBT连接WiFi的用户也可以有不同，可以是管理员家长或普通家长，也可以是跟当前的RBT没有任何关联的用户。</p>
 <p>在连接WiFi之后，根据MOB上的用户权限（是否为普通家长或管理员家长）以及嘉佳是否已激活，在WiFi连接成功后会有不同的返回结果。</p>
@@ -327,7 +327,7 @@
 <h1 id="多模态交互"><a href="#多模态交互" class="headerlink" title="多模态交互"></a>多模态交互</h1><p>人的感官有视觉、听觉、味觉、触觉和嗅觉模态，会接收周围环境或别人给出的信息并做出反应。</p>
 <p>同样，RBT也有这种类似的模态，用户通过声音、按压操作、信息载体（文字、图片）甚至肢体语言等多个通道与RBT智能机器人沟通交流，RBT会融合这些多维的信息去判断人的意图，并通过声音、文字、图片、音视频、灯、表情、动作等多种方式作出反应。</p>
 <p>人与智能机器的沟通是一系列多模态交互的集合，回归到最本质的人机交互就是人与智能设备之间的<code>输入和输出</code>。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/jiajia/multi-inter.png" alt="multi-inter"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/robot_jiajia/multi-inter.png" alt="multi-inter"></p>
 <section class="caption-image">RBT可交互硬件示意图</section>
 
 
@@ -357,7 +357,7 @@
 <p>2、主动式，即机器基于某些条件主动向用户进行反馈输出</p>
 </blockquote>
 <p>下面是这两种形交互形式在RBT上多模态输出的例子</p>
-<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/jiajia/multi-inter-case.png" alt="multi-inter-case"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/robot_jiajia/multi-inter-case.png" alt="multi-inter-case"></p>
 <section class="caption-image">被动式和主动式多模态交互示例</section>
 
 </br>
@@ -370,7 +370,7 @@
 </blockquote>
 <h2 id="每周使用分析报告"><a href="#每周使用分析报告" class="headerlink" title="每周使用分析报告"></a>每周使用分析报告</h2><p>小孩在使用RBT智能机器人的过程中，会产生大量的行为记录，包括看了什么视频、听了什么音乐、跟谁进行了视频聊天、每天每周使用时间有多长、使用时间主要分布在哪些内容等等，通过这些让家长更了解自己的宝宝。</p>
 <p>有了这些原始行为数据，可以分析了解小孩的时间主要花在哪些内容上，是用来学知识还是用来看动画，每天使用时间有多长，喜欢哪些内容，喜欢跟谁聊天等等，可以让父母更了解自己小孩的行为和喜好。</p>
-<p>查看初步方案：<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/yangbe/resource@master/PDF/weekly_data.pdf">每周使用报告分析</a></p>
+<p>查看初步方案：<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/PDF/weekly_data.pdf">每周使用报告分析</a></p>
 <h2 id="摇一摇"><a href="#摇一摇" class="headerlink" title="摇一摇"></a>摇一摇</h2><p>人和人增进了解和情感最好的办法就是相处，没错，就是这么简单，不过有时这也是一件很困难的事情。</p>
 <p>我们发现小孩与家长之间也是需要话题的，多样的话题可以增加相处时间和互动方式。有时家长想跟宝宝讲一些生活方面或其它领域的知识，来来去去都是讲那几个东西，可能家长也不太清楚；有时家长想逗小孩玩，但没有合适的方法；有时想跟宝宝一起听听故事，但不知道听什么…</p>
 <p>根据这些家长与小孩相处的一丝丝痛点，结合MOB和RBT设计<strong>「摇一摇」</strong>这个功能，主要设计目的有两个：</p>
@@ -379,11 +379,11 @@
 <p>2、增加MOB与RBT之间的娱乐互动趣味性，家长也可以作为它的第二用户</p>
 </blockquote>
 <p>摇一摇是家长使用MOB随机发现内容或问题，然后向RBT发出执行指令，比如做个表情、讲个故事等等。这个过程是可以让宝宝参与进来的，如下图所示</p>
-<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/jiajia/shake_usercase.svg" alt="shake_mob"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/robot_jiajia/shake_usercase.svg" alt="shake_mob"></p>
 <section class="caption-image">家长-小孩-智能机器人 互动示意图</section>
 
 <p>家长在MOB上摇出表情、故事或问题后，可以跟小孩聊天互动（比如摇出问题：长颈鹿的脖子为什么这么长），然后在MOB上触发指令，让RBT嘉佳智能机器人向小孩讲述答案；或者MOB上摇出几个表情，家长可以逗一下宝宝给个惊喜，向RBT发出指令做几个表情。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/jiajia/shake_pages.png" alt="shake_pages"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/robot_jiajia/shake_pages.png" alt="shake_pages"></p>
 <section class="caption-image">MOB的摇一摇部分示意图</section>
 
 </br>
@@ -394,15 +394,15 @@
     <footer class="f-cf">
         
         <a href="/posts/97c2747e/" class="link f-fl">
-          <span class="arrow">Prev:</span>
+          <span class="arrow">⇠</span>
           如何推动设计方案落地实现
         </a>
       
 
       
         <a href="/posts/f1ee05/" class="link f-fr">
-           <span class="arrow">Next:</span>
           MMF BOOK
+          <span class="arrow">⇢</span>
         </a>
       
     </footer>
@@ -508,6 +508,9 @@
 
 <script src="/js/highlightjs-line-numbers.js"></script>
  
+<!-- 
+<script src="/js/cdn-accelerator.js"></script>
+  -->
 
 <script>
     hljs.initHighlightingOnLoad();

@@ -148,6 +148,7 @@ h1 {
 }
 .post-md ul>li, ol>li {
     padding-left: 20px;
+    margin-bottom: 8px;
     position: relative;
     list-style: none;
 }
@@ -163,6 +164,21 @@ h1 {
     background-color: #6a6a6a;
     border-radius: 4px;
 }
+
+.post-md ul>li>ul>li::before {
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+    left: 0;
+    top: 15px;
+    margin-top: -3px;
+    width: 6px;
+    height: 6px;
+    border: 1px solid #6a6a6a;
+    background-color: transparent;
+    border-radius: 4px;
+}
+
 .post-md li>li, li>li {
     padding-left: 20px;
     position: relative;
@@ -212,6 +228,10 @@ h1 {
 }
 .post-md blockquote>p:last-child {
     margin-bottom: 0;
+}
+.post-md blockquote>ol {
+    padding-left: 0px;
+    margin: 0px 0px 0px 8px;
 }
 
 .post-md .video-container
@@ -405,6 +425,9 @@ h1 {
     color: #999999;
     padding: 4px;
     margin: 6px 0 0 0;
+}
+.link:hover .arrow {
+    color: var(--brand-color);
 }
 .f-cf .link {
     font-size: var(--font-size-regular);

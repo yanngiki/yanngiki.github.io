@@ -73,7 +73,7 @@
         <ul class="menu-group">
             
             <li class="menu-detail">
-                <a href="/" class="menu  ">首页</a>
+                <a href="/" class="menu  ">案例</a>
                 <span class="splash"> </span>
             </li>
             
@@ -123,10 +123,10 @@
 </li>
 </ul>
 <p>下图是系统设计的部分示例。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/ModeCon.png" alt="ModeCon"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/modes/ModeCon.png" alt="ModeCon"></p>
 <section style="font-size:15px;color:#8c8c8c;text-align:center;">深浅模式示例</section>
 
-<h1 id="颜色"><a href="#颜色" class="headerlink" title="颜色"></a>颜色</h1><p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/color.png" alt="color"></p>
+<h1 id="颜色"><a href="#颜色" class="headerlink" title="颜色"></a>颜色</h1><p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/modes/color.png" alt="color"></p>
 <section style="font-size:15px;color:#8c8c8c;text-align:center;margin:0 0 40px 0;">系统颜色</section>
 
 
@@ -161,7 +161,7 @@ color-success-1000: #00211C,
 </code></pre>
 <h2 id="基本色"><a href="#基本色" class="headerlink" title="基本色"></a>基本色</h2><p>基本色： <code>basic color</code>，即从黑到白的一系列中性灰（包括黑白），系统中使用最多的颜色，也是颜色中最复杂的部分。主要用于背景、描边、阴影、字体、图标等。</p>
 <p>在设计深浅模式时，基本色可以共用同一套，也可以单独做两套（设计上会比较轻松），根据实际需要自行定制。我们的是共用同一套基本色。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/basic_color.png" alt="basic_color"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/modes/basic_color.png" alt="basic_color"></p>
 <pre><code class="css">color-basic-100: #FFFFFF,
 color-basic-200: #FAFAFA,
 color-basic-300: #F4F4F6,
@@ -208,8 +208,8 @@ color-basic-1500: #121212,
 </section>
 
 <p>实例如下面两张图所示：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/color_define.png" alt="color_define"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/color_define_2.png" alt="color_define_2"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/modes/color_define.png" alt="color_define"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/modes/color_define_2.png" alt="color_define_2"></p>
 <p><strong>Yep！</strong>对于一个普通的APP或简单网页来说，这种方法是可行的。</p>
 <p>但对于有着数百个页面和交互状态的系统来说，我们在实际应用的时候，设计上会有下面两个严重的问题：</p>
 <ul>
@@ -226,7 +226,7 @@ color-basic-1500: #121212,
 <section style="background:#FAFAFA;color:#106369; padding:10px 18px;margin:20px 0 20px 0px; line-height:32px; font-size:15px">1. 每种模式下可以设置不同的颜色集，互不影响。<br>2. 拆解界面设计语言，划分不同类型的基础要素（如字体、背景等），主要用于区分颜色的使用范围。<br>3. 语义化颜色，根据拆解的基础要素来命名颜色，并且作为变量使用。
 </section>
 
-<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/Scope.png" alt="Scope"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/modes/Scope.png" alt="Scope"></p>
 <section style="font-size:15px;color:#8c8c8c;text-align:center;">多模式下的颜色结构</section>
 
 
@@ -250,7 +250,7 @@ color-basic-1500: #121212,
 <p><span style="color:#8c8c8c">  PS：这些是我们设计不同模式时，界面上需要改变的基础要素。不同的设计语言会有不一样的拆解内容，比如iOS还有材质层 — 也就是我们常说的透明磨沙层。</span></p>
 <p>这一步可以让我们理解到颜色在界面上的使用范围，为接下来 <strong><a href="#%E8%AF%AD%E4%B9%89%E5%8C%96%E9%A2%9C%E8%89%B2%EF%BC%8C%E5%8A%A8%E6%80%81%E6%94%B9%E5%8F%98%E8%89%B2%E5%80%BC">语义化颜色</a></strong> 做准备。</p>
 <p>对于背景、描边、字体和投影，它们自身会有着不同的层级。我们常见的字体，这次设计了3 ~ 4种层级的深浅度，用在标题、正文、辅助等文字，因为做这种系统UI设计的大多数时候是在处理信息的层级关系（hierarchy）。拆解之后，我们可以单独定义每项基础要素及其不同层级的颜色，而且它们之间互不影响。</p>
-<h2 id="语义化颜色，动态改变色值"><a href="#语义化颜色，动态改变色值" class="headerlink" title="语义化颜色，动态改变色值"></a>语义化颜色，动态改变色值</h2><p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/color_define_3.png" alt="color_define_3"></p>
+<h2 id="语义化颜色，动态改变色值"><a href="#语义化颜色，动态改变色值" class="headerlink" title="语义化颜色，动态改变色值"></a>语义化颜色，动态改变色值</h2><p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/modes/color_define_3.png" alt="color_define_3"></p>
 <section style="font-size:15px;color:#8c8c8c;text-align:center;">语义化颜色</section>
 
 <p>所谓语义化，简单来说就是给对象起个与之意义相符合和容易理解的名字。</p>
@@ -258,7 +258,7 @@ color-basic-1500: #121212,
 <p>在不同模式下使用相同的命名，在切换模式时，相同命名的颜色的色值进行动态化改变。上图中的 <code>primaryText</code> 在浅色模式下是<code>#262626</code>，在深色模式下就变为了<code>#FFFFFF</code>；我们的主色在浅色模式下是<code>#2C77F4</code>，在深色模式下是<code>#589AFF</code>，都有共同且唯一的名称<code>primaryColor</code>。</p>
 <p><strong>Yep！！!</strong> 这是语义化颜色带来的好处，可以轻松的改变颜色。如果有需要，在切换模式时，页面的元素甚至也可以动态使用其它命名的颜色，相当灵活。</p>
 <p>再来看看已经调好的深色模式和浅色模式的一些组件，每项基础要素通过使用变量（颜色的命名）来赋值色值，模式切换的时候可以做到无缝对应。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/States/Components.png" alt="Components"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/modes/States/Components.png" alt="Components"></p>
 <section style="font-size:15px;color:#8c8c8c;text-align:center;">组件示例</section>
 
 
@@ -266,36 +266,36 @@ color-basic-1500: #121212,
 <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>背景，有界面整体布局用到的背景，也有组件比如弹窗、下拉菜单所用到的背景，还有某些信息通过添加填充背景以与周围的信息区分隔离开。所以背景颜色不是单指某一个颜色色值，而且是一组颜色集。</p>
 <p>界面整体的框架布局我们用到3个层级的背景，浅色模式下的白色是用到比较多的背景色，在它上面的还有稍微深一点的二级和三级的背景色，有了这些可以很轻松的构建系统页面的信息层级。</p>
 <p>同样，深色模式的也一样。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/background.png" alt="background"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/modes/background.png" alt="background"></p>
 <section style="font-size:15px;color:#8c8c8c;text-align:center;">Layout背景色</section>
 
 
 <p>由于系统本身的复杂，除了整体框架布局用到的背景填充，还有一系列的组件也要用到背景填充，它们是作为上面3个层级背景色的补充。目的是将布局的背景填充与组件拆分处理，可以让组件灵活设计不受太多限制。</p>
 <p>浅色模式下，这部分背景色有4个层级，虽然部分色值与上面的会有重复，但它们是不一样的变量，作用范围也不一样。同样对应到深色模式下也是有4个层级，与浅色模式形成一对一的映射关系。</p>
 <p>深色模式下，<code>fillBackground-1 ~ fillBackground-3</code> 这三个的色值其实都是同一个，但它们也同样是不一样的变量。当然他们的色值可以不一样，视设计需要而定。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/fill_color.png" alt="fill_color"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/modes/fill_color.png" alt="fill_color"></p>
 <section style="font-size:15px;color:#8c8c8c;text-align:center;">辅助背景色</section>
 
 
 <h2 id="描边"><a href="#描边" class="headerlink" title="描边"></a>描边</h2><p>我们把描边分为三个等级，每个等级的颜色都有使用的地方。<code>primaryBorder</code>大多数用在输入框、默认按钮的描边，<code>sceondaryBorder</code>用在表格分隔线、下拉菜单、弹窗的描边，<code>tertiaryBorder</code>用在内容块之间的分隔。</p>
 <p><span style="color:#8c8c8c">PS：这里对描边定义的颜色，实际上是包括了Divider分隔线，因为不想用太多颜色定义它们，描边的颜色一多使用起来会容易混乱。</span></p>
-<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/Border.png" alt="Border"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/modes/Border.png" alt="Border"></p>
 <section style="font-size:15px;color:#8c8c8c;text-align:center;">Border颜色</section>
 
 
 <h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><p>界面中实际上出现最多的是文字，文字信息可以看作是人机交互最直接的交流媒介。</p>
 <p>为了可以在设计上更好地处理信息展示的层级关系（hierarchy），我们在定义字体颜色的时候把它分成了4个等级，分别是<code>primaryText </code>  <code>secondaryText</code>   <code>tertiaryText</code>  <code>quaternaryText</code>，应用的范围包括placeholder、组件默认文字、标题、正文、辅助和描述性文字等等，基本上揽括了我们整个设计中的字体用色。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/Text.png" alt="Text"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/modes/Text.png" alt="Text"></p>
 <section style="font-size:15px;color:#8c8c8c;text-align:center;">Text颜色</section>
 
 
 <h2 id="图标"><a href="#图标" class="headerlink" title="图标"></a>图标</h2><p>作为视觉设计的一部分，图标和字体一样，在深浅模式下需要改变颜色，以达到更好的显示效果。使用有彩色的、使用渐变色的和使用组合颜色的图标需要特别注意。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/icon_color.png" alt="icon_color"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/modes/icon_color.png" alt="icon_color"></p>
 <section style="font-size:15px;color:#8c8c8c;text-align:center;">图标（不同颜色）</section>
 
 <p>不过，通常有大量的图标实际上是可以不需要重新修改颜色的，只要通过调整图标的颜色在深色和浅色背景上能有明显的对比度。这种图标通常使用<a href="#%E5%9F%BA%E6%9C%AC%E8%89%B2">基本色</a>，像下拉菜单上的图标、输入框、选择框中使用的图标。</p>
 <p>下图这4组图标分别放在不同深浅的常用背景填充上，都能有不错对比度，而且图标的颜色都是同一个。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/icon_basic.png" alt="icon_basic"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/modes/icon_basic.png" alt="icon_basic"></p>
 <section style="font-size:15px;color:#8c8c8c;text-align:center;">图标（相同颜色）</section>
 
 
@@ -303,14 +303,14 @@ color-basic-1500: #121212,
 <p>除非有以下两点的考虑：</p>
 <p>一，为了更好的显示效果，有时候浅色模式下使用的图片在深色模式下不一定能搭配得上，反之亦然。</p>
 <p>二，图片在不同模式下可能含有某些意义，可以使用与模式相匹配的图片，比如yahoo天气早上、中午、黄昏、和夜晚的图片，还有晴天、阴天、雨天的图片，都是根据当时的日照情况和天气情况而适配显示的。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/pic.png" alt="pic"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/modes/pic.png" alt="pic"></p>
 <section style="font-size:15px;color:#8c8c8c;text-align:center;">不同模式下的图片</section>
 
 
 <h2 id="投影"><a href="#投影" class="headerlink" title="投影"></a>投影</h2><p>投影在我们的设计中是不可忽视的一部分，在设计信息层级（hierarchy）的时候用得比较多。它的使用可以让元素更突出，如浮层一样，与周围的信息形成更强的对比和区分。我们常用的Dropdown Menu、Dialog、Card就是典型的使用。</p>
 <p>除此之处，投影也可以用在Button、Card等基础组件的hover、pressed的操作状态上，增强用户操作时的视觉反馈。</p>
 <p>下图做了5个层级的投影，适用在上面所提到这些组件和操作。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/Shadows.png" alt="Shadows"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/modes/Shadows.png" alt="Shadows"></p>
 <section style="font-size:15px;color:#8c8c8c;text-align:center;">投影</section>
 
 
@@ -330,35 +330,35 @@ color-basic-1500: #121212,
 </thead>
 <tbody><tr>
 <td align="left">Normal</td>
-<td align="center"><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/States/Normal2.png" height="32px"></td>
+<td align="center"><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/modes/States/Normal2.png" height="32px"></td>
 </tr>
 <tr>
 <td align="left">Hover</td>
-<td align="center"><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/States/Hover.png" height="36px"></td>
+<td align="center"><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/modes/States/Hover.png" height="36px"></td>
 </tr>
 <tr>
 <td align="left">Pressed</td>
-<td align="center"><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/States/Pressed.png" height="36px"></td>
+<td align="center"><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/modes/States/Pressed.png" height="36px"></td>
 </tr>
 <tr>
 <td align="left">Focused</td>
-<td align="center"><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/States/Focus.png" height="34px"></td>
+<td align="center"><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/modes/States/Focus.png" height="34px"></td>
 </tr>
 <tr>
 <td align="left">Disabled</td>
-<td align="center"><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/States/Disabled.png" height="32px"></td>
+<td align="center"><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/modes/States/Disabled.png" height="32px"></td>
 </tr>
 <tr>
 <td align="left">Activated</td>
-<td align="center"><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/States/Activated.png" height="32px" ></td>
+<td align="center"><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/modes/States/Activated.png" height="32px" ></td>
 </tr>
 <tr>
 <td align="left">Selected</td>
-<td align="center"><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/States/Selected2.png" height="204px"></td>
+<td align="center"><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/modes/States/Selected2.png" height="204px"></td>
 </tr>
 <tr>
 <td align="left">Dragged</td>
-<td align="center"><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/States/Dragged.png" height="202px"></td>
+<td align="center"><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/modes/States/Dragged.png" height="202px"></td>
 </tr>
 </tbody></table>
 
@@ -367,14 +367,14 @@ color-basic-1500: #121212,
 
 
 <p>下图是定义了通用的Hover、Disabled的状态所关联到的描边和背景填充颜色。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/States.png" alt="States"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/modes/States.png" alt="States"></p>
 <section style="font-size:15px;color:#8c8c8c;text-align:center;">部分通用状态</section>
 
 
 <h1 id="One-More-Thing"><a href="#One-More-Thing" class="headerlink" title="One More Thing"></a>One More Thing</h1><p>当上线后，如果需要调整设计，比如修改描边、字体、甚至背景颜色时，以前需要抓破头皮去想究竟还有哪些地方会受影响，现在只要把要改的部分直接改掉就可以。</p>
 <p>以字体为例，如果要把字体颜色加亮或加深，只需要单独把这部分的颜色集修改就可以了。</p>
 <p>因为它们都是单独的，而且可以看成是模块化，各基础要素在模式之间可以做到互不影响，在模式内也互不影响。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/Modes/textMagic.png" alt="textMagic"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/modes/textMagic.png" alt="textMagic"></p>
 <section style="font-size:15px;color:#8c8c8c;text-align:center;">替换字体颜色示例</section>
 
 </br>
@@ -385,15 +385,15 @@ color-basic-1500: #121212,
     <footer class="f-cf">
         
         <a href="/posts/5fbba3cc/" class="link f-fl">
-          <span class="arrow">Prev:</span>
+          <span class="arrow">⇠</span>
           顾问SaaS
         </a>
       
 
       
         <a href="/posts/9f178846/" class="link f-fr">
-           <span class="arrow">Next:</span>
           公众号个性化菜单的模型抽象化和分析
+          <span class="arrow">⇢</span>
         </a>
       
     </footer>
@@ -499,6 +499,9 @@ color-basic-1500: #121212,
 
 <script src="/js/highlightjs-line-numbers.js"></script>
  
+<!-- 
+<script src="/js/cdn-accelerator.js"></script>
+  -->
 
 <script>
     hljs.initHighlightingOnLoad();

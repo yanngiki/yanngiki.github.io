@@ -26,6 +26,7 @@
 /* 设置toc的List的style */
 #toc ol>li {
     padding: 0 0 8px 0px;
+    margin-bottom: 0px;
     list-style-type: cjk-ideographic;
 }
  #toc ol>li ol {

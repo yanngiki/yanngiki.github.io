@@ -73,7 +73,7 @@
         <ul class="menu-group">
             
             <li class="menu-detail">
-                <a href="/" class="menu  ">首页</a>
+                <a href="/" class="menu  ">案例</a>
                 <span class="splash"> </span>
             </li>
             
@@ -99,8 +99,85 @@
             嘉佳智能
         </div>
         <div id="portf_detail" class="post-md">
-            <p>此处放作品内容</p>
+            <div class="image-wrap jiajia-intelligence">
+    <img src='https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/portfolio/jiajia/banner_pages.png'></img>
+    <img src='https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/portfolio/jiajia/jiajia_01.png'></img>
+    <img src='https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/portfolio/jiajia/jiajia_02.png'></img>
+    <img src='https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/portfolio/jiajia/jiajia_03.png'></img>
+    <img src='https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/portfolio/jiajia/jiajia_04.png'></img>
+    <img src='https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/portfolio/jiajia/jiajia_05.png'></img>
+    </br>
+    <img src='https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/portfolio/jiajia/banner_guideline.png'></img>
+    <div class="image-container">
+        <div class="image-item">
+            <img src='https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/portfolio/jiajia/guideline_1.png'></img>
+        </div>
+        <div class="image-item">
+            <img src='https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/portfolio/jiajia/guideline_2.png'></img>
+        </div>
+        <div class="image-item">
+            <img src='https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/portfolio/jiajia/guideline_3.png'></img>
+        </div>
+        <div class="image-item">
+            <img src='https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/portfolio/jiajia/guideline_4.png'></img>
+        </div>
+    </div>
+    </br>
+    <img src='https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/portfolio/jiajia/banner_icon.png'></img>
+    <img src='https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/portfolio/jiajia/jiajia_icon_1.jpeg'></img>
+    <img src='https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/portfolio/jiajia/jiajia_icon_2.jpeg'></img>
+    <img src='https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/portfolio/jiajia/the-end.png'></img>
+</div>
 
+<style>
+    .jiajia-intelligence>img {
+        border-radius: 0px;
+    }
+    .image-container {
+        display: flex;
+        flex-direction: row;
+    }
+    .image-item {
+        flex: 1;                /* 每个图片项平均分配宽度 */
+        min-width: 0;           /* 防止内容溢出容器 */
+        height: 480px;          /* 统一设置高度 */
+        position: relative;     /* 用于图片定位 */
+        overflow: hidden;       /* 隐藏超出容器的部分 */
+    }
+    .image-item img {
+        width: 100%;            /* 图片宽度占满容器 */
+        height: 100%;           /* 图片高度占满容器 */
+        object-fit: cover;      /* 保持比例并填充容器，可能裁剪图片 */
+        object-position: top;   /* 图片顶部对齐 */
+        display: block;         /* 移除图片下方的默认空白 */
+        border-radius: 0px;
+    }
+      @media screen and (min-width:700px) and (max-width: 940px) {
+        .image-item {
+            height: 380px;         /* 小屏幕上适当调整高度 */
+        }
+    }
+    @media screen and (min-width:600px) and (max-width: 700px) {
+        .image-item {
+            height: 340px;         /* 小屏幕上适当调整高度 */
+        }
+    }
+    @media screen and (min-width:480px) and (max-width: 600px) {
+        .image-item {
+            height: 280px;         /* 小屏幕上适当调整高度 */
+        }
+    }
+    @media screen and (min-width:381px) and (max-width: 480px) {
+        .image-item {
+            height: 240px;         /* 小屏幕上适当调整高度 */
+        }
+    }
+    @media (max-width: 380px) {
+        .image-item {
+            height: 180px;         /* 小屏幕上适当调整高度 */
+        }
+    }
+</style>
         </div>
     </div>
 </body>
@@ -129,6 +206,9 @@
 
 <script src="/js/highlightjs-line-numbers.js"></script>
  
+<!-- 
+<script src="/js/cdn-accelerator.js"></script>
+  -->
 
 <script>
     hljs.initHighlightingOnLoad();

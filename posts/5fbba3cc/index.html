@@ -73,7 +73,7 @@
         <ul class="menu-group">
             
             <li class="menu-detail">
-                <a href="/" class="menu  ">首页</a>
+                <a href="/" class="menu  ">案例</a>
                 <span class="splash"> </span>
             </li>
             
@@ -140,9 +140,9 @@
 <p><strong>二、明确业务模型</strong></p>
 <p>电子合同的完整功能交互，包括签约、续签、升单，都依赖于 <code>门店 - 合同类型 - 合同版本</code> 这三者的模型关系。在没确定之前，基础的事件交互容易做得天马行空。为了让产品和开发明确了解清楚，以及保证整体交互和设计方案的完整性、可行性，对它们进行了简单的业务建模。</p>
 <p>合同签约有针对单店和连锁（包含主店和分店），这两者的在签约处理上会有差别。下图是门店签约的入口页面，可以选择签约哪种类型的合同，但在这之前我们需要解决几个关键问题，才能知道在具体签约合同时的交互要怎么做。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/yizhioa/key_problem.png" alt="key_problem"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@main/img/yizhi_oa/key_problem.png" alt="key_problem"></p>
 <p>要回答这些问题 ，其实是先整理清楚<code>门店--合同类型--合同版本</code>三者之间的对应关系，下图所示</p>
-<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/yizhioa/entity_shopcontract.png" alt="entity"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@main/img/yizhi_oa/entity_shopcontract.png" alt="entity"></p>
 <section class="caption-image">解释门店、合同、版本之间的对应关系</section>
 
 </br>
@@ -152,13 +152,13 @@
 
 <p><strong>三、梳理流程</strong></p>
 <p>创建合同（首签、续签、升单）、合同管理、合同审批，这三者的流程在产品提供的文档都缺少清晰的描述，在沟通后，将这部分流程的需求重新转译为可实现的合理的方案，以及整理整条流程之间涉及到的干系人、操作和状态流转关系。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/yizhioa/process.svg" alt="process"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@main/img/yizhi_oa/process.svg" alt="process"></p>
 <section class="caption-image">创建合同-审批-签约流程图 </section> 
 
 </br>
 
 <p>下图是合同从创建到审批流程相关的部分页面</p>
-<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/yizhioa/process_part.png" alt="process_part"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@main/img/yizhi_oa/process_part.png" alt="process_part"></p>
 <section class="caption-image">创建合同、合同管理、审批合同的部分页面 </section> 
 
 
@@ -168,17 +168,17 @@
 <p><strong>四、优化交互和页面框架</strong></p>
 <p>由于产品所设计的原型没有考虑到基本的移动端交互、表单校验、信息框架如何合理布局等问题，在设计阶段充分了解和把握真实需求动机后，把这些问题逐一想办法解决，最大程度地保证了设计的可行性。</p>
 <p>下面两图是部分做过调整的页面：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/yizhioa/form_adjustment.png" alt="form_adjustment"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@main/img/yizhi_oa/form_adjustment.png" alt="form_adjustment"></p>
 <section class="caption-image">添加客户</section>
 
 
 
-<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/yizhioa/customer_pic.png" alt="customer_pic"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@main/img/yizhi_oa/customer_pic.png" alt="customer_pic"></p>
 <section class="caption-image">客户名片</section>
 
 
-<h1 id="页面展示"><a href="#页面展示" class="headerlink" title="页面展示"></a>页面展示</h1><p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/yizhioa/page_preview.png" alt="page_preview"></p>
-<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/yizhioa/page_preview_big.png">查看部分页面图</a></p>
+<h1 id="页面展示"><a href="#页面展示" class="headerlink" title="页面展示"></a>页面展示</h1><p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@main/img/yizhi_oa/page_preview.png" alt="page_preview"></p>
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/yanngiki/resource@main/img/yizhi_oa/page_preview_big.png">查看部分页面图</a></p>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p><strong>设计流程上跨职能敏捷协作:</strong></p>
 <p>1、<strong>设计沟通</strong>，目的是充分了解需求和发现问题。沟通需求、疑点问题、方案探讨 (结合需求、设计、技术)，通过提问题引导产品反向得出真正的需求点，渐进式地协助产品发现问题，再共商提出更好的方案。</p>
 <p>2、<strong>设计梳理</strong>，目的是重新梳理功能点和流程逻辑，保证功能的完整闭环，以及采用什么样的交互和设计语言。</p>
@@ -199,15 +199,15 @@
     <footer class="f-cf">
         
         <a href="/posts/f1ee05/" class="link f-fl">
-          <span class="arrow">Prev:</span>
+          <span class="arrow">⇠</span>
           MMF BOOK
         </a>
       
 
       
         <a href="/posts/64854923/" class="link f-fr">
-           <span class="arrow">Next:</span>
           深浅模式设计
+          <span class="arrow">⇢</span>
         </a>
       
     </footer>
@@ -313,6 +313,9 @@
 
 <script src="/js/highlightjs-line-numbers.js"></script>
  
+<!-- 
+<script src="/js/cdn-accelerator.js"></script>
+  -->
 
 <script>
     hljs.initHighlightingOnLoad();

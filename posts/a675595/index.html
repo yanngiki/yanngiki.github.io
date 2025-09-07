@@ -73,7 +73,7 @@
         <ul class="menu-group">
             
             <li class="menu-detail">
-                <a href="/" class="menu  ">首页</a>
+                <a href="/" class="menu  ">案例</a>
                 <span class="splash"> </span>
             </li>
             
@@ -106,7 +106,7 @@
     <div class="post-md" id="post-detail">
         <h1 id="了解时区和时间"><a href="#了解时区和时间" class="headerlink" title="了解时区和时间"></a>了解时区和时间</h1><p><img src="https://upload.wikimedia.org/wikipedia/commons/8/88/World_Time_Zones_Map.png" alt="Time_Zones"></p>
 <p><strong>时区</strong></p>
-<p>时区指使用相同时间的某个地理区域。 相邻时区通常（但不总是）相差一小时，中国(+8)与日本(+9)相差一个时区，澳洲中部(+9.5)与日本(+9)相差了0.5个时区。 世界上任一时区的时间都能以与协调世界时 (UTC±0:00) 之间的时差（偏移量）表示。</p>
+<p>时区指的是使用相同时间的某个地理区域。 相邻时区通常（但不总是）相差一小时，中国(+8)与日本(+9)相差一个时区，澳洲中部(+9.5)与日本(+9)相差了0.5个时区。 世界上任一时区的时间都能以与协调世界时 (UTC±0:00) 之间的时差（偏移量）表示。</p>
 <p>我们所说的时间，实质上是根据天体运动衍生的概念，例如地球自转一圈是24小时为一天，围绕太阳公转一圈365天为一年，这就是我们时间产生的缘由。</p>
 <table>
 <thead>
@@ -129,12 +129,12 @@
 <p><strong>显示时间</strong></p>
 <p>地球是一个自转的球体，不同地区的人们过着”日出而作，日落而息”的生活，北京时间6点的日出和西雅图6点的日出，虽然都是日出，但不属于同一个时间点。</p>
 <p>为了方便各自地区的生活，划分了时区这个概念。处于不同地区(时区)的人，虽然在同一个绝对时间，但显示时间是不一样的。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/bi_timezone/timezone_ex.png" alt="时区时间解释示例"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@main/img/bi_timezone/timezone_ex.png" alt="时区时间解释示例"></p>
 <p>在同一条时间线上，北京时间10:00am，在日本其实是11:00am；北京时间10:00am与日本10:00am是两个不同的时刻。</p>
 <h1 id="时区使用场景"><a href="#时区使用场景" class="headerlink" title="时区使用场景"></a>时区使用场景</h1><p><strong>统计计算</strong></p>
 <p>根据对不同时区创建业务分析图表或用户标记分析（如用户分群或标签）</p>
 <p>例如，一款在多个地区发行的游戏，分析师想了解某个地区女性玩家的活跃时间，以进一步确定活动运营时间，这种情况下只需要将分析时区设置为玩家所在地区的时区即可。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/bi_timezone/timezone_analyse.png" alt="时区应用实例"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@main/img/bi_timezone/timezone_analyse.png" alt="时区应用实例"></p>
 <p><strong>数据阅读</strong></p>
 <p>将不同时区上报的事件偏移到统一的时间进行计算和查看。</p>
 <p>例如，对于总部在中国的全球运营项目，想要按北京时间查看全球用户同一段绝对时间上报的付费数据，只需要切换到北京所对应的时区即可。</p>
@@ -163,7 +163,7 @@
 </tr>
 </tbody></table>
 <p>以下面的例子来详细说明两者之间的区别。</p>
-<p>下面表格记录了来自不同国家的3位用户，都在用户所在地区10:00am分别充值$10、$30、$60，offset为时区偏移量。下图表是用不同的视角来聚合数据进行分析，</p>
+<p>下面表格记录了来自3个国家的3位用户，都在用户所在地区<strong>10:00am</strong>分别充值 <strong>$10</strong>, <strong>$60</strong>, <strong>$30</strong>，<strong>offset</strong>为时区偏移量。下图表是用不同的视角来聚合数据进行分析：</p>
 <table>
 <thead>
 <tr>
@@ -183,20 +183,20 @@
 </tr>
 <tr>
 <td>user_02</td>
-<td>$30</td>
+<td>$60</td>
 <td>10:00:00 am</td>
 <td>中国</td>
 <td>+8</td>
 </tr>
 <tr>
 <td>user_03</td>
-<td>$60</td>
+<td>$30</td>
 <td>10:00:00 am</td>
 <td>日本</td>
 <td>+9</td>
 </tr>
 </tbody></table>
-<p><img src="https://cdn.jsdelivr.net/gh/yangbe/resource@master/img/bi_timezone/timezone_aplication.png" alt="时区时间解释示例"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@main/img/bi_timezone/timezone_aplication.png" alt="时区时间解释示例"></p>
 <h1 id="核心逻辑与配置"><a href="#核心逻辑与配置" class="headerlink" title="核心逻辑与配置"></a>核心逻辑与配置</h1><h2 id="时区转换的核心逻辑"><a href="#时区转换的核心逻辑" class="headerlink" title="时区转换的核心逻辑"></a>时区转换的核心逻辑</h2><pre><code class="java">原始时区+原始时间  ---&gt;  目标时区+目标时间
 </code></pre>
 <p>目标是把数据表的原始时间换算成阅读和分析数据场景下显示时区的时间。</p>
@@ -235,15 +235,15 @@
     <footer class="f-cf">
         
         <a href="/posts/ed8efc35/" class="link f-fl">
-          <span class="arrow">Prev:</span>
+          <span class="arrow">⇠</span>
           从 0-1 吃透业务！ 设计师的破局指南
         </a>
       
 
       
         <a href="/posts/97c2747e/" class="link f-fr">
-           <span class="arrow">Next:</span>
           如何推动设计方案落地实现
+          <span class="arrow">⇢</span>
         </a>
       
     </footer>
@@ -349,6 +349,9 @@
 
 <script src="/js/highlightjs-line-numbers.js"></script>
  
+<!-- 
+<script src="/js/cdn-accelerator.js"></script>
+  -->
 
 <script>
     hljs.initHighlightingOnLoad();
