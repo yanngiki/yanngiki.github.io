@@ -16,6 +16,7 @@
   font-size: 24px;
   font-weight: 500;
   color: #46515C;
+  display: none;
 }
 
 .about .table-info {
@@ -24,7 +25,8 @@
   word-wrap: break-word;
   word-break: break-all;
   margin: 18px 0 0 0;
-  border-bottom: 1px solid var(--border-light);
+  background: #F9FAFC;
+  border-radius: 16px;
 }
 .about .table-info :is(th, tr, td) {
   border-bottom: none;
@@ -36,9 +38,13 @@
 }
 .about .table-info :is(th,td) {
   text-align: left;
-  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-regular);
+  border-top: none;
   padding: 24px 14px 24px 0 ;
   color: var(--text-secondary);
+}
+.about .table-info .last-tr :is(th,td) {
+  border-bottom: none;
 }
 /* .about .table-info td {
   text-align: left;
@@ -48,8 +54,9 @@
 } */
 .about .table-info th {
   font-size: 15px;
-  font-weight: 400;
-  width: 35%;
+  font-weight: 600;
+  width: 28%;
+  padding-left: 1.5rem;
 }
   
 .about .span-title {
@@ -73,7 +80,7 @@
   line-height: 28px;
 }
 .about .span-line {
-  color: var(--border-regular);
+  color: var(--border-tertiary);
 }
 .about .span-desc-multiline {
   display: block;
@@ -87,6 +94,7 @@
   list-style-type: none;
   padding-left: 12px;
   margin-bottom: 4px;
+  margin-left: 3px;
   position: relative;
 }
 
@@ -100,7 +108,7 @@
   width: 5px;
   height: 5px;
   border-radius: 50%;;
-  background-color: #c7c7c7;
+  background-color: #aaaaaa;
 }
 
 .about .span-desc-multiline li::before {
@@ -113,11 +121,13 @@
   width: 5px;
   height: 5px;
   border-radius: 50%;;
-  background-color: #c7c7c7;
+  background-color: #aaaaaa;
 }
 
 @media screen and (max-width:600px) {
   .about .table-info th {
-    width: 25%;
+    width: 28%;
+    padding-left: 1rem;
   }
+  
 }
