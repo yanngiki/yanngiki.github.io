@@ -88,7 +88,7 @@ a:hover {
 .post-imgwrap img {
     width: 100%;
     height: 100%;
-    border-radius: 0px;
+    border-radius: 6px;
 }
 
 .post-text
@@ -125,6 +125,7 @@ a:hover {
     text-align: justify;
     line-height: 24px;
     color: var(--font-color-2);
+    font-size: 15px;
 }
 
 .post-text:hover .post-title

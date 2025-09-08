@@ -126,7 +126,7 @@
 
 @media screen and (max-width:600px) {
   .about .table-info th {
-    width: 28%;
+    width: 25%;
     padding-left: 1rem;
   }
   

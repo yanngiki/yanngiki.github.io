@@ -7,13 +7,17 @@
    .pflo {margin-top: 0px;} 
 }
 
+.pflo .post-main-title {
+    display: none;
+}
+
 .pflo-grid {
     display: grid;
     box-sizing: border-box;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); 
     /* min270px */
     grid-gap: 16px;
-    margin-top: 24px;
+    margin-top: 0px;
 }
 
 .pflo li {

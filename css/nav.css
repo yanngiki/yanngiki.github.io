@@ -14,7 +14,7 @@
     #nav {
         position: absolute;
         margin-bottom: 24px;
-        padding: 20px 0 10px 0;
+        padding: 20px 0px 4px 0px;
     }
 }
 @media screen and (min-width: 600px){
