@@ -1,133 +1,183 @@
-
-.about {
-  background-color: var(--white-color);
-  min-height: 300px;
-  padding: 0;
-  line-height: 30px;
+.content-container {
+    margin: 0px auto;
 }
-  
-.about a {
-  color: var(--brand-color);
-}
-
-.about .main-title {
-  text-align: left;
-  margin: 6px 0;
-  font-size: 24px;
-  font-weight: 500;
-  color: #46515C;
-  display: none;
+        
+/* 桌面端内容样式 */
+.desktop-content {
+    /* background-color: #e3f2fd;
+    border: 1px solid #bbdefb;
+    padding: 20px; */
+    border-radius: 12px;
+    overflow: hidden;
 }
 
-.about .table-info {
-  width: 100%;
-  max-width: 960px;
-  word-wrap: break-word;
-  word-break: break-all;
-  margin: 18px 0 0 0;
-  background: #F9FAFC;
-  border-radius: 16px;
+#myCarousel {
+    --f-arrow-pos: 10px;
+    --f-arrow-bg: rgba(255,255,255,0.60);
+    --f-arrow-hover-bg: rgba(255,255,255,1);
+    --f-arrow-shadow: 0 4px 12px -2px rgb(50 50 93 / 15%);
+    --f-arrow-color: #333;
+    --f-arrow-width: 40px;
+    --f-arrow-height: 40px;
+    --f-arrow-svg-width: 20px;
+    --f-arrow-svg-height: 20px;
+    --f-arrow-svg-stroke-width: 2px;
+    --f-arrow-border-radius: 50%;
+     --f-thumb-opacity: "0.5";
+    --f-thumb-hover-opacity: "1";
+    --f-thumb-selected-opacity: "1";
+    /* --f-carousel-slide-height: 600px, */
+    /* height: 600px; */
 }
-.about .table-info :is(th, tr, td) {
-  border-bottom: none;
-  border-right: none;
-  border-left: none;
+
+#myCarousel .f-carousel__slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.about>.table-info tr:hover, td:hover {
-  background: none;
+
+#myCarousel img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
 }
-.about .table-info :is(th,td) {
-  text-align: left;
-  border-bottom: 1px solid var(--border-regular);
-  border-top: none;
-  padding: 24px 14px 24px 0 ;
-  color: var(--text-secondary);
+
+
+/* 移动端内容样式 */
+.mobile-content {
+    background-color: #f9fafc;
+    /* border: 1px solid #ffe0b2; */
+    padding: 12px;
+    border-radius: 12px;
 }
-.about .table-info .last-tr :is(th,td) {
-  border-bottom: none;
+/* mobile 图片墙样式 */
+.img-slider{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 12px;
+    /* overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth; */
 }
-/* .about .table-info td {
-  text-align: left;
-  border-top: 1px solid var(--border-light);
-  padding: 24px 14px 24px 0 ;
-  color: #46515C;
+.img-slider img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    border-radius: 8px;
+}
+.img-slider img:hover{
+    transform: scale(1.008);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px -4px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+}
+/* .img-slider :nth-child(n+21){
+    display: none;
 } */
-.about .table-info th {
-  font-size: 15px;
-  font-weight: 600;
-  width: 28%;
-  padding-left: 1.5rem;
+
+
+/* 页面标题区、下载按钮样式  */
+.title-area{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
 }
-  
-.about .span-title {
-  display: block;
-  font-size: 15px;
-  font-weight: 500;
-  color: var(--text-secondary);
-  margin: 0;
+.main-title{
+    font-size: 24px;
+    font-weight: 600;
+    color: #11181c;
 }
-.about .span-company {
-  display: block;
-  font-size: 14px;
-  color: var(--text-secondary);
-  line-height: 28px;
-  margin: 0 0 8px 0;
+.pdf-download {
+    width: 33.3%;
+    min-width: 120px;
+    display: flex;
+    justify-content: center;
+    padding: 6px 0px;
+    background-color: #262626;
+    color: rgba(255, 255, 255, 0.88);
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
 }
-.about .span-desc {
-  display: block;
-  font-size: 14px;
-  color: var(--text-teritiary);
-  line-height: 28px;
+.pdf-download:hover{
+    background-color: #020202;
+    color: white;
+    cursor: pointer;
 }
-.about .span-line {
-  color: var(--border-tertiary);
-}
-.about .span-desc-multiline {
-  display: block;
-  font-size: 14px;
-  color: var(--text-tertiary);
-  line-height: 28px;
-  margin-bottom: 16px;
-}
-  
-.about .span-desc li, .span-desc-multiline li {
-  list-style-type: none;
-  padding-left: 12px;
-  margin-bottom: 4px;
-  margin-left: 3px;
-  position: relative;
+.main-title a:hover {
+    color: white;
 }
 
-.about .span-desc li::before {
-  content: '';
-  position: absolute;
-  box-sizing: border-box;
-  left: 0;
-  top: 15px;
-  margin-top: -3px;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;;
-  background-color: #aaaaaa;
+/* 个人信息样式 */
+.personal-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: #333;
+    line-height: 1.5;
+    gap: 6px;
+    margin-top: 24px;
+}
+.wraper {
+    padding: 16px;
+    background: #f9fafc;
+    border-radius: 12px;
+}
+.span-title {
+    font-weight: 600;
+    font-size: 16px;
+    color: #11181c;
+    display: inline-block;
+    padding: 12px 0px;
+}
+.span-desc {
+    display: block;
+    color: #444;
+    padding: 0 12px;
+}
+.span-desc li {
+    margin-bottom: 8px;
+}
+.span-contact .min-title {
+    display: inline-block;
+    font-weight: 600;
+    margin-right: 0px;
+}
+.--column-1 {
+    flex: 1.6;
+}
+    
+.--column-2 {
+    flex: 1;
+}
+.span-contact .contact-item {
+    margin-bottom: 8px;
 }
 
-.about .span-desc-multiline li::before {
-  content: '';
-  position: absolute;
-  box-sizing: border-box;
-  left: 0;
-  top: 15px;
-  margin-top: -3px;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;;
-  background-color: #aaaaaa;
-}
-
-@media screen and (max-width:600px) {
-  .about .table-info th {
-    width: 25%;
-    padding-left: 1rem;
+ @media screen and (max-width:600px) {
+  .title-area {
+    flex-direction: column;
   }
-  
+  .title-area .main-title {
+    display: none;
+  }
+  .title-area .pdf-download {
+    width: 100%;
+    margin-top: 12px;
+    padding: 8px 0px;
+  }
 }
+@media screen and (max-width:828px) {
+    .personal-info {
+        flex-direction: column;
+    }
+}
+

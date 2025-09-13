@@ -1,0 +1,133 @@
+
+.about {
+  background-color: var(--white-color);
+  min-height: 300px;
+  padding: 0;
+  line-height: 30px;
+}
+  
+.about a {
+  color: var(--brand-color);
+}
+
+.about .main-title {
+  text-align: left;
+  margin: 6px 0;
+  font-size: 24px;
+  font-weight: 500;
+  color: #46515C;
+  display: none;
+}
+
+.about .table-info {
+  width: 100%;
+  max-width: 960px;
+  word-wrap: break-word;
+  word-break: break-all;
+  margin: 18px 0 0 0;
+  background: #F9FAFC;
+  border-radius: 16px;
+}
+.about .table-info :is(th, tr, td) {
+  border-bottom: none;
+  border-right: none;
+  border-left: none;
+}
+.about>.table-info tr:hover, td:hover {
+  background: none;
+}
+.about .table-info :is(th,td) {
+  text-align: left;
+  border-bottom: 1px solid var(--border-regular);
+  border-top: none;
+  padding: 24px 14px 24px 0 ;
+  color: var(--text-secondary);
+}
+.about .table-info .last-tr :is(th,td) {
+  border-bottom: none;
+}
+/* .about .table-info td {
+  text-align: left;
+  border-top: 1px solid var(--border-light);
+  padding: 24px 14px 24px 0 ;
+  color: #46515C;
+} */
+.about .table-info th {
+  font-size: 15px;
+  font-weight: 600;
+  width: 28%;
+  padding-left: 1.5rem;
+}
+  
+.about .span-title {
+  display: block;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin: 0;
+}
+.about .span-company {
+  display: block;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 28px;
+  margin: 0 0 8px 0;
+}
+.about .span-desc {
+  display: block;
+  font-size: 14px;
+  color: var(--text-teritiary);
+  line-height: 28px;
+}
+.about .span-line {
+  color: var(--border-tertiary);
+}
+.about .span-desc-multiline {
+  display: block;
+  font-size: 14px;
+  color: var(--text-tertiary);
+  line-height: 28px;
+  margin-bottom: 16px;
+}
+  
+.about .span-desc li, .span-desc-multiline li {
+  list-style-type: none;
+  padding-left: 12px;
+  margin-bottom: 4px;
+  margin-left: 3px;
+  position: relative;
+}
+
+.about .span-desc li::before {
+  content: '';
+  position: absolute;
+  box-sizing: border-box;
+  left: 0;
+  top: 15px;
+  margin-top: -3px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;;
+  background-color: #aaaaaa;
+}
+
+.about .span-desc-multiline li::before {
+  content: '';
+  position: absolute;
+  box-sizing: border-box;
+  left: 0;
+  top: 15px;
+  margin-top: -3px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;;
+  background-color: #aaaaaa;
+}
+
+@media screen and (max-width:600px) {
+  .about .table-info th {
+    width: 25%;
+    padding-left: 1rem;
+  }
+  
+}

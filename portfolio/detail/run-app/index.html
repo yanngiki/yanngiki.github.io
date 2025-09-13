@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+    <!-- <meta name="referrer" content="no-referrer"> -->
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
     <link rel="alternate icon" type="image/ico" href="/images/favicon.ico">
@@ -39,27 +40,10 @@
 <link rel="stylesheet" href="/css/portf_detail.css">
 
     
-    <!-- Fanbox图片预览引用 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
-
-    <!-- 引用iconfont Symbol -->
-    <script src="//at.alicdn.com/t/font_1136188_oqq48jgc1lf.js"></script>
-
-
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6MJSP6QY2Z"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-6MJSP6QY2Z');
-    </script>
+   
 
     <!-- umami -->
      <script defer src="https://cloud.umami.is/script.js" data-website-id="109c0d22-a81d-41ab-9e0e-c282a86a840b"></script>
-
 <meta name="generator" content="Hexo 7.3.0"></head>
     <body>
          <nav id="nav">
@@ -78,7 +62,7 @@
             </li>
             
             <li class="menu-detail">
-                <a href="/about" class="menu  ">简历</a>
+                <a href="/about" class="menu  ">作品集</a>
                 <span class="splash"> </span>
             </li>
             
@@ -108,6 +92,11 @@
     </div>
 </div>
 
+<!-- <iframe src="https://media.githubusercontent.com/media/yanngiki/lfs/refs/heads/main/work_info/portflio.pdf" width="100%" height="600px"></iframe> -->
+
+<div id="pdf-viewer" style="width: 100%; height: 800px;"></div>
+
+
 <style>
 .image-container {
   margin: 0 auto;
@@ -131,11 +120,40 @@
 }
 
 @media screen and (max-width:600px) {
-.image-container {
-    gap: 32px;
+  .image-container {
+      gap: 32px;
+  }
 }
 </style>
 
+
+<script>
+  // 初始化PDF查看器
+  const pdfPath = 'https://media.githubusercontent.com/media/yanngiki/lfs/refs/heads/main/work_info/portflio.pdf';
+  const container = document.getElementById('pdf-viewer');
+  
+  pdfjsLib.getDocument(pdfPath).promise.then(function(pdf) {
+    // 加载第一页
+    return pdf.getPage(1);
+  }).then(function(page) {
+    const scale = 1.5;
+    const viewport = page.getViewport({ scale: scale });
+    
+    // 创建画布元素
+    const canvas = document.createElement('canvas');
+    const context = canvas.getContext('2d');
+    canvas.height = viewport.height;
+    canvas.width = 800;
+    container.appendChild(canvas);
+    
+    // 渲染页面
+    const renderContext = {
+      canvasContext: context,
+      viewport: viewport
+    };
+    return page.render(renderContext);
+  });
+</script>
         </div>
     </div>
 </body>
@@ -145,11 +163,12 @@
 <script src="/js/push-last-url.js"></script>
  -->
 
-
+ <!-- Fanbox图片预览引用 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 
 
-<script src="/js/fancy-box.js"></script>
+<script src="/js/fancybox-v5.js"></script>
  
             </div>
         </div>
