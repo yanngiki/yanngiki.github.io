@@ -2,7 +2,7 @@
 // <!---------------------------------------- 定义展示示内容（HTML变量） ------------------------------------------>
 
 const mobileHtml = `
-    <section class="about" id="slider-group">
+    <section class="mobile-slider" id="slider-group">
         <div class="content">       
             <div class="img-slider">
                 <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_2.png" />
@@ -49,7 +49,7 @@ const mobileHtml = `
     `;
 
 const desktopHtml = `
-    <section class="about">
+    <section class="desktop-slider">
         <div class="f-carousel" id="myCarousel">
             
 
@@ -751,7 +751,7 @@ scriptsToLoad.forEach((scriptUrl, index) => {
     document.body.appendChild(script);
     // const paperMain = document.getElementsByClassName('paper-main')[0];
     // paperMain.appendChild(script);
-    
+
     // 记录已加载的脚本元素
     loadedScripts.elements.push(script);
 });

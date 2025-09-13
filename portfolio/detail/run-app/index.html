@@ -78,12 +78,7 @@
             跑步计数
         </div>
         <div id="portf_detail" class="post-md">
-            
-<video src='https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/portfolio/motion_run/motion_page_wide.mp4' type='video/mp4' controls='controls' width='100%' height='100%' autoplay loop muted></video>
-
-
-<p><img src='https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/portfolio/motion_run/motion_running.png'></img></p>
-<div class="image-container">
+            <div class="image-container">
     <div class="image-item">
         <img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/portfolio/motion_run/motion_page1.png">
     </div>
@@ -92,11 +87,12 @@
     </div>
 </div>
 
-<!-- <iframe src="https://media.githubusercontent.com/media/yanngiki/lfs/refs/heads/main/work_info/portflio.pdf" width="100%" height="600px"></iframe> -->
-
-<div id="pdf-viewer" style="width: 100%; height: 800px;"></div>
 
 
+<video src='https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/portfolio/motion_run/motion_page_wide.mp4' type='video/mp4' controls='controls' width='100%' height='100%' autoplay loop muted></video>
+
+
+<p><img src='https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/portfolio/motion_run/motion_running.png'></img></p>
 <style>
 .image-container {
   margin: 0 auto;
@@ -126,34 +122,6 @@
 }
 </style>
 
-
-<script>
-  // 初始化PDF查看器
-  const pdfPath = 'https://media.githubusercontent.com/media/yanngiki/lfs/refs/heads/main/work_info/portflio.pdf';
-  const container = document.getElementById('pdf-viewer');
-  
-  pdfjsLib.getDocument(pdfPath).promise.then(function(pdf) {
-    // 加载第一页
-    return pdf.getPage(1);
-  }).then(function(page) {
-    const scale = 1.5;
-    const viewport = page.getViewport({ scale: scale });
-    
-    // 创建画布元素
-    const canvas = document.createElement('canvas');
-    const context = canvas.getContext('2d');
-    canvas.height = viewport.height;
-    canvas.width = 800;
-    container.appendChild(canvas);
-    
-    // 渲染页面
-    const renderContext = {
-      canvasContext: context,
-      viewport: viewport
-    };
-    return page.render(renderContext);
-  });
-</script>
         </div>
     </div>
 </body>
