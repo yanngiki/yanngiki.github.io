@@ -1,6 +1,6 @@
 Carousel(document.getElementById("myCarousel"), {
       Thumbs: {
-            type: "classic"
+            type: "modern"
           },
     }, {
       Lazyload,
@@ -8,22 +8,27 @@ Carousel(document.getElementById("myCarousel"), {
       Thumbs
     }).init();
 
-    // Fancybox.bind("[data-fancybox]", {
-    //   theme: "dark",
-    //   Carousel: {
-    //     Toolbar: {
-    //       display: {
-    //         left: ["counter"],
-    //         middle: [
-    //           "zoomIn",
-    //           "zoomOut",
-    //           "toggle1to1",
-    //         ],
-    //         right: ["thumbs", "close"],
-    //       },
-    //     },
-    //     Thumbs: {
-    //         type: "classic"
-    //       },
-    // },
-    // });
+    Fancybox.bind("[data-fancybox]", {
+      theme: "dark",
+      Carousel: {
+        Toolbar: {
+          display: {
+            left: ["counter"],
+            middle: [
+              "zoomIn",
+              "zoomOut",
+              "toggle1to1",
+              "thumbs",
+            ],
+            right: ["close"],
+          },
+        },
+        // Thumbs: false,
+        // Thumbs: {
+        //     type: "modern"
+        //   },
+        Thumbs: {
+          showOnStart: false,
+        }, 
+    },
+    });

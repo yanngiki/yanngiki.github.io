@@ -8,41 +8,62 @@ const mobileHtml = `
                 <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_2.png" />
                 <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_3.png" />
                 <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_4.png" />
+                <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_5.png" />
                 <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_6.png" />
+                <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_7.png" />
                 <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_8.png" />
+                <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_9.png" />
+                <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_10.png" />
+
                 <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_11.png" />
                 <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_12.png" />
-                
                 <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_13.png" />
-                
+                <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_14.png" />
+                <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_15.png" />
                 <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_16.png" />
+                <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_17.png" />
                 <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_18.png" />
                 <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_19.png" />
                 <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_20.png" />
 
+                <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_21.png" />
                 <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_22.png" />
+                <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_23.png" />
                 <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_24.png" />
+                <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_25.png" />
                 <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_26.png" />
                 <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_27.png" />
+                <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_28.png" />
                 <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_29.png" />
-
                 <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_30.png" />
+
                 <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_31.png" />
                 <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_32.png" />
                 <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_33.png" />
                 <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_34.png" />
                 <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_35.png" />
                 <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_36.png" />
-
                 <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_37.png" />
                 <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_38.png" />
-                <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_41.png" />
+                <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_39.png" />
+                <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_40.png" />
 
+                <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_41.png" />
+                <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_42.png" />
+                <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_43.png" />
                 <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_44.png" />
                 <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_45.png" />
                 <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_46.png" />
                 <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_47.png" />
                 <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_48.png" />
+                <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_49.png" />
+                <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_50.png" />
+
+                <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_51.png" />
+                <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_52.png" />
+                <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_53.png" />
+                <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_54.png" />
+                <img src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_55.png" />
             </div>
         </div>
     </section>
@@ -52,7 +73,6 @@ const desktopHtml = `
     <section class="desktop-slider">
         <div class="f-carousel" id="myCarousel">
             
-
             <div class="f-carousel__slide" 
                 data-fancybox="gallery"
                 data-src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_2.png"
@@ -429,6 +449,63 @@ const desktopHtml = `
                 >
             <img data-lazy-src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_48.png"/>
             </div>
+
+            <div class="f-carousel__slide" 
+                data-fancybox="gallery"
+                data-src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_49.png"
+                data-thumb-src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_49.png"
+                >
+            <img data-lazy-src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_49.png"/>
+            </div>
+            
+            <div class="f-carousel__slide" 
+                data-fancybox="gallery"
+                data-src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_50.png"
+                data-thumb-src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_50.png"
+                >
+            <img data-lazy-src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_50.png"/>
+            </div>
+            
+            <div class="f-carousel__slide" 
+                data-fancybox="gallery"
+                data-src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_51.png"
+                data-thumb-src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_51.png"
+                >
+            <img data-lazy-src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_51.png"/>
+            </div>
+            
+            <div class="f-carousel__slide" 
+                data-fancybox="gallery"
+                data-src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_52.png"
+                data-thumb-src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_52.png"
+                >
+            <img data-lazy-src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_52.png"/>
+            </div>
+            
+            <div class="f-carousel__slide" 
+                data-fancybox="gallery"
+                data-src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_53.png"
+                data-thumb-src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_53.png"
+                >
+            <img data-lazy-src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_53.png"/>
+            </div>
+            
+            <div class="f-carousel__slide" 
+                data-fancybox="gallery"
+                data-src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_54.png"
+                data-thumb-src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_54.png"
+                >
+            <img data-lazy-src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_54.png"/>
+            </div>
+            
+            <div class="f-carousel__slide" 
+                data-fancybox="gallery"
+                data-src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_55.png"
+                data-thumb-src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_55.png"
+                >
+            <img data-lazy-src="https://gitee.com/yanngiki/resource/raw/master/img/about/page_55.png"/>
+            </div>
+            
     </div>
 
 </section>
