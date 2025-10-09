@@ -15,8 +15,8 @@ Carousel(document.getElementById("myCarousel"), {
           display: {
             left: ["counter"],
             middle: [
-              "zoomIn",
-              "zoomOut",
+              // "zoomIn",
+              // "zoomOut",
               "toggle1to1",
               "thumbs",
             ],
