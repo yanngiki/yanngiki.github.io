@@ -45,9 +45,9 @@
 
 /* 移动端内容样式 */
 .mobile-content {
-    background-color: #f9fafc;
+    /* background-color: #f9fafc; */
     /* border: 1px solid #ffe0b2; */
-    padding: 12px;
+    /* padding: 12px; */
     border-radius: 12px;
 }
 /* mobile 图片墙样式 */
@@ -181,3 +181,11 @@
     }
 }
 
+/* fancybox的thumb样式 */
+.f-thumbs {
+  --f-thumb-selected-shadow: none;
+  --f-thumbs-gap: 2px;
+  --f-thumb-transform: scale(0.86);
+  --f-thumb-hover-transform: scale(0.86);
+  --f-thumb-selected-transform: scale(1);
+}
