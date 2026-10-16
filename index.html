@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <!-- <meta name="referrer" content="no-referrer"> -->
     <meta charset="utf-8">
+    
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
     <link rel="alternate icon" type="image/ico" href="/images/favicon.ico">
  
@@ -11,55 +11,27 @@
         YANNGIKI
     </title>
 
-    <!-- CSS引用 -->
+    <!-- CSS引用：全站基础 + 按页面加载 -->
     
-<link rel="stylesheet" href="/css/colors.css">
+<link rel="stylesheet" href="/css/base.css">
 
     
-<link rel="stylesheet" href="/css/reset.css">
+<link rel="stylesheet" href="/css/list.css">
 
     
-<link rel="stylesheet" href="/css/nav.css">
-
     
-<link rel="stylesheet" href="/css/home.css">
-
     
-<link rel="stylesheet" href="/css/postmd.css">
-
     
-<link rel="stylesheet" href="/css/index.css">
 
+ 
     
-<link rel="stylesheet" href="/css/about.css">
 
-    
-<link rel="stylesheet" href="/css/toc.css">
-
-    
-<link rel="stylesheet" href="/css/portf_detail.css">
-
-    
     <!-- amplitude -->
    <script src="https://cdn.amplitude.com/script/0bac11cc897af36bae8de07ccbd6c78.js"></script><script>window.amplitude.add(window.sessionReplay.plugin({sampleRate: 1}));window.amplitude.init('0bac11cc897af36bae8de07ccbd6c78', {"fetchRemoteConfig":true,"autocapture":{"attribution":true,"fileDownloads":true,"formInteractions":true,"pageViews":true,"sessions":true,"elementInteractions":true,"networkTracking":true,"webVitals":true,"frustrationInteractions":true}});</script>
 
     <!-- umami -->
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="109c0d22-a81d-41ab-9e0e-c282a86a840b"></script>
-    
-    <!-- umami docker -->
-     <script defer src="http://100.96.97.73:3080/script.js" data-website-id="96d27d67-4499-45d0-a5f2-8f58c8785d7a"></script>
-
-    <!-- posthog -->
-     <script>
-        !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="fi init Oi Fi ft Ii Ai Ri capture calculateEventProperties Ni register register_once register_for_session unregister unregister_for_session Hi getFeatureFlag getFeatureFlagPayload getFeatureFlagResult isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync qi identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty zi Li createPersonProfile setInternalOrTestUser Bi $i Wi opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing Mi debug bt ji getPageViewId captureTraceFeedback captureTraceMetric Si".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-        posthog.init('phc_BYJnXvUlcwhmsBHdBjHTtAKAYPmRJmekTif59c4wwhv', {
-            api_host: 'https://us.i.posthog.com',
-            defaults: '2026-01-30',
-            person_profiles: 'identified_only', // or 'always' to create profiles for anonymous users as well
-        })
-    </script>
+    <script defer src="https://4dc14f395c60-0.yanngiki.fnos.net/script.js" data-website-id="96d27d67-4499-45d0-a5f2-8f58c8785d7a"></script>
 <meta name="generator" content="Hexo 7.3.0"></head>
-
 
     <body>
          <nav id="nav">
@@ -68,7 +40,7 @@
         <ul class="menu-group">
             
             <li class="menu-detail">
-                <a href="/" class="menu z-active ">总结</a>
+                <a href="/" class="menu z-active ">案例</a>
                 <span class="splash"> </span>
             </li>
             
@@ -78,7 +50,7 @@
             </li>
             
             <li class="menu-detail">
-                <a href="/works" class="menu  ">作品集</a>
+                <a href="/works" class="menu  ">关于我</a>
                 <span class="splash"> </span>
             </li>
             
@@ -116,7 +88,7 @@
         <div class="post-text">
             <a href="/posts/ed8efc35/">
                 <div class="post-title" >从 0-1 吃透业务！ 设计师的破局指南</div>
-                <div  class="post-except" >面对复杂且全新的业务，设计师应该如何切入...</div>
+                <div  class="post-except" >设计师在从零了解复杂且全新的业务，可从功能矩阵、业务场景、用户角色和关键词四个维度快速建立全局认知，从而跳出视觉与交互表层，深入理解业务并提升体验设计能力。</div>
             </a>
             <!-- <div class="post-date">2025.07.02</div> -->
         </div>
@@ -136,7 +108,7 @@
         <div class="post-text">
             <a href="/posts/a675595/">
                 <div class="post-title" >时区在BI工具中的应用和核心逻辑</div>
-                <div  class="post-except" ></div>
+                <div  class="post-except" >总结了 BI 工具中时区的核心逻辑，即通过区分绝对时间与本地显示时间，并在数据中规范记录时间和时区信息，从而支持按用户本地或固定时区准确进行多地区业务分析。</div>
             </a>
             <!-- <div class="post-date">2024.06.19</div> -->
         </div>
@@ -196,7 +168,7 @@
         <div class="post-text">
             <a href="/posts/5fbba3cc/">
                 <div class="post-title" >伊智OA（顾问SaaS）</div>
-                <div  class="post-except" >伊智OA（顾问SaaS）是公司内部销售顾问、运营顾问、和管理人员使用的工具，主要用于在与客户谈合作时能快速拟定合同和完成签约，利用数字化手段提升业务端录入客户、签发合同的效率...</div>
+                <div  class="post-except" >公司内部销售顾问、运营顾问通过数字化工具快速拟定合同和完成签约，提升业务端录入客户、签发合同的效率...</div>
             </a>
             <!-- <div class="post-date">2021.05.08</div> -->
         </div>
@@ -256,7 +228,7 @@
         <div class="post-text">
             <a href="/posts/79ed9cfc/">
                 <div class="post-title" >移动收银</div>
-                <div  class="post-except" >移动收银是提供给美业门店SaaS服务的移动电子化收银，集商品服务开单、开卡、充值、购买优惠券和疗程、还款等功能。本次设计主要是从流程和交互体验上进行优化，优化后的交互体验获得客户大力肯定， DAU 也从个位数提升到最高1K+。</div>
+                <div  class="post-except" >移动收银是提供给美业门店SaaS服务的移动电子化收银，通过重构开单结账任务流，优化后的交互体验获得客户大力肯定， DAU 从个位数提升到最高1K+。</div>
             </a>
             <!-- <div class="post-date">2019.06.07</div> -->
         </div>
@@ -275,8 +247,8 @@
                
         <div class="post-text">
             <a href="/posts/bb3a1757/">
-                <div class="post-title" >表单优化</div>
-                <div  class="post-except" >测试填写这个表单时, 发现在体验上存在一些问题：联系方式填写混乱；相同特征的信息没有放在一起；信息的阅读性混乱；校验出错提示不能明确告诉使用者如何解决，反而还容易造成误解...</div>
+                <div class="post-title" >表单体验优化：从字段调整到认知负担的系统性改善</div>
+                <div  class="post-except" >设计的核心价值不应是调整表单的间距、颜色等样式美化，而是通过重新审视信息录入的必要性、字段之间的关系，以及系统与用户之间的沟通方式，降低用户的认知负担和操作成本。</div>
             </a>
             <!-- <div class="post-date">2019.05.22</div> -->
         </div>
@@ -303,22 +275,8 @@
     </body>
     
 
-<link rel="stylesheet" href="/css/a11y-dark.min.css">
 
 
-<script src="/js/highlight.min.js"></script>
-
-
-<script src="/js/highlightjs-line-numbers.js"></script>
- 
-<!-- 
-<script src="/js/cdn-accelerator.js"></script>
-  -->
-
-<script>
-    hljs.initHighlightingOnLoad();
-    hljs.initLineNumbersOnLoad();
-</script>
 
 <script>
     function setImgAtt() {
@@ -333,4 +291,5 @@
         return false
     }
 </script>
+
 </html>

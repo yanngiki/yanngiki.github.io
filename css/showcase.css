@@ -1,4 +1,7 @@
 
+/* showcase.css — 设计作品列表页（/design）
+   来自原 portfolio.css */
+
 .pflo {
     margin-top: 0px;
 }
@@ -34,10 +37,6 @@
 }
 .pflo li:hover {
     animation: tapAnimation .4s cubic-bezier(0.31, 1, 0.34, 1) forwards;
-}
-
-.pflo li:hover .icon-link {
-    transform:scale(1.1);
 }
 
 @media screen and (max-width: 600px) {
@@ -83,14 +82,6 @@
     align-items: center;
     padding-right: 6px;
 }
-.pflo .info .icon-link {
-    /* width: 16px; */
-    /* height: 16px; */
-    font-size: 18px;
-    /* color: #121314; */
-    /* stroke-width: 2px; */
-    transition: all 0.4s ease;
-}
 .pflo .info h3 {
     margin: 4px 0 0 0;
     font-size: 14px;
@@ -110,9 +101,6 @@
 /* 设置默认图的背景色 */
 .figure-mmfbook {
     background: #fd9c3e;
-}
-.figure-idata {
-    background: #ffffff;
 }
 .figure-datacenter {
     background: #fafafa;
@@ -134,12 +122,6 @@
 }
 .figure-mmf-categoryicon{
     background: #fcfaf2;
-}
-.figure-mmf-emptystate {
-    background: #ebe8ec;
-}
-.figure-running {
-    background:#cee0f5;
 }
 .figure-motion-running {
     background:#f8fbfc;

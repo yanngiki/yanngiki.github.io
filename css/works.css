@@ -1,3 +1,35 @@
+/* works.css — 作品集页（/works）
+   来自原 about.css */
+
+/* 移动端 / 桌面端只显示一个，断点与 works.js 的 680px 一致 */
+.works-mobile { display: block; }
+.works-desktop { display: none; }
+@media screen and (min-width: 680px) {
+    .works-mobile { display: none; }
+    .works-desktop { display: block; }
+}
+
+/* DOM 顺序是「个人信息 → 作品集」，桌面端直接用这个顺序；
+   移动端把「个人信息」排到最后，让作品集在最前 */
+.works-layout {
+    display: flex;
+    flex-direction: column;
+}
+.works-layout > .content-container {
+    width: 100%;
+}
+@media screen and (max-width: 679px) {
+    .works-layout > .personal-info {
+        order: 1;
+    }
+}
+@media screen and (min-width: 680px) {
+    /* 桌面端「关于我 / 联系」在页面最上方，去掉它的顶部外边距 */
+    .works-layout > .personal-info {
+        margin-top: 0;
+    }
+}
+
 .content-container {
     margin: 0px auto;
 }
@@ -50,34 +82,41 @@
     /* padding: 12px; */
     border-radius: 12px;
 }
-/* mobile 图片墙样式 */
-.img-slider{
+/* 移动端封面卡（点击后进入全屏翻阅） */
+.works-cover {
+    position: relative;
+    display: block;
     width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 12px;
-    /* overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth; */
-}
-.img-slider img{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    scroll-snap-align: start;
-    flex-shrink: 0;
-    border-radius: 8px;
-}
-.img-slider img:hover{
-    transform: scale(1.008);
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 4px 10px -4px rgba(0, 0, 0, 0.08);
+    padding: 0;
+    border: 0;
+    background: none;
+    border-radius: 12px;
+    overflow: hidden;
     cursor: pointer;
+    line-height: 0;
 }
-/* .img-slider :nth-child(n+21){
-    display: none;
-} */
+.works-cover img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+.works-cover:active img {
+    transform: scale(0.995);
+}
+.works-cover-hint {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    padding: 28px 12px 8px;
+    font-size: 11px;
+    line-height: 1.4;
+    color: var(--text-tertiary);
+    text-align: center;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+}
 
 
 /* 页面标题区、下载按钮样式  */
@@ -119,7 +158,7 @@
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     font-size: 13px;
     color: #333;
     line-height: 1.5;
@@ -133,7 +172,7 @@
 }
 .span-title {
     font-weight: 600;
-    font-size: 16px;
+    font-size: 24px;
     color: #11181c;
     display: inline-block;
     padding: 12px 0px;
@@ -165,9 +204,10 @@
  @media screen and (max-width:600px) {
   .title-area {
     flex-direction: column;
+    align-items: flex-start;
   }
   .title-area .main-title {
-    display: none;
+    display: block;
   }
   .title-area .pdf-download {
     width: 100%;

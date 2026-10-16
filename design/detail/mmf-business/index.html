@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <!-- <meta name="referrer" content="no-referrer"> -->
     <meta charset="utf-8">
+    
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
     <link rel="alternate icon" type="image/ico" href="/images/favicon.ico">
  
@@ -11,55 +11,32 @@
         YANNGIKI
     </title>
 
-    <!-- CSS引用 -->
+    <!-- CSS引用：全站基础 + 按页面加载 -->
     
-<link rel="stylesheet" href="/css/colors.css">
+<link rel="stylesheet" href="/css/base.css">
 
     
-<link rel="stylesheet" href="/css/reset.css">
+    
+<link rel="stylesheet" href="/css/post.css">
 
     
-<link rel="stylesheet" href="/css/nav.css">
-
     
-<link rel="stylesheet" href="/css/home.css">
-
     
-<link rel="stylesheet" href="/css/postmd.css">
+<link rel="stylesheet" href="/css/detail.css">
 
-    
-<link rel="stylesheet" href="/css/index.css">
 
+ 
     
-<link rel="stylesheet" href="/css/about.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1.15/dist/fancybox/fancybox.css">
+    
+    
 
-    
-<link rel="stylesheet" href="/css/toc.css">
-
-    
-<link rel="stylesheet" href="/css/portf_detail.css">
-
-    
     <!-- amplitude -->
    <script src="https://cdn.amplitude.com/script/0bac11cc897af36bae8de07ccbd6c78.js"></script><script>window.amplitude.add(window.sessionReplay.plugin({sampleRate: 1}));window.amplitude.init('0bac11cc897af36bae8de07ccbd6c78', {"fetchRemoteConfig":true,"autocapture":{"attribution":true,"fileDownloads":true,"formInteractions":true,"pageViews":true,"sessions":true,"elementInteractions":true,"networkTracking":true,"webVitals":true,"frustrationInteractions":true}});</script>
 
     <!-- umami -->
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="109c0d22-a81d-41ab-9e0e-c282a86a840b"></script>
-    
-    <!-- umami docker -->
-     <script defer src="http://100.96.97.73:3080/script.js" data-website-id="96d27d67-4499-45d0-a5f2-8f58c8785d7a"></script>
-
-    <!-- posthog -->
-     <script>
-        !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="fi init Oi Fi ft Ii Ai Ri capture calculateEventProperties Ni register register_once register_for_session unregister unregister_for_session Hi getFeatureFlag getFeatureFlagPayload getFeatureFlagResult isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync qi identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty zi Li createPersonProfile setInternalOrTestUser Bi $i Wi opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing Mi debug bt ji getPageViewId captureTraceFeedback captureTraceMetric Si".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-        posthog.init('phc_BYJnXvUlcwhmsBHdBjHTtAKAYPmRJmekTif59c4wwhv', {
-            api_host: 'https://us.i.posthog.com',
-            defaults: '2026-01-30',
-            person_profiles: 'identified_only', // or 'always' to create profiles for anonymous users as well
-        })
-    </script>
+    <script defer src="https://4dc14f395c60-0.yanngiki.fnos.net/script.js" data-website-id="96d27d67-4499-45d0-a5f2-8f58c8785d7a"></script>
 <meta name="generator" content="Hexo 7.3.0"></head>
-
 
     <body>
          <nav id="nav">
@@ -68,7 +45,7 @@
         <ul class="menu-group">
             
             <li class="menu-detail">
-                <a href="/" class="menu  ">总结</a>
+                <a href="/" class="menu  ">案例</a>
                 <span class="splash"> </span>
             </li>
             
@@ -78,7 +55,7 @@
             </li>
             
             <li class="menu-detail">
-                <a href="/works" class="menu  ">作品集</a>
+                <a href="/works" class="menu  ">关于我</a>
                 <span class="splash"> </span>
             </li>
             
@@ -88,13 +65,12 @@
 
         <div class="paper">
             <div class="paper-main">   
-                <body>
-    <div id="portf_main" class="post-main">
-        <div class="post-main-title">
-            MMF Business
-        </div>
-        <div id="portf_detail" class="post-md">
-            <style>
+                <div id="portf_main" class="post-main">
+    <div class="post-main-title">
+        MMF Business
+    </div>
+    <div id="portf_detail" class="post-md">
+        <style>
     .image-wrap {
         box-shadow: 0 0 0 8px #e8eaeda1;
         border-radius: 4px;
@@ -116,25 +92,14 @@
     <img src='https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/portfolio/mmf_business/13.png'></img>
     <img src='https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/portfolio/mmf_business/the-end.png'></img>
 </div>
-        </div>
     </div>
-</body>
+</div>
 
-<!-- 
-<script src="/js/push-last-url.js"></script>
- -->
-
- <!-- Fanbox图片预览引用 -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
-<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-
-
-<script src="/js/fancybox-v5.js"></script>
- 
             </div>
         </div>
     </body>
     
+
 
 <link rel="stylesheet" href="/css/a11y-dark.min.css">
 
@@ -143,15 +108,22 @@
 
 
 <script src="/js/highlightjs-line-numbers.js"></script>
- 
-<!-- 
-<script src="/js/cdn-accelerator.js"></script>
-  -->
 
 <script>
-    hljs.initHighlightingOnLoad();
-    hljs.initLineNumbersOnLoad();
+    if (window.hljs) {
+        hljs.initHighlightingOnLoad();
+        hljs.initLineNumbersOnLoad();
+    }
 </script>
+
+
+
+<!-- 6.1 起 fancybox.umd.js 已内置 Carousel 与 Thumbs / Arrows / Lazyload，无需再单独引入 -->
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1.15/dist/fancybox/fancybox.umd.js"></script>
+
+<script src="/js/fancybox-gallery.js"></script>
+
+
 
 <script>
     function setImgAtt() {
@@ -166,4 +138,5 @@
         return false
     }
 </script>
+
 </html>

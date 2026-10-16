@@ -1,5 +1,8 @@
 @charset "utf-8";
 
+/* post.css — 文章与作品详情正文
+   合并自：postmd.css / toc.css */
+
 /* ------------------------ post页面、主标题、日期样式 ------------------------ */
 .post-main
 {
@@ -57,8 +60,8 @@
     margin: 12px 0;
 }
 
-h1 {
-    font-size:30px;
+.post-md h1 {
+    font-size:1.875rem;
     font-weight: 600;
     line-height: 72px;
     margin-bottom: 15px;
@@ -79,27 +82,38 @@ h1 {
 }
 .post-md h3
 {
-    font-size: 1.75rem;
+    font-size: 1.375rem;
     line-height: 1.2;
     padding: 18px 0;
 }
 .post-md h4
 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     line-height: 1.2;
     padding: 16px 0;
 }
 .post-md h5
 {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     line-height: 1.2;
     padding: 14px 0;
 }
 .post-md h6
 {
-    font-size: 1.125rem;
+    font-size: 1rem;
     line-height: 1.2;
     padding: 12px 0;
+}
+
+/* 标题里的辅助文案：不进入标题文字/锚点，仅由 CSS 渲染展示 */
+.post-md h1 .heading-sub::after,
+.post-md h2 .heading-sub::after,
+.post-md h3 .heading-sub::after,
+.post-md h4 .heading-sub::after,
+.post-md h5 .heading-sub::after,
+.post-md h6 .heading-sub::after
+{
+    content: attr(data-text);
 }
 
 
@@ -142,17 +156,20 @@ h1 {
     list-style: disc;
     padding-left: 0px;
 }
-.post-md ul, ol {
+.post-md ul,
+.post-md ol {
     margin: 0px 0 16px 12px;
     list-style: none;
 }
-.post-md ul>li, ol>li {
+.post-md ul>li,
+.post-md ol>li {
     padding-left: 20px;
     margin-bottom: 8px;
     position: relative;
     list-style: none;
 }
-.post-md ul>li::before, ol>li::before {
+.post-md ul>li::before,
+.post-md ol>li::before {
     content: '';
     position: absolute;
     box-sizing: border-box;
@@ -179,11 +196,11 @@ h1 {
     border-radius: 4px;
 }
 
-.post-md li>li, li>li {
+.post-md li>li {
     padding-left: 20px;
     position: relative;
 }
-.post-md li>li::before, li>li::before {
+.post-md li>li::before {
     content: '';
     position: absolute;
     left: 0;
@@ -234,15 +251,7 @@ h1 {
     margin: 0px 0px 0px 8px;
 }
 
-.post-md .video-container
-{
-    background: #000;
-    border-radius: 4px;
-    overflow: hidden;
-}
-
-.post-md iframe,
-.post-md .video-container iframe
+.post-md iframe
 {
     width: 100%;
     margin: 12px 0;
@@ -290,13 +299,15 @@ h1 {
     word-break: normal;
     -ms-word-break: normal;
 }
-.post-md table tr, td {
+.post-md table tr,
+.post-md table td {
     border:1px solid #E8E8E8;
     padding: 10px 14px;
     /*竖直居中*/
     vertical-align: middle;
 }
-.post-md table tr:hover, td:hover {
+.post-md table tr:hover,
+.post-md table td:hover {
     background-color: var(--table-hover);
 }
 .post-md table td>img {
@@ -312,7 +323,7 @@ h1 {
 } */
 
 /*首列不换行*/
-table td:nth-child(1) {
+.post-md table td:nth-child(1) {
     white-space: nowrap;
 }
 
@@ -373,10 +384,6 @@ table td:nth-child(1) {
     display: flex;
     flex-direction: row;
 } 
-.int .int-cardstyle .divide-line {
-    color: var(--border-regular);
-    margin-right: 8px;
-}
 .int .int-cardstyle .int-title {
     color: var(--text-primary);
     margin: 4px 0 0 0;
@@ -458,41 +465,58 @@ table td:nth-child(1) {
 }
 
 
-/* ----------------------- 附近卡片 --------------------- */
+/* ----------------------- 附件卡片 --------------------- */
 .card-content {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  background-color: #f7f7f9;
+  border-radius: 10px;
 }
 
 .card-link {
-  width: 20%;
+  width: 100%;
   box-sizing: border-box;
   border: 1px solid #efefef; 
+  background-color: #fff;
   border-radius: 6px;
   cursor: pointer;
-  margin: 0 12px 12px 0;
+
+  padding: 8px;
 }
 .card-link:hover {
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.05);
-    color:--brand-color;
+    color: var(--brand-color);
+}
+.card-link a {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    box-shadow: none;
 }
 
+.card-content .card-link .card-title {
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    margin: auto 12px;
+}
 
 #card-img{
   display: block;
-  width: 100%;
+  width: 64px;
+  height: 64px;
   margin: 0;
   border-radius: 6px;
     pointer-events: none;
 }
 
-.card-content .card-link .card-title {
-  font-size: 14px;
-  padding: 8px 16px;
-  text-align: center;
-  line-height: 22px;
-  color:--text-secondary;
-  margin: 0;
+
+
+.card-content .card-link a {
+    text-decoration: none;
+    box-shadow: none;
 }
 
 @media screen and (max-width: 600px) {
@@ -507,26 +531,14 @@ table td:nth-child(1) {
         flex-direction: row;
     }
      #card-img {
-        width: 80px;
-        height: 80px;
-    }
-    .card-content .card-link .card-title {
-        text-align: left;
-        justify-content: center;
-        align-items: center;
-        margin: auto 0;
+        width: 64px;
+        height: 64px;
     }
 }
 
 /* ------------------------文章内容分组标题标签样式(逐步弃用)------------------------------------- */
 
 
-/* 辅助标题 - 浅色 */
-.caption-light {
-  font-size:16px;
-  color:#aaadb1;
-  text-align:left;
-}
 /* 辅助标题 - 以前 */
 .caption-yellow {
   text-align:left; 
@@ -585,8 +597,7 @@ table td:nth-child(1) {
 
   @media screen and (max-width:600px) {
     .caption-yellow,
-    .caption-green,
-    .caption-light {
+    .caption-green {
       text-align: center;
     }
     .question,
@@ -596,3 +607,168 @@ table td:nth-child(1) {
         width: 100%;
     }
   }
+
+
+/* ------------------------文章内容分组标题标签样式(逐步弃用)------------------------------------- */
+
+#toc {
+    z-index: 100;
+    position: fixed;
+    right: 0px;
+    top: 80px;
+    width: 200px;
+    height: 84%;
+    padding: 0px 10px 10px 48px;
+    margin-bottom: 32px;
+    display: none;
+    background-color:rgba(255,255,255,0.96);
+    font-size: 0.8rem;
+    color:#afafaf;
+    border-left: 1px solid #f0f0f0;
+    overflow: scroll;
+}
+
+#toc a {
+    color: var(--font-color-toc);
+}
+#toc a:hover {
+    color: var(--text-secondary);
+}
+
+/* 设置toc的List的style */
+#toc ol>li {
+    padding: 0 0 8px 0px;
+    margin-bottom: 0px;
+    list-style-type: cjk-ideographic;
+}
+ #toc ol>li ol {
+    margin: 0;
+}
+#toc ol>li li  {
+    padding: 0px;
+    margin-left: 12px;
+    list-style-type: none;
+}
+ #toc ol>li::before {
+    content: none;
+}
+
+
+@media screen and (max-width: 560px) {
+    #toc {
+      font-size: .9em;
+      width: 100%;
+      height: 100%;
+      left: 0px;
+      top: 0px;
+      bottom: 0px;
+      padding-top: 100px;
+    }
+}
+@media screen and (min-width: 561px) and (max-width: 1131px) {
+    #toc{
+    right: 0px;
+    top: 0px;
+    height: 100%;
+    bottom: 0px;
+    padding-top: 100px;
+    box-shadow: -10px 4px 6px -10px rgba(38,38,38,0.08);
+    }
+}
+@media screen and (min-width: 1132px) {
+    #toc{
+    display: block; 
+  }
+}
+
+
+/* 隐藏toc滚动条 */
+#toc::-webkit-scrollbar {
+  display: none;
+}
+#toc {
+    /* IE 10+ */
+    -ms-overflow-style: none; 
+    /* Firefox */
+    overflow: -moz-scrollbars-none; 
+}
+
+
+/* toc盒子 */
+.toc {
+  margin: 10px 0 40px 6px;
+}
+
+
+/* 目录面包屑 */
+.mini_toc {
+  display: block;
+  z-index: 1000;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px 0 0 8px;
+  border: 1px solid #f0f0f0;
+  background-color: var(--white-color);
+  text-align: center; 
+  position: fixed;
+  right:-1px;
+  top: 44px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px -3px rgba(0,0,0,0.2);
+}
+@media screen and (min-width: 1132px) {
+    .mini_toc{
+    display: none;
+  }
+}
+
+.toc_icn{
+    position: relative;
+    height: 20px;
+    width: 14px;
+    margin: 10px auto;
+    cursor: pointer
+}
+.toc_icn span{
+    position: absolute;
+    display: block;
+    background-color: var(--text-tertiary);
+    height: 2px;
+    width: 14px;
+    transition: all .25s ease-in-out;
+    margin: 0 0 -1px 0;
+}
+
+.toc_icn span:nth-child(1){
+      top: 0px;
+  }
+.toc_icn span:nth-child(2){
+      top: 8px;
+  }
+.toc_icn span:nth-child(3){
+      top: 8px;
+  }
+.toc_icn span:nth-child(4){
+      top: 16px;;
+  }
+.toc_icn span:nth-child(1).op{
+      top: 8px;
+      transition: all .15s ease;
+      transform: scaleX(0);
+  }
+.toc_icn span:nth-child(2).op{
+      transform: rotate(45deg);
+  }
+.toc_icn span:nth-child(3).op{
+      transform: rotate(-45deg);
+  }
+.toc_icn span:nth-child(4).op{
+      top: 8px;
+      transition: all .15s ease;
+      transform: scaleX(0);
+  }
+
+
+.mini_toc:hover {
+    box-shadow: 0 4px 12px -3px rgba(0,0,0,0.2);
+}
