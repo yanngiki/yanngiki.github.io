@@ -7,7 +7,7 @@
     <link rel="alternate icon" type="image/ico" href="/images/favicon.ico">
  
     <title>
-         企业艺术采购系统重大改版设计 ·  
+         企业艺术采购系统重构：以任务为中心的体验设计 ·  
         YANNGIKI
     </title>
 
@@ -33,22 +33,24 @@
    <script src="https://cdn.amplitude.com/script/0bac11cc897af36bae8de07ccbd6c78.js"></script><script>window.amplitude.add(window.sessionReplay.plugin({sampleRate: 1}));window.amplitude.init('0bac11cc897af36bae8de07ccbd6c78', {"fetchRemoteConfig":true,"autocapture":{"attribution":true,"fileDownloads":true,"formInteractions":true,"pageViews":true,"sessions":true,"elementInteractions":true,"networkTracking":true,"webVitals":true,"frustrationInteractions":true}});</script>
 
     <!-- umami -->
-    <script defer src="https://4dc14f395c60-0.yanngiki.fnos.net/script.js" data-website-id="96d27d67-4499-45d0-a5f2-8f58c8785d7a"></script>
+    <script defer src="https://umami.128200.xyz/script.js" data-website-id="96d27d67-4499-45d0-a5f2-8f58c8785d7a"></script>
 <meta name="generator" content="Hexo 7.3.0"></head>
 
     <body>
-         <nav id="nav">
+         
+<nav id="nav">
     <div class="nav-content">
-        <a class="logo" href="/"><img class="navlogo" src="/images/logo.svg"></a>
+        
+        <a class="logo logo--back" href="/" aria-label="返回上一级" title="返回上一级">
+            <svg class="nav-back-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                <path d="M22.0003 13.0001L22.0004 11.0002L5.82845 11.0002L9.77817 7.05044L8.36396 5.63623L2 12.0002L8.36396 18.3642L9.77817 16.9499L5.8284 13.0002L22.0003 13.0001Z"></path>
+            </svg>
+        </a>
+        
         <ul class="menu-group">
             
             <li class="menu-detail">
-                <a href="/" class="menu  ">案例</a>
-                <span class="splash"> </span>
-            </li>
-            
-            <li class="menu-detail">
-                <a href="/design" class="menu  ">设计</a>
+                <a href="/" class="menu  ">设计</a>
                 <span class="splash"> </span>
             </li>
             
@@ -66,7 +68,7 @@
                 <div class="post-main">
     
         <div class="post-main-title">
-            企业艺术采购系统重大改版设计
+            企业艺术采购系统重构：以任务为中心的体验设计
         </div>
         <!-- <div class="post-meta">
             2025-08-12
@@ -74,15 +76,12 @@
     
     
     <div class="post-md" id="post-detail">
-        <h1 id="项目背景"><a href="#项目背景" class="headerlink" title="项目背景"></a>项目背景</h1><p><strong>介绍</strong></p>
-<p>网易互娱游戏制作所涉及到的美术、音频、视频、GUI等资源，除了游戏工作室会承担一部分制作，还会分配给内部的网易互娱「艺术设计中心」和签约的供应商&#x2F;个人画师。<strong>APC平台的核心作用是制作任务单据跟踪管理（流转和审批）</strong>，使整个资产制作任务链路的拆单、分配、报价、质量审核、业务验收等操作实现数字化管理。</p>
+        <h1 id="项目概述"><a href="#项目概述" class="headerlink" title="项目概述"></a>项目概述</h1><p>网易互娱游戏制作所涉及到的美术、音频、视频、GUI等资源，除了游戏工作室会承担一部分制作，还会分配给内部的网易互娱「艺术设计中心」和签约的供应商&#x2F;个人画师。<strong>APC平台的核心作用是制作任务单据跟踪管理（流转和审批）</strong>，使整个资产制作任务链路的拆单、分配、报价、质量审核、业务验收等操作实现数字化管理。</p>
 <hr>
-<p><strong>改版原因</strong></p>
-<p>APC 在2025年有重大的业务变化，其在网易使用了已有十余年，多年来业务持续变化调整，功能也不断累加，系统熵增问题显露，较难及时翻身适配新业务的变化，同时累积了一系列体验等问题，这些已经被高层看在眼里，自上而下的改版。</p>
+<p>APC 在2025年有重大的业务变化，其在网易使用了已有十余年，多年来业务持续变化调整，功能也不断累加，系统熵增的结构性问题逐渐显露：历史功能难以清理、导航层级复杂、工作台信息冗余、业务表单难以理解，以及页面性能和视觉体验不足，较难及时转变适配新业务的变化。</p>
 <hr>
-<p><strong>面临困境</strong></p>
-<p>前期希望通过换肤和局部交互调整的形式，快速改造 APC 的视觉风格和体验，用低成本的方式先让高层看到有所改动。但这个方向很快被否定，高层希望更彻底地解决。</p>
-<p>当时的状态是：<strong>大家都知道要改版，但没人知道怎么做！</strong>。</p>
+<p>项目最初考虑通过视觉换肤和局部交互调整快速改善体验，但深入分析后发现，问题并非来自界面本身，而是长期业务演变与功能累积共同造成的系统性负担。</p>
+<p>所以，这次改版的核心目标不再是局部优化，而是重新梳理系统的<strong>业务结构</strong>、信息组织方式与<strong>关键操作流程</strong>，在保留必要业务能力的前提下，降低系统的理解成本和操作摩擦。</p>
 <h1 id="前置准备"><a href="#前置准备" class="headerlink" title="前置准备"></a>前置准备</h1><p>为了尽快了解和消化 APC 的业务，分别从 <strong>「功能矩阵」「业务场景」「用户角色」「关键词」</strong> 4个维度作为切入口，构建了一个对 APC 相关业务全貌的认知模型。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_redesign/key_dimension.svg" alt="key_dimension"></p>
 <table>
@@ -110,24 +109,28 @@
 </tr>
 </tbody></table>
 <p>若需更详细了解 APC 的业务和用户，<a target="_blank" rel="noopener" href="https://yanngiki.xyz/posts/ed8efc35/">查看链接</a>。</p>
-<h1 id="探索与聚焦问题"><a href="#探索与聚焦问题" class="headerlink" title="探索与聚焦问题"></a>探索与聚焦问题</h1><p>随着深入了解业务和真实用户反馈的使用问题，从设计的角度认为，仅优化表现层的视觉风格是治标不治本，系统多年来累积的问题不去解决是不会有实质性的收益，因为这是一个系统性问题，不仅视觉样式问题，还包括业务调整问题、技术历史问题和用户体验问题。</p>
+<h1 id="探索与聚焦问题"><a href="#探索与聚焦问题" class="headerlink" title="探索与聚焦问题"></a>探索与聚焦问题</h1><p>在了解业务和收集真实用户反馈的使用问题后，从设计的角度认为，仅优化表现层的视觉风格是治标不治本，系统多年来累积的问题不去解决是不会有实质性的收益，因为这是一个系统性问题，不仅视觉样式问题，还包括业务调整问题、技术历史问题和用户体验问题。</p>
 <h2 id="结合用户反馈探索问题"><a href="#结合用户反馈探索问题" class="headerlink" title="结合用户反馈探索问题"></a>结合用户反馈探索问题</h2><p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_redesign/issue_discover.svg" alt="issue_discover"></p>
-<h2 id="剖析和聚焦问题"><a href="#剖析和聚焦问题" class="headerlink" title="剖析和聚焦问题"></a>剖析和聚焦问题</h2><p>以上只是通过指标初步定位问题方向，为了进一步明晰 APC 的问题细节和产生原因，我们设计上做了一系列的前置工作进行深入分析：</p>
+<h2 id="结合系统功能和流程分析问题"><a href="#结合系统功能和流程分析问题" class="headerlink" title="结合系统功能和流程分析问题"></a>结合系统功能和流程分析问题</h2><p>以上只是通过指标初步定位问题方向，为了进一步明晰 APC 的问题细节和产生原因，我们设计上做了一系列的前置工作进行深入分析：</p>
 <ul>
-<li>梳理系统的功能框架，根据业务场景和<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_business_analysis/roles_function.svg">用户功能明细</a>，对功能进行二次分类。</li>
-<li>结合具体的页面，系统性去剖析APC的体验问题。</li>
+<li>梳理系统的功能框架，根据业务场景和用户功能明细，对功能进行二次分类。</li>
+<li>基于核心页面，系统性去剖析APC的体验问题。</li>
 </ul>
 <div class="image-container">
-    <div style="flex:1" class="image-item">
-        <img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_redesign/function_structure.svg">
-    </div>
-    <div style="flex:1" class="image-item">
-        <img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_redesign/old_homepage.png" >
-    </div>
-    <div style="flex:1" class="image-item">
-        <img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_redesign/old_details.png" >
-    </div>
+  <div style="flex:1" class="image-item">
+    <img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_business_analysis/roles_function.svg">
+  </div>
+  <div style="flex:1" class="image-item">
+    <img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_redesign/function_structure.svg">
+  </div>
+  <div style="flex:1" class="image-item">
+    <img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_redesign/old_homepage.png" >
+  </div>
+  <div style="flex:1" class="image-item">
+    <img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_redesign/old_details.png" >
+  </div>
 </div>
+
 
 <p>基于设计的角度总结，APC的体验问题主要聚焦于在以下几个方面：<strong>全局性问题</strong>（业务负担、导航结构、品质感），<strong>核心功能问题</strong>（工作台、单据&#x2F;表单详情）。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_redesign/question_focus.svg" alt="question_focus"></p>
@@ -177,6 +180,10 @@
 <li><strong>布局缺陷-阅读与填写冲突</strong>：空间利用和布局缺陷，信息阅读区与操作区存在空间侵占冲突，有效信息可视区域和真正的作业区域变少，直接导致阅读流畅性下降与信息输入效率低2大问题并存，造成用户操作过程中的交互摩擦感与情绪不适感。</li>
 <li><strong>视觉层级混乱</strong>：从视觉呈现上，页面元素（文字大小、颜色、间距、区块划分）未通过视觉权重区分优先级，导致用户无法快速识别关键信息。例如，目录树与内容详情区域、按钮与背景色对比微弱，用户难以判断操作焦点。</li>
 </ul>
+<h2 id="问题根源"><a href="#问题根源" class="headerlink" title="问题根源"></a>问题根源</h2><p>以上问题的产生均可追溯，而且并非独立存在，而是构成了一条问题链：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_redesign/question_chain.svg" alt="question_chain"></p>
+<p>所以，如果只调整颜色、间距、字体与组件样式，或者局部的交互体验，用户仍然还需要面对不断堆叠的功能、相同的业务复杂度，以及相同的信息组织问题。</p>
+<p>因此，设计的第一步不是重新绘制界面，而是重新理解业务，并判断哪些复杂性应该被消除，哪些应该被重新组织。</p>
 <h1 id="设计思考"><a href="#设计思考" class="headerlink" title="设计思考"></a>设计思考</h1><p>至此，APC的重点问题已经清晰明确了，那接下来我们该如何解决？？</p>
 <p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_redesign/design_thinking.svg" alt="design_thinking"></p>
 <p>首先，我们应该要先明确用户真正需要的是什么？不同的用户群体对上述问题有什么不一样的期望？</p>
@@ -189,27 +196,35 @@
 <p><strong>一、减法</strong>：功能上做减法，砍掉不存在业务场景的历史功能；信息上做减法，删减冗余字段。可以很大程度降低系统的复杂性，不管是业务层面、技术或设计层面。（这一块最终由产品跟业务方沟通决定）。</p>
 <p><strong>二、分类</strong>：功能导航优先按业务性质做聚合，属于同一业务模块的功能应该要放在一起，能让用户轻松记忆的触达路径；同样，字段上也要做分类，将字段属性或业务上强关联的字段组合在一起。</p>
 <p>整体的思路是要做到<strong>「化繁为简」</strong>，这实际上是一个降维过程，将复杂功能和逻辑揉碎后再重组，能让用户更多容易理解的界面&#x2F;信息载体，然后按照他们自己的认知和习惯高效达成使用目的。</p>
-<h1 id="设计策略"><a href="#设计策略" class="headerlink" title="设计策略"></a>设计策略</h1><h2 id="重组功能框架和导航结构"><a href="#重组功能框架和导航结构" class="headerlink" title="重组功能框架和导航结构"></a>重组功能框架和导航结构</h2><p><strong>一、导航框架</strong></p>
-<p>APC系统产品功能架构有<strong>延伸多级</strong>的功能菜单。旧版使用侧边导航<strong>单一结构</strong>，子层级放右侧内容区的顶部，用户对产品功能缺少全局认知，<strong>导航效率低</strong>。</p>
-<p>重新规划整体的系统信息框架时，主要考虑保持业务功能的同时能让用户从已习得的使用习惯中快速适应，另外要更有利于各模块的<strong>规划分类</strong>和后续的<strong>扩展性</strong>。</p>
+<h1 id="设计策略"><a href="#设计策略" class="headerlink" title="设计策略"></a>设计策略</h1><h2 id="重组功能框架和导航结构"><a href="#重组功能框架和导航结构" class="headerlink" title="重组功能框架和导航结构"></a>重组功能框架和导航结构</h2><blockquote>
+<p><strong>核心指引：从功能罗列到业务场景分类组织</strong></p>
+</blockquote>
+<p>APC 系统采用混合导航结构（左侧栏主菜单+顶部子菜单），功能层级较深，用户难以获得完整的系统认知。并将长期累积的功能直接暴露给用户，导致用户需要记忆功能所在的位置，而不是依据业务目标找到对应操作。</p>
+<p>解决上述问题，不能只通过单纯收起菜单或减少导航视觉层级来实现，而是重新组织功能与业务任务之间的关系。</p>
+<p>具体有以下3个方向：</p>
+<ul>
+<li><strong>精简化：</strong>删减不存在业务场景的历史功能和部分定制化功能，如工时登记、周报&#x2F;月报、成本管理等，减少用户浏览的无关入口。</li>
+<li><strong>业务场景分类：</strong>主要分为七大工作场景：任务单据跟踪管理、费用结算、供应商管理、项目相关配置、查看报告、艺设团队管理，有效帮助用户记忆和定位，解决过往功能分散的问题。</li>
+<li><strong>调整入口层级：</strong>任务单据的跟踪管理是APC的主干业务，将其从原工作台拆出来放在一级菜单，并将单据类型作为子级菜单，功能路径更清晰，同时也<strong>缩短用户触达目标的路径</strong>。</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_redesign/navigation_role.png" alt="navigation_role"></p>
+<p>同时，结合用户群体权限划分，用户看到的导航菜单更简洁并符合岗位职责所需，解决过去菜单混合不同职责内容的问题。</p>
+<p>整体的设计逻辑是</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_redesign/design_logic.png" alt="design_logic"></p>
+<p>另外，在规划整个系统导航结构的表现层时，要充分考虑保持业务功能的同时能让用户从已习得的使用习惯中快速适应，也要有利于各模块的<strong>规划分类</strong>和后续的<strong>扩展性</strong>。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_redesign/navigation_constructure.png" alt="navigation_constructure"></p>
 </br>
 
-<p><strong>二、内容结构</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_redesign/navigation_role.png" alt="navigation_role"></p>
-<p><strong>精简化</strong>：删减不存在业务场景的历史功能和部分定制化功能，如工时登记、周报&#x2F;月报、成本管理等。</p>
-<p><strong>导航分类场景化</strong>：按业务场景重新分类和聚合，主要分为七大工作场景：任务单据跟踪管理、费用结算、供应商管理、项目相关配置、查看报告、艺设团队管理，有效帮助用户记忆和定位，解决过往功能分散的问题。</p>
-<p><strong>按用户群体的权限划分范围</strong>：结合业务调整，导航菜单根据角色权限划分范围，看到的更简洁且符合期职责所需，解决过往菜单权限混乱的问题。</p>
-<p><strong>缩短核心功能触达路径</strong>：任务单据的跟踪管理是APC的主干业务，将其从原工作台拆出来放在一级菜单，并将单据类型作为子级菜单，功能路径更清晰，同时也缩短用户触达目标的路径。</p>
-<p><span style="color: #AAA">– 效果图展示 –</span></p>
 <h2 id="重新定义工作台"><a href="#重新定义工作台" class="headerlink" title="重新定义工作台"></a>重新定义工作台</h2><blockquote>
-<p>设计之前：基于用户的角度去思辨业务，工作台在用户使用APC的整个链路中承载着什么作用？各类角色的用户需要的是什么？</p>
+<p><strong>核心指引：从「做事的地方」转变为「找路的地方」</strong></p>
+<p>基于用户的角度去思辨业务，工作台在用户使用APC的整个链路中承载着什么作用？各类角色的用户需要的是什么？</p>
 </blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_redesign/homepage_redefine.svg" alt="homepage_redefine"></p>
-<p><strong>一、了解工作台的作用</strong></p>
-<p>原工作台是一个<strong>「做事的地方」</strong>，把各类业务场景的主要功能通过页面顶部的tab组件集中在一块，各项需要处理的事务直接以列表的形式平铺展示给用户，强调功能性和效率，目的是让用户可以直接操作，进来就是干活的，在APC系统中充当着一个<strong>任务中枢</strong>的作用。</p>
-<p>原工作台本质上是一个<strong>功能视角下的产物</strong>，而且让用户进入系统就要直接面对堆满功能入口的顶部导航和冰冷且同质化的内容列表，是很容易迷失方向性和目的性。</p>
-<p><strong>二、从功能视角转换为用户视角</strong></p>
+<p><strong>一、旧工作台</strong></p>
+<p>将不同业务的功能入口与待处理事项集中展示，强调进入系统后即可开始操作。</p>
+<p>各类业务场景的主要功能通过页面顶部的tab组件集中在一块，各项需要处理的事务以列表的形式平铺展示给用户，让用户进来直接干活。</p>
+<p>随着功能持续增加，工作台逐渐成为一个混合了导航、任务列表与业务信息的页面。由于不同角色看到的内容高度相似，用户仍然需要自行筛选信息，判断哪些内容与自己的职责相关。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_redesign/old_home_page.png" alt="旧工作台"></p>
+<p><strong>二、转换视角：从功能视角转换为用户视角</strong></p>
 <p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_redesign/homepage_role.svg" alt="homepage_role"></p>
 <section class="caption-image">用户角色图</section>
 
@@ -219,18 +234,32 @@
 <li><strong>信息关注点差异：</strong>每个类型的用户角色所关注的信息点不同，如采购外包管理组和商务组，对任务单据的跟踪是有差异的，前者关注验收前所有制作链路的环节，后者关注结算相关的环节。</li>
 <li><strong>内容颗粒度差异：</strong>兼顾多个业务场景的用户会更倾向于对负责的工作内容有全貌的了解，而偏执行的用户侧更倾向于快速完成任务。</li>
 </ul>
+<p><strong>这意味着，工作台的问题不只是信息太多，而是信息展示方式没有充分与用户的工作职责匹配。</strong></p>
+<p><strong>三、新的方向</strong></p>
 <p>基于上述对用户的分析，我们提供给APC用户的应该是一种<strong>基于用户角色实行差异化信息的设计</strong>，<strong>以信息展示为核心，聚焦信息传递和导航引导</strong>，在APC系统中起到能满足不同用户工作场景的需要。</p>
-<p>同时，对于兼顾多业务场景的用户（如采购外包、采购商务、接口人、APM等），工作台作为一个信息中枢，于用户而言是一个「找路的地方」，为该类用户提供职责相关的工作全貌总览的信息内容，而单一业务场景的用户直达相应的功能模块，无需提供工作台。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_redesign/homepage_redefine.svg" alt="homepage_redefine"></p>
+<p>这一设计思路并不是简单地为不同用户制作不同首页，而是根据工作场景重新定义工作台的职责：有些用户需要通过它理解全局，有些用户只需要快速进入工作。</p>
+<p>例如：</p>
+<ul>
+<li>采购外包、采购商务、接口人、APM等，工作台作为一个信息中枢，于用户而言是一个「找路的地方」，为该类用户提供职责相关的工作全貌总览的信息内容。</li>
+<li>财务、QC 等，单一业务场景的用户直达相应的功能模块，无需提供工作台。</li>
+</ul>
 <p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_redesign/homepage_show.png" alt="homepage_show"></p>
-<section class="caption-image">各角色的关注内容由产品提供</section>
+<section class="caption-image">各角色的关注内容示例：设计上通过建立共享框架，通过调整信息模块、入口以匹配不同角色职责</section>
 
+<p><strong>设计的关键不在于展示多少信息，而在于让每一类用户都能快速识别与自己相关的信息，并知道下一步应该做什么。</strong></p>
+</br>
 
-
-<h2 id="单据详情优化"><a href="#单据详情优化" class="headerlink" title="单据详情优化"></a>单据详情优化</h2><p>APC 的单据是业务核心载体，单据详情的设计难点主要来源于业务上的复杂性，所以在开始设计之前就优先<strong>拆解各类业务表单的复杂性</strong>。</p>
+<h2 id="单据详情优化"><a href="#单据详情优化" class="headerlink" title="单据详情优化"></a>单据详情优化</h2><blockquote>
+<p><strong>核心指引：从字段堆积向围绕业务组织信息</strong></p>
+<p>表单的易用性不仅取决于页面是否整洁、内容多与少，更取决于用户是否能理解字段含义、判断当前状态，以及容易找到并完成自己负责的操作。</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_redesign/old_detail_page.png" alt="旧详情页"></p>
+<p>APC 的单据是业务核心载体，单据详情的设计难点主要来源于业务上的复杂性，所以在开始设计之前就优先<strong>拆解各类业务表单的复杂来源</strong>。</p>
 <table>
 <thead>
 <tr>
-<th><div style="width:80px;" >复杂内容 </div></th>
+<th><div style="width:80px;" >复杂内容 </div></th>
 <th>描述</th>
 </tr>
 </thead>
@@ -249,54 +278,56 @@
 </tbody></table>
 <p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_redesign/form_complexity.png" alt="form_complexity"></p>
 <hr>
-<p>APC 的单据是业务核心载体，基于用户使用表单的行为，将表单的交互拆分为3个关键设计点：<strong>阅读</strong>、<strong>编辑</strong>和<strong>提交</strong>，结合上述探索聚焦的问题制定相对应的设计目标和设计策略。</p>
+<p>基于 APC 业务单据的复杂性，在设计上主要考虑点不应是如何把更多字段放进一个页面，而是如何让用户在正确的业务阶段，理解并处理正确的信息。</p>
+<p>于是，根据用户使用表单的行为，将表单的通用交互拆分为3个关键设计点：<strong>阅读</strong>、<strong>编辑</strong>和<strong>提交</strong>，结合上述探索聚焦的问题制定相对应的设计目标和设计策略。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_redesign/form_design_keypoint.svg" alt="form_design_keypoint"></p>
-<p>结合对单据设定的设计目标和策略，以下是对单据详情做的具体优化：</p>
-<p><strong>统一表单结构</strong></p>
-<ul>
-<li>一种载体框架，适用于APC多种类型的业务表单。</li>
-<li>结合阅读场景提供「抽屉形式」和「独立页面」2种查看形式，前者便捷填单和切换，后者专注沉浸式查看。</li>
-</ul>
-<p><strong>信息分组</strong></p>
-<ul>
-<li>结合业务属性，将字段大致分为几大类：标题区、基本信息、成本信息、制作信息、底部操作等，遵循格式塔-接近性原理，将零散的字段信息有规律的组织，并且同时考虑不同类型的业务单据。</li>
-<li>分角色、阶段重点信息及状态突出展示：结合业务流程，针对不同阶段、不同用户展示所需关注信息。</li>
-<li>重点内容：根据用户业务派单的场景可得知，在填单前就已经清楚是分配内包还是外包（国内供应商&#x2F;国外供应商&#x2F;个画），但原单据上仅凭最终的分配人标记，其它阅读的人不能完全全了解。</li>
-</ul>
+<p>所以对单据详情的优化有以下<strong>4项</strong>重点内容：</p>
+<p><strong>01.统一信息结构，共享页面布局</strong></p>
+<p>原有表单在长期迭代中不断增加字段，缺乏稳定的分类方式。用户需要在分散的信息之间建立联系，也难以快速识别重点。</p>
+<p>设计上首先建立统一的表单框架，并根据业务属性将字段划分为标题区、基本信息、成本信息、制作信息与操作区域等模块，将零散的字段信息有规律的组织。</p>
+<p>这并不意味着所有表单必须完全相同，而是为不同业务类型建立共同的组织规则，一种载体框架，适用于APC多种类型的业务表单，让用户能够逐步形成稳定的阅读预期。</p>
+<p>另外，结合阅读场景提供「抽屉形式」和「独立页面」2种查看形式，前者便捷填单和切换，后者专注沉浸式查看。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_redesign/form_layout_example.png" alt="form_layout_example"></p>
 <p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_redesign/form_layout_fileds.png" alt="form_layout_fileds"></p>
-<hr>
-<p><strong>表单轻量化</strong></p>
+<p><strong>02.根据角色与业务阶段决定信息优先级</strong></p>
+<p>不同角色关注的字段不同，同一用户在不同业务节点需要完成的操作也不同。</p>
+<p>因此，在共享的表单结构之上，应该根据当前角色、单据类型和流程状态，分角色和节点动态展示与当前任务相关的信息，并明确哪些字段可以可查看或编辑。</p>
+<p>例如：上游用户在派单前已经知道任务属于内部制作还是外包制作，但旧表单并没有以足够直观的方式呈现，导致下游用户并不一定清晰，仅凭最终的分配人识别推断。</p>
+<p>设计上需要把业务上已经明确的属性转化为界面中可直接识别的信息，而不是让每个用户通过其它字段信息间接推断。</p>
+<p><strong>03.表单轻量化：降低单据的阅读和填写成本</strong></p>
+<p>面对字段繁多、层级复杂的业务单据，从结构、内容和视觉三个层面进行轻量化重构，减少冗余信息与不必要的操作，让用户更聚焦于当前任务。</p>
 <ul>
-<li><p>结构轻量化：</p>
-<ul>
-<li>丢弃让用户难受的占了半屏的节点信息填写区域，降低页面布局的复杂性。</li>
-<li>结合用户的填单习惯，简化单据的目录树层级结构（从4层简化为3层，大大减少数据量），默认仅展示需求单所关联的任务底单，目录树可根据需要收纳或展开。</li>
+<li><strong>结构轻量化：简化信息层级，释放页面空间</strong><ul>
+<li>精简填写区域：丢弃让用户难受的占了半屏的节点信息填写区域，释放更多空间用于信息阅读和填写。</li>
+<li>简化目录结构：结合用户的填单习惯，默认仅展示需求单所关联的任务底单，将目录树从4层简化为3层，目录树可根据需要收纳或展开，在降低目录复杂度的同时，减少默认加载的数据量。</li>
 </ul>
 </li>
-<li><p>内容轻量化：</p>
-<ul>
-<li>删减冗余字段<span style="color:#888; font-style:italic">（这部分主要与产品决定</span>），以卡片化的形式组织和展示字段，提升阅读效率。</li>
-<li>分角色和节点动态展示信息，定位和展开当前角色和节点所关注的卡片内容。</li>
-<li>减少填写工作量：任务底单在待分配的节点自动继承需求单的字段信息，无需用户二次重复填写。</li>
+<li><strong>内容轻量化：精简冗余信息，简化用户填写</strong><ul>
+<li>删减冗余字段：协同产品梳理并删减冗余字段，以卡片化布局组织信息，提升内容的可读性与查找效率。</li>
+<li>减少重复填写：任务底单在待分配的节点，自动继承需求单的字段信息，无需用户二次重复填写，降低操作负担。</li>
 </ul>
 </li>
-<li><p>视觉轻量化：</p>
-<ul>
+<li><strong>视觉轻量化：弱化干扰，建立清晰的信息层级</strong><ul>
 <li>通过优化色彩体系、精简视觉元素和优化信息密度等，降低用户的视觉认知负担。</li>
 <li>同时保持重要信息的清晰传递和界面的呼吸感。</li>
 </ul>
 </li>
 </ul>
-<p><strong>制定阅读和编辑的交互范式</strong></p>
+<p><strong>04.交互范式重构：让阅读与编辑适配不同业务场景</strong></p>
+<p>针对流程类与展示类单据在使用目的上的差异，分别建立对应的阅读与编辑模式，避免以单一交互方式处理不同的业务需求。</p>
 <ul>
-<li><p>【流程类单据】：当各流程节点需展示&#x2F;填写不同内容时，根据用户角色和节点状态共同判断可编辑字段，平铺展示，整个填写过程所见即所得，提升阅读和填写效率，解决表单因空间布局结构缺陷导致的阅读区与填写区域互相侵占的问题。</p>
-</li>
-<li><p>【展示类单据】：以阅读为主要述求，默认状态下更聚集于阅读，如有编辑需要，通过提供独立的编辑入口触发编辑态。</p>
-</li>
+<li><strong>流程类单据：阅读与填写一体化</strong></li>
 </ul>
+<p>针对不同流程节点需要展示和填写不同内容的特点，结合用户角色与节点状态，动态控制字段的可编辑范围，并采用平铺展示的方式，让用户在阅读信息的同时即可完成填写，实现所见即所得。</p>
+<p>这一方式减少了阅读区与填写区之间的空间争夺，降低阅读与编辑之间的切换成本，让信息理解与业务操作自然衔接。</p>
+<ul>
+<li><strong>展示类单据：以阅读为主，按需进入编辑</strong></li>
+</ul>
+<p>对于以信息查阅为主要目的的单据，默认采用更适合阅读的信息呈现方式，避免编辑控件持续干扰内容浏览；当用户需要修改信息时，再通过独立的编辑入口进入编辑状态，兼顾日常查阅效率与必要的编辑需求。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_redesign/form_edite&read.png" alt="form_edite&amp;read"></p>
-<h2 id="品质感提升"><a href="#品质感提升" class="headerlink" title="品质感提升"></a>品质感提升</h2><p>提升 APC 整体的品质感，从各种设计细节入手，主要有以下几类设计策略：</p>
+</br>
+
+<h2 id="品质感提升"><a href="#品质感提升" class="headerlink" title="品质感提升"></a>品质感提升</h2><p>在完成信息架构和核心业务流程的重构后，视觉规范才真正有了稳定的基础，从以下几个方面提升 APC 整体的品质感：</p>
 <p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@master/img/apc_redesign/design_quality.png" alt="design_quality"></p>
 <ul>
 <li><strong>设计语言升级和规范统一</strong><ul>
@@ -330,9 +361,11 @@
 </ul>
 </li>
 </ul>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>一、设计不应局限于需求的接收方，可以是产品的共同缔造者，利用一切可能够改进的方式的方式去提升体验。</p>
-<p>二、走近和聆听用户，结合业务思考设计，运用设计思维工具（如 双钻模型），提供一个结构化的流程，在设计过程中有全局性的节凑把握，进行广泛的探索和深入的聚焦，先保证设计正确的东西（方向），再到做正确的设计（结果）。</p>
-<p>三、要精准还原业务和流程逻辑，更要思考用户如何与信息交互。例如在任务单据分配和查看时没有直观的信息体现它供应商单还是个画单，这对用户来说是较难通过分配对象来识别的，所以在“分配给”字段这里加上分配对象的来源选择。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>这次 APC 改版的核心价值，在于设计介入的深度。</p>
+<p>面对一个长期迭代、业务规则复杂、功能不断累积的企业系统，我们不应只停留在视觉换肤和局部交互修补，而是从业务、角色、功能与信息结构入手，重新梳理系统应该如何服务于用户的工作。</p>
+<p>通过清理历史功能、重组导航、重新定义工作台、优化复杂表单和建立统一设计规范，项目尝试将一个以功能堆积为特征的系统，转变为一个以用户职责和工作任务为中心的工作环境。</p>
+<p>这一案例也验证了企业级 UX 设计中的一个普遍现状：</p>
+<p><strong>复杂系统的体验问题，往往不是因为用户看到的信息不够漂亮，而是系统没有以用户能够理解和使用的方式组织业务。</strong></p>
 <style>
 .image-container {
   margin: 0 auto;
@@ -353,10 +386,10 @@
     border-radius: 8px;
     object-fit: cover;
   }
-
 </style>
-    </div>
 
+    </div>
+<!-- 
     <footer class="f-cf">
         
 
@@ -366,7 +399,7 @@
           <span class="arrow">⇢</span>
         </a>
       
-    </footer>
+    </footer> -->
 </div>
 
 <!-- 目录入口图标 -->
@@ -383,7 +416,7 @@
 
 
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E8%83%8C%E6%99%AF"><span class="toc-text">项目背景</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E7%BD%AE%E5%87%86%E5%A4%87"><span class="toc-text">前置准备</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8E%A2%E7%B4%A2%E4%B8%8E%E8%81%9A%E7%84%A6%E9%97%AE%E9%A2%98"><span class="toc-text">探索与聚焦问题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E5%90%88%E7%94%A8%E6%88%B7%E5%8F%8D%E9%A6%88%E6%8E%A2%E7%B4%A2%E9%97%AE%E9%A2%98"><span class="toc-text">结合用户反馈探索问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%96%E6%9E%90%E5%92%8C%E8%81%9A%E7%84%A6%E9%97%AE%E9%A2%98"><span class="toc-text">剖析和聚焦问题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%80%83"><span class="toc-text">设计思考</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E7%AD%96%E7%95%A5"><span class="toc-text">设计策略</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E7%BB%84%E5%8A%9F%E8%83%BD%E6%A1%86%E6%9E%B6%E5%92%8C%E5%AF%BC%E8%88%AA%E7%BB%93%E6%9E%84"><span class="toc-text">重组功能框架和导航结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E6%96%B0%E5%AE%9A%E4%B9%89%E5%B7%A5%E4%BD%9C%E5%8F%B0"><span class="toc-text">重新定义工作台</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E6%8D%AE%E8%AF%A6%E6%83%85%E4%BC%98%E5%8C%96"><span class="toc-text">单据详情优化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%93%81%E8%B4%A8%E6%84%9F%E6%8F%90%E5%8D%87"><span class="toc-text">品质感提升</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E6%A6%82%E8%BF%B0"><span class="toc-text">项目概述</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E7%BD%AE%E5%87%86%E5%A4%87"><span class="toc-text">前置准备</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8E%A2%E7%B4%A2%E4%B8%8E%E8%81%9A%E7%84%A6%E9%97%AE%E9%A2%98"><span class="toc-text">探索与聚焦问题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E5%90%88%E7%94%A8%E6%88%B7%E5%8F%8D%E9%A6%88%E6%8E%A2%E7%B4%A2%E9%97%AE%E9%A2%98"><span class="toc-text">结合用户反馈探索问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E5%90%88%E7%B3%BB%E7%BB%9F%E5%8A%9F%E8%83%BD%E5%92%8C%E6%B5%81%E7%A8%8B%E5%88%86%E6%9E%90%E9%97%AE%E9%A2%98"><span class="toc-text">结合系统功能和流程分析问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E6%A0%B9%E6%BA%90"><span class="toc-text">问题根源</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%80%83"><span class="toc-text">设计思考</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E7%AD%96%E7%95%A5"><span class="toc-text">设计策略</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E7%BB%84%E5%8A%9F%E8%83%BD%E6%A1%86%E6%9E%B6%E5%92%8C%E5%AF%BC%E8%88%AA%E7%BB%93%E6%9E%84"><span class="toc-text">重组功能框架和导航结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E6%96%B0%E5%AE%9A%E4%B9%89%E5%B7%A5%E4%BD%9C%E5%8F%B0"><span class="toc-text">重新定义工作台</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E6%8D%AE%E8%AF%A6%E6%83%85%E4%BC%98%E5%8C%96"><span class="toc-text">单据详情优化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%93%81%E8%B4%A8%E6%84%9F%E6%8F%90%E5%8D%87"><span class="toc-text">品质感提升</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol>
     </div>
 
 
@@ -417,9 +450,9 @@
 
     triggle[0].addEventListener('click', toc_icn_state, false);
 
-    // >1132px,处理窗口改变大小时，强制让toc出现； 开关变为x，className控制开关隐藏
+    // >1280px,处理窗口改变大小时，强制让toc出现； 开关变为x，className控制开关隐藏
     function toc_show(){
-        if((document.body.clientWidth+15) > 1132) {
+        if(document.body.clientWidth > 1280) {
             toc.style.display = "block";
             key = true;
             for(let i=0; i < line.length; i++){
@@ -430,9 +463,9 @@
     window.addEventListener('resize', toc_show, false)
 
 
-    // <1132px toc出现后，点击外围区域可关闭
+    // <1280px toc出现后，点击外围区域可关闭
     function toc_close(){
-        if((document.body.clientWidth) < 1132 ) {
+        if((document.body.clientWidth) < 1280 ) {
             toc.style.display = "none";
             key = false;
             for(let i=0; i < line.length; i++){

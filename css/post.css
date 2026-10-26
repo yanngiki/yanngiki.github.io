@@ -14,7 +14,7 @@
     margin: 0 auto 24px;
     max-width: 768px;
 }
-@media screen and (min-width: 1132px) and (max-width: 1319px)  {
+@media screen and (min-width: 1280px) and (max-width: 1319px)  {
     .post-main {
         margin: 0 0 24px;
     }
@@ -665,7 +665,7 @@
       padding-top: 100px;
     }
 }
-@media screen and (min-width: 561px) and (max-width: 1131px) {
+@media screen and (min-width: 561px) and (max-width: 1279px) {
     #toc{
     right: 0px;
     top: 0px;
@@ -675,7 +675,7 @@
     box-shadow: -10px 4px 6px -10px rgba(38,38,38,0.08);
     }
 }
-@media screen and (min-width: 1132px) {
+@media screen and (min-width: 1280px) {
     #toc{
     display: block; 
   }
@@ -716,7 +716,7 @@
   cursor: pointer;
   box-shadow: 0 2px 8px -3px rgba(0,0,0,0.2);
 }
-@media screen and (min-width: 1132px) {
+@media screen and (min-width: 1280px) {
     .mini_toc{
     display: none;
   }

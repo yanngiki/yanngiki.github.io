@@ -33,22 +33,24 @@
    <script src="https://cdn.amplitude.com/script/0bac11cc897af36bae8de07ccbd6c78.js"></script><script>window.amplitude.add(window.sessionReplay.plugin({sampleRate: 1}));window.amplitude.init('0bac11cc897af36bae8de07ccbd6c78', {"fetchRemoteConfig":true,"autocapture":{"attribution":true,"fileDownloads":true,"formInteractions":true,"pageViews":true,"sessions":true,"elementInteractions":true,"networkTracking":true,"webVitals":true,"frustrationInteractions":true}});</script>
 
     <!-- umami -->
-    <script defer src="https://4dc14f395c60-0.yanngiki.fnos.net/script.js" data-website-id="96d27d67-4499-45d0-a5f2-8f58c8785d7a"></script>
+    <script defer src="https://umami.128200.xyz/script.js" data-website-id="96d27d67-4499-45d0-a5f2-8f58c8785d7a"></script>
 <meta name="generator" content="Hexo 7.3.0"></head>
 
     <body>
-         <nav id="nav">
+         
+<nav id="nav">
     <div class="nav-content">
-        <a class="logo" href="/"><img class="navlogo" src="/images/logo.svg"></a>
+        
+        <a class="logo logo--back" href="/#thinking" aria-label="返回上一级" title="返回上一级">
+            <svg class="nav-back-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                <path d="M22.0003 13.0001L22.0004 11.0002L5.82845 11.0002L9.77817 7.05044L8.36396 5.63623L2 12.0002L8.36396 18.3642L9.77817 16.9499L5.8284 13.0002L22.0003 13.0001Z"></path>
+            </svg>
+        </a>
+        
         <ul class="menu-group">
             
             <li class="menu-detail">
-                <a href="/" class="menu  ">案例</a>
-                <span class="splash"> </span>
-            </li>
-            
-            <li class="menu-detail">
-                <a href="/design" class="menu  ">设计</a>
+                <a href="/" class="menu  ">设计</a>
                 <span class="splash"> </span>
             </li>
             
@@ -75,7 +77,7 @@
     
     <div class="post-md" id="post-detail">
         <h1 id="背景概述"><a href="#背景概述" class="headerlink" title="背景概述"></a>背景概述</h1><p><img src="https://cdn.jsdelivr.net/gh/yanngiki/resource@main/img/personalize_menu/banner.png" alt="banner"></p>
-<p>微信公众号平台提供了<strong>个性化菜单</strong>的接口，第三方开发者可以直接调取使用，可以根据关注者的标签、性别、地区、系统语言等条件自动匹配显示不同的菜单，以达到让公众号上不同的用户群体看到不一样的自定义菜单，实现<strong>精准的个性化营销</strong>。比如我是一位男生用户，显示的菜单与女生用户的会不一样。</p>
+<p>微信公众号提供了<strong>个性化菜单</strong>的接口，第三方开发者可以直接调取使用，可以根据关注者的标签、性别、地区、系统语言等条件自动匹配显示不同的菜单，以达到让公众号上不同的用户群体看到不一样的自定义菜单，实现<strong>精准的个性化营销</strong>。比如我是一位男生用户，显示的菜单与女生用户的会不一样。</p>
 <p>我们的产品同学想要在司内产品接入这项能力，在进行UI设计时，发现产品同学提供的原型设计思路（下面的方案A）在可用性和使用场景上存在一些欠妥的地方，大家双方对个性化菜单上也产生了不一样的理解，于是重新换了种思路设计了方案B与产品同学再沟通。</p>
 <h1 id="方案分歧与验证"><a href="#方案分歧与验证" class="headerlink" title="方案分歧与验证"></a>方案分歧与验证</h1><p>下面是基于两种个性化菜单模型展开分析，虽然在UI设计层面上体现出的差异很少，但在功能的设计思路、数据结构都是不一样的思路。</p>
 <p>方案A存在好几个问题，也正是这几个问题决定了这个方案不太可能继续往下走，主要是由于功能设计的拓展性差和对实际使用场景考虑的不周到。下面通过对两个方案的模型进行分析来两个方案的差异和优缺点。</p>
@@ -231,7 +233,7 @@
 <p>在设计方案的过程中，带着这些维度反复在大脑中串连和思考各个场景环节，思考设计这么做会有哪些优缺点，还有没有更好的交互，是否还有其它的应用场景，能不能找到更简单的逻辑去实现同样的功能等等。通过这种方法往往可以发现更多问题，反推着换思路重新思考已有的设计方案。</p>
 
     </div>
-
+<!-- 
     <footer class="f-cf">
         
         <a href="/posts/64854923/" class="link f-fl">
@@ -246,7 +248,7 @@
           <span class="arrow">⇢</span>
         </a>
       
-    </footer>
+    </footer> -->
 </div>
 
 <!-- 目录入口图标 -->
@@ -297,9 +299,9 @@
 
     triggle[0].addEventListener('click', toc_icn_state, false);
 
-    // >1132px,处理窗口改变大小时，强制让toc出现； 开关变为x，className控制开关隐藏
+    // >1280px,处理窗口改变大小时，强制让toc出现； 开关变为x，className控制开关隐藏
     function toc_show(){
-        if((document.body.clientWidth+15) > 1132) {
+        if(document.body.clientWidth > 1280) {
             toc.style.display = "block";
             key = true;
             for(let i=0; i < line.length; i++){
@@ -310,9 +312,9 @@
     window.addEventListener('resize', toc_show, false)
 
 
-    // <1132px toc出现后，点击外围区域可关闭
+    // <1280px toc出现后，点击外围区域可关闭
     function toc_close(){
-        if((document.body.clientWidth) < 1132 ) {
+        if((document.body.clientWidth) < 1280 ) {
             toc.style.display = "none";
             key = false;
             for(let i=0; i < line.length; i++){

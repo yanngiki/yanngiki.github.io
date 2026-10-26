@@ -33,22 +33,24 @@
    <script src="https://cdn.amplitude.com/script/0bac11cc897af36bae8de07ccbd6c78.js"></script><script>window.amplitude.add(window.sessionReplay.plugin({sampleRate: 1}));window.amplitude.init('0bac11cc897af36bae8de07ccbd6c78', {"fetchRemoteConfig":true,"autocapture":{"attribution":true,"fileDownloads":true,"formInteractions":true,"pageViews":true,"sessions":true,"elementInteractions":true,"networkTracking":true,"webVitals":true,"frustrationInteractions":true}});</script>
 
     <!-- umami -->
-    <script defer src="https://4dc14f395c60-0.yanngiki.fnos.net/script.js" data-website-id="96d27d67-4499-45d0-a5f2-8f58c8785d7a"></script>
+    <script defer src="https://umami.128200.xyz/script.js" data-website-id="96d27d67-4499-45d0-a5f2-8f58c8785d7a"></script>
 <meta name="generator" content="Hexo 7.3.0"></head>
 
     <body>
-         <nav id="nav">
+         
+<nav id="nav">
     <div class="nav-content">
-        <a class="logo" href="/"><img class="navlogo" src="/images/logo.svg"></a>
+        
+        <a class="logo logo--back" href="/#thinking" aria-label="返回上一级" title="返回上一级">
+            <svg class="nav-back-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                <path d="M22.0003 13.0001L22.0004 11.0002L5.82845 11.0002L9.77817 7.05044L8.36396 5.63623L2 12.0002L8.36396 18.3642L9.77817 16.9499L5.8284 13.0002L22.0003 13.0001Z"></path>
+            </svg>
+        </a>
+        
         <ul class="menu-group">
             
             <li class="menu-detail">
-                <a href="/" class="menu  ">案例</a>
-                <span class="splash"> </span>
-            </li>
-            
-            <li class="menu-detail">
-                <a href="/design" class="menu  ">设计</a>
+                <a href="/" class="menu  ">设计</a>
                 <span class="splash"> </span>
             </li>
             
@@ -207,7 +209,7 @@
 <p>可以选择对这部分表添加时区标识，例如某数据表是按 UTC +10:00记录的，人工标记一下让系统知道其真实时区。若未作标识，将默认标记为项目的默认时区。但在分析应用时切换其它时区时，将不会进行时区转换。</p>
 
     </div>
-
+<!-- 
     <footer class="f-cf">
         
         <a href="/posts/ed8efc35/" class="link f-fl">
@@ -217,12 +219,12 @@
       
 
       
-        <a href="/posts/24f58410/" class="link f-fr">
-          嘉佳智能
+        <a href="/posts/f1ee05/" class="link f-fr">
+          MMF BOOK
           <span class="arrow">⇢</span>
         </a>
       
-    </footer>
+    </footer> -->
 </div>
 
 <!-- 目录入口图标 -->
@@ -273,9 +275,9 @@
 
     triggle[0].addEventListener('click', toc_icn_state, false);
 
-    // >1132px,处理窗口改变大小时，强制让toc出现； 开关变为x，className控制开关隐藏
+    // >1280px,处理窗口改变大小时，强制让toc出现； 开关变为x，className控制开关隐藏
     function toc_show(){
-        if((document.body.clientWidth+15) > 1132) {
+        if(document.body.clientWidth > 1280) {
             toc.style.display = "block";
             key = true;
             for(let i=0; i < line.length; i++){
@@ -286,9 +288,9 @@
     window.addEventListener('resize', toc_show, false)
 
 
-    // <1132px toc出现后，点击外围区域可关闭
+    // <1280px toc出现后，点击外围区域可关闭
     function toc_close(){
-        if((document.body.clientWidth) < 1132 ) {
+        if((document.body.clientWidth) < 1280 ) {
             toc.style.display = "none";
             key = false;
             for(let i=0; i < line.length; i++){
