@@ -115,7 +115,7 @@
     flex: 0 0 auto;
     padding: 12px 20px;
     border: 0;
-    border-radius: 12px;
+    border-radius: 8px;
     background: #f7f4f2;
     color: var(--text-primary);
     cursor: pointer;
@@ -247,6 +247,12 @@
 
     .work-filter__button {
         padding: 11px 17px;
+    }
+}
+
+@media screen and (max-width:440px) {
+    .work-filter {
+        justify-content: center;
     }
 }
 
